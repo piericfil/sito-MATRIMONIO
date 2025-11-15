@@ -394,6 +394,65 @@ if (locationCarouselTrack) {
     startAutoScroll();
 }
 
+// ===== GESTIONE FORM RSVP (Web3Forms) =====
+const rsvpForm = document.getElementById('rsvp-form');
+const formMessage = document.getElementById('form-message');
+
+if (rsvpForm) {
+    rsvpForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Disabilita il bottone durante l'invio
+        const submitBtn = rsvpForm.querySelector('.btn-submit');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = currentLang === 'it' ? 'Invio in corso...' : 'A enviar...';
+
+        // Raccogli i dati del form
+        const formData = new FormData(rsvpForm);
+
+        try {
+            // Invia al Web3Forms
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Successo!
+                formMessage.className = 'form-message success';
+                formMessage.textContent = currentLang === 'it'
+                    ? '✅ Grazie! Conferma ricevuta con successo. Ci vediamo al matrimonio!'
+                    : '✅ Obrigado! Confirmação recebida com sucesso. Vemo-nos no casamento!';
+                formMessage.style.display = 'block';
+
+                // Reset form
+                rsvpForm.reset();
+
+                // Nascondi messaggio dopo 10 secondi
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 10000);
+            } else {
+                throw new Error('Submission failed');
+            }
+        } catch (error) {
+            // Errore
+            formMessage.className = 'form-message error';
+            formMessage.textContent = currentLang === 'it'
+                ? '❌ Ops! Qualcosa è andato storto. Riprova o contattaci direttamente.'
+                : '❌ Ops! Algo correu mal. Tenta novamente ou contacta-nos diretamente.';
+            formMessage.style.display = 'block';
+        } finally {
+            // Riabilita il bottone
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+        }
+    });
+}
+
 // Console message
 console.log('💕 Cata & Lorenzo - 26 Settembre 2026 💕');
 console.log('Sito creato con amore per celebrare il nostro giorno speciale');

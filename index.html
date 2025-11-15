@@ -131,23 +131,65 @@
                Ci farebbe molto piacere averti con noi! Per favore conferma entro il 30 giugno 2026
             </p>
 
-            <!-- ISTRUZIONI:
-                1. Vai su https://forms.google.com e crea un nuovo modulo
-                2. Aggiungi i campi che vuoi (nome ospiti, telefono, intolleranze, ecc.)
-                3. Clicca "Invia" in alto a destra
-                4. Clicca sull'icona del link (🔗)
-                5. Copia l'URL del form
-                6. Sostituisci "IL_TUO_GOOGLE_FORM_URL_QUI" qui sotto con l'URL copiato
-            -->
-            <div class="rsvp-buttons">
-                <a href="IL_TUO_GOOGLE_FORM_URL_QUI" target="_blank" class="btn-rsvp" data-it="Conferma Presenza" data-pt="Confirmar Presença">
-                    Conferma Presenza
-                </a>
-            </div>
+            <!-- Form RSVP con Web3Forms -->
+            <form id="rsvp-form" class="rsvp-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="21d6306d-2013-49f8-a820-03e3f725d2da">
+                <input type="hidden" name="subject" value="Nuova Conferma RSVP - Matrimonio Cata & Lorenzo">
+                <input type="hidden" name="from_name" value="Sito Matrimonio Cata & Lorenzo">
 
-            <p class="rsvp-note" data-it="Il modulo si aprirà in una nuova finestra" data-pt="O formulário abrirá numa nova janela">
-                Il modulo si aprirà in una nuova finestra
-            </p>
+                <!-- Nome principale -->
+                <div class="form-group">
+                    <label for="nome" data-it="Il tuo Nome e Cognome" data-pt="O teu Nome e Apelido">Il tuo Nome e Cognome *</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Mario Rossi">
+                </div>
+
+                <!-- Nomi altri ospiti (per famiglie) -->
+                <div class="form-group">
+                    <label for="altri_ospiti" data-it="Altri ospiti che parteciperanno con te" data-pt="Outros convidados que participarão contigo">Altri ospiti che parteciperanno con te</label>
+                    <textarea id="altri_ospiti" name="altri_ospiti" rows="3" placeholder="es: Maria Rossi, Luca Rossi (uno per riga)"></textarea>
+                    <small data-it="Lascia vuoto se partecipi da solo" data-pt="Deixa vazio se participas sozinho">Lascia vuoto se partecipi da solo</small>
+                </div>
+
+                <!-- Telefono -->
+                <div class="form-group">
+                    <label for="telefono" data-it="Telefono (opzionale)" data-pt="Telefone (opcional)">Telefono (opzionale)</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+39 123 456 7890">
+                </div>
+
+                <!-- Partecipazione -->
+                <div class="form-group">
+                    <label data-it="Parteciperò a:" data-pt="Participarei em:">Parteciperò a: *</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="cerimonia" value="Sì" checked>
+                            <span data-it="Cerimonia (15:00)" data-pt="Cerimónia (15:00)">Cerimonia (15:00)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="ricevimento" value="Sì" checked>
+                            <span data-it="Ricevimento (18:00)" data-pt="Receção (18:00)">Ricevimento (18:00)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Allergie -->
+                <div class="form-group">
+                    <label for="intolleranze" data-it="Allergie o intolleranze alimentari" data-pt="Alergias ou intolerâncias alimentares">Allergie o intolleranze alimentari</label>
+                    <textarea id="intolleranze" name="intolleranze" rows="2" placeholder="es: Celiaco, Intollerante al lattosio..."></textarea>
+                </div>
+
+                <!-- Messaggio -->
+                <div class="form-group">
+                    <label for="messaggio" data-it="Un messaggio per noi" data-pt="Uma mensagem para nós">Un messaggio per noi</label>
+                    <textarea id="messaggio" name="messaggio" rows="3" placeholder="Auguri, richieste particolari..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-submit" data-it="Conferma Presenza" data-pt="Confirmar Presença">Conferma Presenza</button>
+            </form>
+
+            <!-- Messaggio di conferma/errore -->
+            <div id="form-message" class="form-message"></div>
         </div>
     </section>
 

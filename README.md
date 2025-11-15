@@ -52,38 +52,31 @@ Sito web personalizzato per il matrimonio del 26 settembre 2026, che unisce l'el
 
 ## 📝 Personalizzazione
 
-### Configurare Google Forms per RSVP
+### Form RSVP con Web3Forms
 
-Il sito usa Google Forms per raccogliere le conferme. È gratuito e illimitato:
+Il sito usa **Web3Forms** - un servizio gratuito e illimitato per inviare email.
 
-1. **Crea il form**:
-   - Vai su [forms.google.com](https://forms.google.com)
-   - Clicca "+ Vuoto" per creare un nuovo modulo
-   - Titolo: "RSVP - Matrimonio Cata & Lorenzo"
+**Il form è GIÀ CONFIGURATO** e funziona out-of-the-box! Le conferme arriveranno all'email che hai configurato.
 
-2. **Aggiungi i campi**:
-   - Nome e Cognome (Risposta breve, obbligatorio)
-   - Telefono (Risposta breve, facoltativo)
-   - Nomi degli ospiti (Paragrafo - per famiglie)
-   - Parteciperà a Cerimonia? (Scelta multipla: Sì/No)
-   - Parteciperà a Ricevimento? (Scelta multipla: Sì/No)
-   - Allergie o intolleranze (Paragrafo, facoltativo)
-   - Un messaggio per noi (Paragrafo, facoltativo)
+#### Come funziona:
+1. Gli ospiti compilano il form sul sito
+2. Le conferme arrivano direttamente via email
+3. **ZERO limiti** - gratuito per sempre
 
-3. **Ottieni il link**:
-   - Clicca "Invia" in alto a destra
-   - Clicca sull'icona link 🔗
-   - Copia l'URL
+#### Cambiare l'email destinataria:
+Se vuoi cambiare l'email dove ricevere le conferme:
 
-4. **Aggiorna il sito**:
-   - Apri `index.html`
-   - Cerca "IL_TUO_GOOGLE_FORM_URL_QUI" (circa riga 128)
-   - Sostituisci con l'URL del tuo Google Form
+1. Vai su [web3forms.com](https://web3forms.com)
+2. Inserisci la NUOVA email dove vuoi ricevere le conferme
+3. Inserisci: `piericfil.github.io/sito-MATRIMONIO` come dominio
+4. Copia la nuova **Access Key** che ti viene data
+5. Apri `index.html` e cerca `access_key` (circa riga 137)
+6. Sostituisci il valore con la nuova chiave
 
-5. **Vedere le risposte**:
-   - Le risposte arriveranno in tempo reale su Google Forms
-   - Puoi vedere tutto su "Risposte" nel form
-   - Puoi esportare in Google Sheets per analisi
+#### Vedere le conferme:
+- Le email arrivano direttamente nella tua casella di posta
+- Ogni conferma include tutti i dettagli: nomi, telefono, allergie, messaggio
+- Puoi crearle una cartella dedicata per organizzarle
 
 ### Aggiungere foto alla galleria
 
@@ -145,9 +138,9 @@ Mostra giorni, ore, minuti e secondi fino al 26 settembre 2026 ore 15:00.
 Bottoni IT/PT in alto a destra per cambiare tra italiano e portoghese.
 
 ### Form RSVP
-- Raccoglie: nomi ospiti, telefono, preferenze, intolleranze
-- Gratuito e illimitato via Google Forms
-- Risposte in tempo reale, esportabili in Excel
+- Raccoglie: nomi ospiti, telefono, partecipazione, allergie, messaggio
+- Gratuito e illimitato via Web3Forms
+- Le email arrivano direttamente nella tua casella di posta
 
 ### Navigazione
 - Menu che appare scrollando
@@ -163,9 +156,11 @@ Bottoni IT/PT in alto a destra per cambiare tra italiano e portoghese.
 ## 🔧 Troubleshooting
 
 ### Il form RSVP non funziona
-1. Verifica di aver sostituito "IL_TUO_GOOGLE_FORM_URL_QUI" in `index.html` con il link del tuo Google Form
-2. Controlla che il link Google Forms sia completo (inizia con https://forms.gle/ o https://docs.google.com/forms/)
-3. Testa il link cliccando sul bottone "Conferma Presenza" - dovrebbe aprire Google Forms
+1. Controlla la connessione internet - Web3Forms richiede connessione attiva
+2. Verifica che l'Access Key in `index.html` (riga ~137) sia corretta
+3. Prova a inviare un test - dovresti ricevere un'email entro 1-2 minuti
+4. Controlla lo spam se non vedi l'email
+5. Se ancora non funziona, vai su [web3forms.com](https://web3forms.com) e genera una nuova Access Key
 
 ### Le immagini non si vedono
 1. Controlla che il percorso sia corretto (es. `images/foto.jpg`)

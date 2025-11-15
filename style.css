@@ -1100,39 +1100,20 @@ section h2::before {
     display: block;
 }
 
-/* Google Forms RSVP */
-.rsvp-buttons {
-    text-align: center;
-    margin: 40px 0 20px;
+/* Form helper text */
+.form-group small {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
 }
 
-.btn-rsvp {
-    display: inline-block;
-    padding: 20px 60px;
-    background: linear-gradient(135deg, var(--white), rgba(255, 255, 255, 0.95));
-    color: var(--azul-navy);
-    font-family: var(--font-sans);
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 50px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
-    border: 3px solid rgba(255, 255, 255, 0.9);
-}
-
-.btn-rsvp:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-    background: var(--white);
-    border-color: var(--gold);
-}
-
-.rsvp-note {
-    text-align: center;
-    font-size: 0.95rem;
-    opacity: 0.85;
-    margin-top: 15px;
+/* Bottone submit disabilitato */
+.btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
 }
 
 /* Lista Regali Section */
