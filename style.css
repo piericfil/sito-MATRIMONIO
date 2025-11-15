@@ -279,30 +279,13 @@ body {
 
 .names {
     font-family: var(--font-serif);
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(4rem, 10vw, 8rem);
     font-weight: 300;
     color: var(--azul-navy);
     margin-bottom: 20px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
     position: relative;
-}
-
-.names::after {
-    content: '❤️';
-    position: absolute;
-    font-size: 0.4em;
-    margin-left: 20px;
-    animation: heartbeat 1.5s ease-in-out infinite;
-}
-
-@keyframes heartbeat {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
 }
 
 .date {
@@ -320,40 +303,49 @@ body {
     font-weight: 300;
 }
 
-/* Countdown - più colorato */
+/* Countdown - Design migliorato */
 .countdown {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: clamp(10px, 3vw, 30px);
     margin-top: 50px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    padding: 0 10px;
 }
 
 .countdown-item {
     text-align: center;
-    padding: 25px 20px;
-    background: linear-gradient(135deg, var(--white) 0%, var(--cream) 100%);
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-    min-width: 110px;
-    border: 3px solid transparent;
-    background-clip: padding-box;
+    padding: clamp(18px, 3vw, 30px) clamp(12px, 2vw, 25px);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.1),
+        inset 0 1px 2px rgba(255,255,255,0.8);
+    flex: 1;
+    min-width: 0;
+    max-width: 140px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
     position: relative;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
 }
 
 .countdown-item::before {
     content: '';
     position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    background: linear-gradient(135deg, var(--terracotta), var(--orange), var(--gold), var(--azul-light));
-    border-radius: 20px;
-    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+        rgba(217, 118, 66, 0.15),
+        rgba(244, 164, 96, 0.15),
+        rgba(46, 92, 138, 0.15));
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
+    z-index: 0;
 }
 
 .countdown-item:hover::before {
@@ -361,24 +353,31 @@ body {
 }
 
 .countdown-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+    transform: translateY(-5px) scale(1.03);
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.15),
+        inset 0 1px 2px rgba(255,255,255,0.9);
+    border-color: var(--gold);
 }
 
 .countdown-item span {
     display: block;
     font-family: var(--font-serif);
-    font-size: 3.5rem;
-    font-weight: 600;
-    background: linear-gradient(135deg, var(--azul-primary), var(--azul-light));
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--terracotta), var(--gold), var(--azul-primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .countdown-item p {
-    margin-top: 12px;
+    margin-top: clamp(8px, 1.5vw, 12px);
+    position: relative;
+    z-index: 1;
     font-size: 0.9rem;
     color: var(--dark);
     text-transform: uppercase;
