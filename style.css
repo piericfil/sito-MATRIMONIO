@@ -254,7 +254,7 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     letter-spacing: 0;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
     white-space: nowrap;
-    transform: translateX(-200px);
+    transform: translateX(-150px);
 }
 
 .date {
