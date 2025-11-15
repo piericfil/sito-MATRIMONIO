@@ -14,12 +14,17 @@ function updateCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById('days').textContent = days;
-    document.getElementById('hours').textContent = hours;
-    document.getElementById('minutes').textContent = minutes;
-    document.getElementById('seconds').textContent = seconds;
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
 
-    if (distance < 0) {
+    if (daysEl) daysEl.textContent = days;
+    if (hoursEl) hoursEl.textContent = hours;
+    if (minutesEl) minutesEl.textContent = minutes;
+    if (secondsEl) secondsEl.textContent = seconds;
+
+    if (distance < 0 && daysEl) {
         document.querySelector('.countdown').innerHTML = '<p>È il nostro giorno speciale! 🎉</p>';
     }
 }
@@ -76,90 +81,191 @@ function changeLanguage(lang) {
             element.textContent = text;
         }
     });
+
+    // Salva preferenza
+    localStorage.setItem('language', lang);
 }
 
-// Form RSVP
-const rsvpForm = document.getElementById('rsvp-form');
-const formMessage = document.getElementById('form-message');
-
-rsvpForm.addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    // Raccogli i dati del form
-    const formData = {
-        nome: document.getElementById('nome').value,
-        email: document.getElementById('email').value,
-        telefono: document.getElementById('telefono').value,
-        ospiti: document.getElementById('ospiti').value,
-        cerimonia: document.querySelector('input[name="cerimonia"]').checked,
-        ricevimento: document.querySelector('input[name="ricevimento"]').checked,
-        intolleranze: document.getElementById('intolleranze').value,
-        messaggio: document.getElementById('messaggio').value
-    };
-
-    // Crea il messaggio email
-    const emailBody = `
-Nome: ${formData.nome}
-Email: ${formData.email}
-Telefono: ${formData.telefono}
-Numero di ospiti: ${formData.ospiti}
-
-Parteciperà a:
-- Cerimonia: ${formData.cerimonia ? 'Sì' : 'No'}
-- Ricevimento: ${formData.ricevimento ? 'Sì' : 'No'}
-
-Allergie/Intolleranze: ${formData.intolleranze || 'Nessuna'}
-
-Messaggio: ${formData.messaggio || 'Nessun messaggio'}
-    `.trim();
-
-    // Usando FormSubmit (servizio gratuito)
-    try {
-        const response = await fetch('https://formsubmit.co/ajax/cata.lorenzo.wedding@email.com', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: formData.nome,
-                email: formData.email,
-                message: emailBody,
-                _subject: `RSVP Matrimonio - ${formData.nome}`,
-                _template: 'table'
-            })
-        });
-
-        if (response.ok) {
-            formMessage.className = 'form-message success';
-            formMessage.textContent = currentLang === 'it'
-                ? 'Grazie! La tua conferma è stata inviata con successo. Ci vediamo il 26 settembre! 💕'
-                : 'Obrigado! A tua confirmação foi enviada com sucesso. Vemo-nos a 26 de setembro! 💕';
-            rsvpForm.reset();
-
-            // Nascondi il messaggio dopo 5 secondi
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
-        } else {
-            throw new Error('Errore nell\'invio');
-        }
-    } catch (error) {
-        // Fallback: apri client email
-        const subject = encodeURIComponent(`RSVP Matrimonio - ${formData.nome}`);
-        const body = encodeURIComponent(emailBody);
-        const mailtoLink = `mailto:cata.lorenzo.wedding@email.com?subject=${subject}&body=${body}`;
-
-        // Mostra messaggio
-        formMessage.className = 'form-message success';
-        formMessage.innerHTML = currentLang === 'it'
-            ? `Stiamo aprendo il tuo client email. Se non si apre automaticamente, <a href="${mailtoLink}" style="color: white; text-decoration: underline;">clicca qui</a>.`
-            : `Estamos a abrir o teu cliente de email. Se não abrir automaticamente, <a href="${mailtoLink}" style="color: white; text-decoration: underline;">clica aqui</a>.`;
-
-        // Apri mailto
-        window.location.href = mailtoLink;
+// Carica lingua salvata
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('language');
+    if (savedLang) {
+        changeLanguage(savedLang);
     }
 });
+
+// ===== CAROUSEL =====
+const carouselTrack = document.getElementById('carouselTrack');
+const carouselIndicators = document.getElementById('carouselIndicators');
+
+if (carouselTrack) {
+    const slides = Array.from(carouselTrack.children);
+    const slideCount = slides.length;
+    let currentIndex = 0;
+    let autoScrollInterval;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    // Crea indicators
+    if (carouselIndicators) {
+        slides.forEach((_, index) => {
+            const indicator = document.createElement('div');
+            indicator.classList.add('carousel-indicator');
+            if (index === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => goToSlide(index));
+            carouselIndicators.appendChild(indicator);
+        });
+    }
+
+    // Funzione per andare a uno slide specifico
+    function goToSlide(index) {
+        currentIndex = index;
+        if (currentIndex < 0) currentIndex = slideCount - 1;
+        if (currentIndex >= slideCount) currentIndex = 0;
+
+        const offset = -currentIndex * 100;
+        carouselTrack.style.transform = `translateX(${offset}%)`;
+
+        // Aggiorna indicators
+        const indicators = carouselIndicators.querySelectorAll('.carousel-indicator');
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === currentIndex);
+        });
+
+        // Reset auto-scroll
+        resetAutoScroll();
+    }
+
+    // Funzione per muovere il carousel
+    function moveCarousel(direction) {
+        goToSlide(currentIndex + direction);
+    }
+
+    // Auto-scroll ogni 6 secondi
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(() => {
+            moveCarousel(1);
+        }, 6000);
+    }
+
+    function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+    }
+
+    function resetAutoScroll() {
+        stopAutoScroll();
+        startAutoScroll();
+    }
+
+    // Touch/Swipe gestures per mobile
+    carouselTrack.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAutoScroll();
+    });
+
+    carouselTrack.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+        resetAutoScroll();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                // Swipe left - next
+                moveCarousel(1);
+            } else {
+                // Swipe right - prev
+                moveCarousel(-1);
+            }
+        }
+    }
+
+    // Mouse drag per desktop (opzionale ma utile)
+    let isDragging = false;
+    let startX = 0;
+    let currentX = 0;
+
+    carouselTrack.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.pageX;
+        carouselTrack.style.cursor = 'grabbing';
+        stopAutoScroll();
+    });
+
+    carouselTrack.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        currentX = e.pageX;
+    });
+
+    carouselTrack.addEventListener('mouseup', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        carouselTrack.style.cursor = 'grab';
+
+        const diff = startX - currentX;
+        const dragThreshold = 50;
+
+        if (Math.abs(diff) > dragThreshold) {
+            if (diff > 0) {
+                moveCarousel(1);
+            } else {
+                moveCarousel(-1);
+            }
+        }
+        resetAutoScroll();
+    });
+
+    carouselTrack.addEventListener('mouseleave', () => {
+        if (isDragging) {
+            isDragging = false;
+            carouselTrack.style.cursor = 'grab';
+            resetAutoScroll();
+        }
+    });
+
+    // Pause on hover
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoScroll);
+        carouselContainer.addEventListener('mouseleave', startAutoScroll);
+    }
+
+    // Avvia auto-scroll
+    startAutoScroll();
+}
+
+// Rendi moveCarousel globale per i bottoni
+window.moveCarousel = function(direction) {
+    if (carouselTrack) {
+        const slides = Array.from(carouselTrack.children);
+        let currentIndex = 0;
+
+        // Trova l'indice corrente
+        const currentTransform = carouselTrack.style.transform;
+        const match = currentTransform.match(/translateX\((-?\d+)%\)/);
+        if (match) {
+            currentIndex = Math.abs(parseInt(match[1]) / 100);
+        }
+
+        currentIndex += direction;
+        if (currentIndex < 0) currentIndex = slides.length - 1;
+        if (currentIndex >= slides.length) currentIndex = 0;
+
+        const offset = -currentIndex * 100;
+        carouselTrack.style.transform = `translateX(${offset}%)`;
+
+        // Aggiorna indicators
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === currentIndex);
+        });
+    }
+};
 
 // Animazioni al scroll (fade in)
 const observerOptions = {
@@ -178,7 +284,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Applica animazioni a elementi selezionati
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.storia-chapter, .evento-card, .timeline-item, .gallery-item, .logistica-item');
+    const animatedElements = document.querySelectorAll('.storia-chapter, .evento-card, .timeline-item, .gallery-item, .logistica-item, .link-card');
 
     animatedElements.forEach(el => {
         el.style.opacity = '0';
@@ -187,73 +293,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
-
-// Easter egg: animazione petali che cadono (opzionale)
-function createPetal() {
-    const petal = document.createElement('div');
-    petal.className = 'petal';
-    petal.style.cssText = `
-        position: fixed;
-        width: 10px;
-        height: 10px;
-        background: linear-gradient(45deg, #E8A87C, #D97642);
-        border-radius: 50% 0;
-        top: -10px;
-        left: ${Math.random() * 100}vw;
-        animation: fall ${5 + Math.random() * 5}s linear;
-        pointer-events: none;
-        z-index: 9999;
-        opacity: 0.7;
-    `;
-
-    document.body.appendChild(petal);
-
-    setTimeout(() => {
-        petal.remove();
-    }, 10000);
-}
-
-// Aggiungi stile per l'animazione dei petali
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes fall {
-        to {
-            transform: translateY(100vh) rotate(360deg);
-        }
-    }
-`;
-document.head.appendChild(style);
-
-// Attiva petali sulla homepage (ogni 3 secondi)
-let petalInterval;
-function togglePetals(enable) {
-    if (enable) {
-        petalInterval = setInterval(createPetal, 3000);
-    } else {
-        clearInterval(petalInterval);
-    }
-}
-
-// Attiva petali solo quando si è sulla hero section
-const heroSection = document.querySelector('.hero');
-const heroObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        togglePetals(entry.isIntersecting);
-    });
-}, { threshold: 0.5 });
-
-heroObserver.observe(heroSection);
-
-// Funzione per aggiungere immagini alla galleria (da usare in futuro)
-function addImageToGallery(imagePath, caption) {
-    const galleryGrid = document.querySelector('.gallery-grid');
-    const galleryItem = document.createElement('div');
-    galleryItem.className = 'gallery-item';
-    galleryItem.innerHTML = `
-        <img src="${imagePath}" alt="${caption}" style="width: 100%; height: 100%; object-fit: cover;">
-    `;
-    galleryGrid.appendChild(galleryItem);
-}
 
 // Console message
 console.log('💕 Cata & Lorenzo - 26 Settembre 2026 💕');

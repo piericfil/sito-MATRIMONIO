@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Località - Cata & Lorenzo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button onclick="changeLanguage('it')" id="lang-it" class="active">IT</button>
+        <button onclick="changeLanguage('pt')" id="lang-pt">PT</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="visible">
+        <ul>
+            <li><a href="index.html" data-it="Home" data-pt="Início">Home</a></li>
+            <li><a href="localita.html" class="active" data-it="Località" data-pt="Localidades">Località</a></li>
+            <li><a href="programma.html" data-it="Programma" data-pt="Programa">Programma</a></li>
+            <li><a href="storia.html" data-it="La Nostra Storia" data-pt="Nossa História">La Nostra Storia</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-it="Località" data-pt="Localidades">Località</h1>
+            <p data-it="Dove celebreremo il nostro matrimonio" data-pt="Onde celebraremos o nosso casamento">Dove celebreremo il nostro matrimonio</p>
+        </div>
+    </section>
+
+    <!-- L'Evento -->
+    <section class="evento">
+        <div class="container">
+            <div class="azulejo-divider"></div>
+            <h2 data-it="L'Evento" data-pt="O Evento">L'Evento</h2>
+
+            <div class="evento-cards">
+                <div class="evento-card">
+                    <div class="azulejo-corner"></div>
+                    <h3 data-it="Cerimonia" data-pt="Cerimónia">Cerimonia</h3>
+                    <h4>Chiesa di Fondra</h4>
+                    <p class="time">Ore 15:00</p>
+                    <p data-it="La cerimonia si terrà nella suggestiva Chiesa di Fondra, un piccolo borgo di montagna immerso nella natura delle Alpi Orobie."
+                       data-pt="A cerimónia terá lugar na sugestiva Igreja de Fondra, uma pequena aldeia de montanha imersa na natureza dos Alpes Oróbios.">
+                       La cerimonia si terrà nella suggestiva Chiesa di Fondra, un piccolo borgo di montagna immerso nella natura delle Alpi Orobie.
+                    </p>
+                    <p class="address">Fondra, 24010 Oltre il Colle (BG)</p>
+                </div>
+
+                <div class="evento-card">
+                    <div class="azulejo-corner"></div>
+                    <h3 data-it="Ricevimento" data-pt="Receção">Ricevimento</h3>
+                    <h4>San Pellegrino Terme</h4>
+                    <p class="time">Ore 18:00</p>
+                    <p data-it="Il ricevimento si svolgerà a San Pellegrino Terme, celebre località termale ai piedi delle montagne bergamasche."
+                       data-pt="A receção terá lugar em San Pellegrino Terme, famosa estância termal aos pés das montanhas bergamascas.">
+                       Il ricevimento si svolgerà a San Pellegrino Terme, celebre località termale ai piedi delle montagne bergamasche.
+                    </p>
+                    <p class="address">San Pellegrino Terme (BG)</p>
+                    <p class="note" data-it="*Maggiori dettagli sul luogo esatto verranno comunicati prossimamente"
+                       data-pt="*Mais detalhes sobre o local exato serão comunicados em breve">
+                       *Maggiori dettagli sul luogo esatto verranno comunicati prossimamente
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logistica -->
+    <section class="logistica">
+        <div class="container">
+            <div class="azulejo-divider"></div>
+            <h2 data-it="Come Arrivare" data-pt="Como Chegar">Come Arrivare</h2>
+
+            <div class="logistica-grid">
+                <div class="logistica-item">
+                    <h3>✈️ <span data-it="Aeroporti" data-pt="Aeroportos">Aeroporti</span></h3>
+                    <div class="logistica-content">
+                        <div class="airport">
+                            <h4>Milano Bergamo (BGY)</h4>
+                            <p data-it="Aeroporto più vicino - 45 km da San Pellegrino Terme"
+                               data-pt="Aeroporto mais próximo - 45 km de San Pellegrino Terme">
+                               Aeroporto più vicino - 45 km da San Pellegrino Terme
+                            </p>
+                        </div>
+                        <div class="airport">
+                            <h4>Milano Malpensa (MXP)</h4>
+                            <p data-it="Alternativa - 110 km da San Pellegrino Terme"
+                               data-pt="Alternativa - 110 km de San Pellegrino Terme">
+                               Alternativa - 110 km da San Pellegrino Terme
+                            </p>
+                        </div>
+                        <div class="airport">
+                            <h4>Milano Linate (LIN)</h4>
+                            <p data-it="Alternativa - 80 km da San Pellegrino Terme"
+                               data-pt="Alternativa - 80 km de San Pellegrino Terme">
+                               Alternativa - 80 km da San Pellegrino Terme
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="logistica-item">
+                    <h3>🚗 <span data-it="In Auto" data-pt="De Carro">In Auto</span></h3>
+                    <div class="logistica-content">
+                        <p data-it="Da Milano: Prendere l'autostrada A4 direzione Bergamo, poi seguire le indicazioni per San Pellegrino Terme (circa 1 ora)"
+                           data-pt="De Milão: Apanhar a autoestrada A4 direção Bergamo, depois seguir as indicações para San Pellegrino Terme (cerca de 1 hora)">
+                           Da Milano: Prendere l'autostrada A4 direzione Bergamo, poi seguire le indicazioni per San Pellegrino Terme (circa 1 ora)
+                        </p>
+                        <p data-it="Da Bergamo: Seguire la SP470 direzione Valle Brembana (circa 30 minuti)"
+                           data-pt="De Bergamo: Seguir a SP470 direção Valle Brembana (cerca de 30 minutos)">
+                           Da Bergamo: Seguire la SP470 direzione Valle Brembana (circa 30 minuti)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="logistica-item">
+                    <h3>🅿️ <span data-it="Parcheggio" data-pt="Estacionamento">Parcheggio</span></h3>
+                    <div class="logistica-content">
+                        <p data-it="Parcheggi disponibili sia a Fondra che a San Pellegrino Terme. Maggiori dettagli verranno comunicati prossimamente."
+                           data-pt="Estacionamento disponível tanto em Fondra como em San Pellegrino Terme. Mais detalhes serão comunicados em breve.">
+                           Parcheggi disponibili sia a Fondra che a San Pellegrino Terme. Maggiori dettagli verranno comunicati prossimamente.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="logistica-item">
+                    <h3>🏨 <span data-it="Alloggio" data-pt="Alojamento">Alloggio</span></h3>
+                    <div class="logistica-content">
+                        <p data-it="San Pellegrino Terme e la Valle Brembana offrono diverse opzioni di alloggio, dagli hotel agli agriturismi. Vi consigliamo di prenotare con anticipo."
+                           data-pt="San Pellegrino Terme e o Valle Brembana oferecem diversas opções de alojamento, desde hotéis a agroturismos. Recomendamos reservar com antecedência.">
+                           San Pellegrino Terme e la Valle Brembana offrono diverse opzioni di alloggio, dagli hotel agli agriturismi. Vi consigliamo di prenotare con anticipo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Cata & Lorenzo</p>
+        <p>26 Settembre 2026</p>
+        <p class="footer-note" data-it="Con amore da Portogallo e Italia" data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

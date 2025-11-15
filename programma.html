@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programma - Cata & Lorenzo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button onclick="changeLanguage('it')" id="lang-it" class="active">IT</button>
+        <button onclick="changeLanguage('pt')" id="lang-pt">PT</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="visible">
+        <ul>
+            <li><a href="index.html" data-it="Home" data-pt="Início">Home</a></li>
+            <li><a href="localita.html" data-it="Località" data-pt="Localidades">Località</a></li>
+            <li><a href="programma.html" class="active" data-it="Programma" data-pt="Programa">Programma</a></li>
+            <li><a href="storia.html" data-it="La Nostra Storia" data-pt="Nossa História">La Nostra Storia</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-it="Programma della Giornata" data-pt="Programa do Dia">Programma della Giornata</h1>
+            <p data-it="Tutti i dettagli del nostro giorno speciale" data-pt="Todos os detalhes do nosso dia especial">Tutti i dettagli del nostro giorno speciale</p>
+        </div>
+    </section>
+
+    <!-- Programma -->
+    <section class="programma">
+        <div class="container">
+            <div class="azulejo-divider"></div>
+            <h2>26 Settembre 2026</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">14:30</div>
+                    <div class="timeline-content">
+                        <h3 data-it="Arrivo degli ospiti" data-pt="Chegada dos convidados">Arrivo degli ospiti</h3>
+                        <p data-it="Chiesa di Fondra" data-pt="Igreja de Fondra">Chiesa di Fondra</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:00</div>
+                    <div class="timeline-content">
+                        <h3 data-it="Cerimonia" data-pt="Cerimónia">Cerimonia</h3>
+                        <p data-it="Celebrazione del matrimonio" data-pt="Celebração do casamento">Celebrazione del matrimonio</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">16:00</div>
+                    <div class="timeline-content">
+                        <h3 data-it="Foto e congratulazioni" data-pt="Fotos e parabéns">Foto e congratulazioni</h3>
+                        <p data-it="Momento per foto di gruppo e saluti" data-pt="Momento para fotos de grupo e cumprimentos">Momento per foto di gruppo e saluti</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">18:00</div>
+                    <div class="timeline-content">
+                        <h3 data-it="Aperitivo di benvenuto" data-pt="Aperitivo de boas-vindas">Aperitivo di benvenuto</h3>
+                        <p data-it="San Pellegrino Terme - Inizio del ricevimento" data-pt="San Pellegrino Terme - Início da receção">San Pellegrino Terme - Inizio del ricevimento</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">20:00</div>
+                    <div class="timeline-content">
+                        <h3 data-it="Cena" data-pt="Jantar">Cena</h3>
+                        <p data-it="Cena con sapori italiani e portoghesi" data-pt="Jantar com sabores italianos e portugueses">Cena con sapori italiani e portoghesi</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">22:30</div>
+                    <div class="timeline-content">
+                        <h3 data-it="Festa e balli" data-pt="Festa e danças">Festa e balli</h3>
+                        <p data-it="Musica, balli e divertimento fino a tardi!" data-pt="Música, dança e diversão até tarde!">Musica, balli e divertimento fino a tardi!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP CTA -->
+    <section class="rsvp-cta">
+        <div class="container">
+            <h2 data-it="Conferma la tua presenza" data-pt="Confirma a tua presença">Conferma la tua presenza</h2>
+            <p data-it="Ci farebbe molto piacere averti con noi!" data-pt="Ficamos muito felizes em ter-te connosco!">Ci farebbe molto piacere averti con noi!</p>
+            <a href="mailto:cata.lorenzo.wedding@email.com" class="cta-button" data-it="Invia RSVP" data-pt="Enviar RSVP">Invia RSVP</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Cata & Lorenzo</p>
+        <p>26 Settembre 2026</p>
+        <p class="footer-note" data-it="Con amore da Portogallo e Italia" data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
