@@ -60,7 +60,7 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1000;
+    z-index: 998;
     display: flex;
     gap: 5px;
     background: var(--white);
@@ -312,6 +312,8 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     max-width: 800px;
     z-index: 1;
     position: relative;
+    text-align: center;
+    margin: 0 auto;
 }
 
 /* Decorazione elegante sopra il titolo */
@@ -1233,6 +1235,24 @@ section h2::before {
     font-style: italic;
     color: #666;
     margin-top: 18px;
+}
+
+/* Decorazione Azulejos */
+.azulejos-decoration {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.azulejos-decoration img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    opacity: 0.6;
+    filter: saturate(1.2) brightness(0.9);
 }
 
 /* Footer */
