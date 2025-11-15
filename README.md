@@ -1,4 +1,4 @@
-# 💕 Cata & Lorenzo - Sito Matrimonio
+# 💕 Catarina & Lorenzo - Sito Matrimonio
 
 Sito web personalizzato per il matrimonio del 26 settembre 2026, che unisce l'eleganza italiana con il calore portoghese.
 

@@ -454,5 +454,5 @@ if (rsvpForm) {
 }
 
 // Console message
-console.log('💕 Cata & Lorenzo - 26 Settembre 2026 💕');
+console.log('💕 Catarina & Lorenzo - 26 Settembre 2026 💕');
 console.log('Sito creato con amore per celebrare il nostro giorno speciale');

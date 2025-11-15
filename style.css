@@ -298,13 +298,14 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
 
 .names {
     font-family: var(--font-serif);
-    font-size: clamp(4rem, 10vw, 8rem);
+    font-size: clamp(3.5rem, 9vw, 8rem);
     font-weight: 300;
     color: var(--azul-navy);
     margin-bottom: 20px;
     letter-spacing: 4px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
     position: relative;
+    white-space: nowrap;
 }
 
 .date {
@@ -1241,7 +1242,8 @@ footer p:first-of-type {
 /* Responsive */
 @media (max-width: 768px) {
     .names {
-        font-size: 3rem;
+        font-size: 2.8rem;
+        letter-spacing: 2px;
     }
 
     .countdown {
@@ -1413,8 +1415,8 @@ footer p:first-of-type {
 
     /* Text sizing */
     .names {
-        font-size: 2.5rem;
-        letter-spacing: 2px;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
     }
 
     .date {
