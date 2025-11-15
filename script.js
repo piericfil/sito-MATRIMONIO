@@ -94,12 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// ===== CAROUSEL =====
-const carouselTrack = document.getElementById('carouselTrack');
-const carouselIndicators = document.getElementById('carouselIndicators');
+// ===== HERO CAROUSEL BACKGROUND =====
+const heroCarouselTrack = document.getElementById('carouselTrack');
+const heroCarouselIndicators = document.getElementById('heroCarouselIndicators');
 
-if (carouselTrack) {
-    const slides = Array.from(carouselTrack.children);
+if (heroCarouselTrack) {
+    const slides = Array.from(heroCarouselTrack.children);
     const slideCount = slides.length;
     let currentIndex = 0;
     let autoScrollInterval;
@@ -107,13 +107,13 @@ if (carouselTrack) {
     let touchEndX = 0;
 
     // Crea indicators
-    if (carouselIndicators) {
+    if (heroCarouselIndicators) {
         slides.forEach((_, index) => {
             const indicator = document.createElement('div');
-            indicator.classList.add('carousel-indicator');
+            indicator.classList.add('hero-carousel-indicator');
             if (index === 0) indicator.classList.add('active');
             indicator.addEventListener('click', () => goToSlide(index));
-            carouselIndicators.appendChild(indicator);
+            heroCarouselIndicators.appendChild(indicator);
         });
     }
 
@@ -124,13 +124,15 @@ if (carouselTrack) {
         if (currentIndex >= slideCount) currentIndex = 0;
 
         const offset = -currentIndex * 100;
-        carouselTrack.style.transform = `translateX(${offset}%)`;
+        heroCarouselTrack.style.transform = `translateX(${offset}%)`;
 
         // Aggiorna indicators
-        const indicators = carouselIndicators.querySelectorAll('.carousel-indicator');
-        indicators.forEach((indicator, i) => {
-            indicator.classList.toggle('active', i === currentIndex);
-        });
+        if (heroCarouselIndicators) {
+            const indicators = heroCarouselIndicators.querySelectorAll('.hero-carousel-indicator');
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === currentIndex);
+            });
+        }
 
         // Reset auto-scroll
         resetAutoScroll();
@@ -158,16 +160,19 @@ if (carouselTrack) {
     }
 
     // Touch/Swipe gestures per mobile
-    carouselTrack.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-        stopAutoScroll();
-    });
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        heroSection.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoScroll();
+        });
 
-    carouselTrack.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-        resetAutoScroll();
-    });
+        heroSection.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            resetAutoScroll();
+        });
+    }
 
     function handleSwipe() {
         const swipeThreshold = 50;
@@ -184,88 +189,66 @@ if (carouselTrack) {
         }
     }
 
-    // Mouse drag per desktop (opzionale ma utile)
+    // Mouse drag per desktop
     let isDragging = false;
     let startX = 0;
     let currentX = 0;
 
-    carouselTrack.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.pageX;
-        carouselTrack.style.cursor = 'grabbing';
-        stopAutoScroll();
-    });
+    if (heroSection) {
+        heroSection.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.pageX;
+            heroSection.style.cursor = 'grabbing';
+            stopAutoScroll();
+        });
 
-    carouselTrack.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        currentX = e.pageX;
-    });
+        heroSection.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            currentX = e.pageX;
+        });
 
-    carouselTrack.addEventListener('mouseup', (e) => {
-        if (!isDragging) return;
-        isDragging = false;
-        carouselTrack.style.cursor = 'grab';
-
-        const diff = startX - currentX;
-        const dragThreshold = 50;
-
-        if (Math.abs(diff) > dragThreshold) {
-            if (diff > 0) {
-                moveCarousel(1);
-            } else {
-                moveCarousel(-1);
-            }
-        }
-        resetAutoScroll();
-    });
-
-    carouselTrack.addEventListener('mouseleave', () => {
-        if (isDragging) {
+        heroSection.addEventListener('mouseup', (e) => {
+            if (!isDragging) return;
             isDragging = false;
-            carouselTrack.style.cursor = 'grab';
-            resetAutoScroll();
-        }
-    });
+            heroSection.style.cursor = 'default';
 
-    // Pause on hover
-    const carouselContainer = document.querySelector('.carousel-container');
-    if (carouselContainer) {
-        carouselContainer.addEventListener('mouseenter', stopAutoScroll);
-        carouselContainer.addEventListener('mouseleave', startAutoScroll);
+            const diff = startX - currentX;
+            const dragThreshold = 50;
+
+            if (Math.abs(diff) > dragThreshold) {
+                if (diff > 0) {
+                    moveCarousel(1);
+                } else {
+                    moveCarousel(-1);
+                }
+            }
+            resetAutoScroll();
+        });
+
+        heroSection.addEventListener('mouseleave', () => {
+            if (isDragging) {
+                isDragging = false;
+                heroSection.style.cursor = 'default';
+                resetAutoScroll();
+            }
+        });
+
+        // Pause on hover
+        heroSection.addEventListener('mouseenter', stopAutoScroll);
+        heroSection.addEventListener('mouseleave', () => {
+            if (!isDragging) startAutoScroll();
+        });
     }
 
     // Avvia auto-scroll
     startAutoScroll();
+
+    // Funzione globale per i bottoni
+    window.moveHeroCarousel = function(direction) {
+        moveCarousel(direction);
+    };
 }
-
-// Rendi moveCarousel globale per i bottoni
-window.moveCarousel = function(direction) {
-    if (carouselTrack) {
-        const slides = Array.from(carouselTrack.children);
-        let currentIndex = 0;
-
-        // Trova l'indice corrente
-        const currentTransform = carouselTrack.style.transform;
-        const match = currentTransform.match(/translateX\((-?\d+)%\)/);
-        if (match) {
-            currentIndex = Math.abs(parseInt(match[1]) / 100);
-        }
-
-        currentIndex += direction;
-        if (currentIndex < 0) currentIndex = slides.length - 1;
-        if (currentIndex >= slides.length) currentIndex = 0;
-
-        const offset = -currentIndex * 100;
-        carouselTrack.style.transform = `translateX(${offset}%)`;
-
-        // Aggiorna indicators
-        const indicators = document.querySelectorAll('.carousel-indicator');
-        indicators.forEach((indicator, i) => {
-            indicator.classList.toggle('active', i === currentIndex);
-        });
-    }
-};
 
 // Animazioni al scroll (fade in)
 const observerOptions = {

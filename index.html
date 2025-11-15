@@ -26,8 +26,36 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section con Carousel Background -->
     <section class="hero">
+        <!-- Carousel Background -->
+        <div class="hero-carousel-bg">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80" alt="Wedding couple">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1920&q=80" alt="Wedding ceremony">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1920&q=80" alt="Wedding celebration">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1920&q=80" alt="Wedding flowers">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1920&q=80" alt="Wedding couple portrait">
+                </div>
+            </div>
+            <!-- Overlay sfumato -->
+            <div class="carousel-overlay"></div>
+        </div>
+
+        <!-- Frecce Carousel FUORI -->
+        <button class="hero-carousel-btn prev" onclick="moveHeroCarousel(-1)">‹</button>
+        <button class="hero-carousel-btn next" onclick="moveHeroCarousel(1)">›</button>
+
+        <!-- Contenuto Hero SOPRA -->
         <div class="hero-content">
             <h1 class="names">Cata & Lorenzo</h1>
             <p class="date">26 Settembre 2026</p>
@@ -53,36 +81,9 @@
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Carousel Section -->
-    <section class="carousel-section">
-        <div class="container">
-            <div class="carousel-container">
-                <button class="carousel-btn prev" onclick="moveCarousel(-1)">‹</button>
-                <div class="carousel-track-container">
-                    <div class="carousel-track" id="carouselTrack">
-                        <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80" alt="Wedding couple">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1200&q=80" alt="Wedding ceremony">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1200&q=80" alt="Wedding celebration">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1200&q=80" alt="Wedding flowers">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1200&q=80" alt="Wedding couple portrait">
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-btn next" onclick="moveCarousel(1)">›</button>
-            </div>
-            <div class="carousel-indicators" id="carouselIndicators"></div>
-        </div>
+        <!-- Indicators -->
+        <div class="hero-carousel-indicators" id="heroCarouselIndicators"></div>
     </section>
 
     <!-- Quick Links -->
@@ -106,6 +107,73 @@
                     <p data-it="Scopri come ci siamo conosciuti" data-pt="Descobre como nos conhecemos">Scopri come ci siamo conosciuti</p>
                 </a>
             </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="rsvp">
+        <div class="container">
+            <div class="azulejo-divider"></div>
+            <h2 data-it="Conferma la tua presenza" data-pt="Confirma a tua presença">Conferma la tua presenza</h2>
+            <p class="rsvp-subtitle" data-it="Ci farebbe molto piacere averti con noi! Per favore conferma entro il 30 giugno 2026"
+               data-pt="Ficamos muito felizes em ter-te connosco! Por favor confirma até 30 de junho de 2026">
+               Ci farebbe molto piacere averti con noi! Per favore conferma entro il 30 giugno 2026
+            </p>
+
+            <form id="rsvp-form" class="rsvp-form" action="https://formsubmit.co/ric.pizzorni@gmail.com" method="POST">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="Nuova Conferma RSVP - Matrimonio Cata & Lorenzo">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-group">
+                    <label for="nome" data-it="Nome e Cognome" data-pt="Nome e Apelido">Nome e Cognome *</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono" data-it="Telefono" data-pt="Telefone">Telefono</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+
+                <div class="form-group">
+                    <label for="ospiti" data-it="Numero di ospiti" data-pt="Número de convidados">Numero di ospiti *</label>
+                    <input type="number" id="ospiti" name="ospiti" min="1" max="10" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label data-it="Parteciperò a:" data-pt="Participarei em:">Parteciperò a: *</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="cerimonia" value="Si" checked>
+                            <span data-it="Cerimonia" data-pt="Cerimónia">Cerimonia</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="ricevimento" value="Si" checked>
+                            <span data-it="Ricevimento" data-pt="Receção">Ricevimento</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="intolleranze" data-it="Allergie o intolleranze alimentari" data-pt="Alergias ou intolerâncias alimentares">Allergie o intolleranze alimentari</label>
+                    <textarea id="intolleranze" name="intolleranze" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="messaggio" data-it="Un messaggio per noi" data-pt="Uma mensagem para nós">Un messaggio per noi</label>
+                    <textarea id="messaggio" name="messaggio" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit" data-it="Conferma Presenza" data-pt="Confirmar Presença">Conferma Presenza</button>
+            </form>
+
+            <div id="form-message" class="form-message"></div>
         </div>
     </section>
 

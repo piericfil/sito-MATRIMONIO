@@ -1487,3 +1487,229 @@ footer p:first-of-type {
         padding: 35px 25px;
     }
 }
+
+/* ===== HERO CAROUSEL BACKGROUND ===== */
+
+/* Hero con carousel dietro */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: none !important;
+}
+
+/* Carousel come background */
+.hero-carousel-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-carousel-bg .carousel-track {
+    height: 100%;
+}
+
+.hero-carousel-bg .carousel-slide {
+    height: 100%;
+}
+
+.hero-carousel-bg .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay sfumato per rendere leggibile il testo */
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        /* Vignette sfumata ai bordi */
+        radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.3) 100%),
+        /* Gradient dal basso */
+        linear-gradient(to bottom, rgba(250, 247, 242, 0.4) 0%, rgba(250, 247, 242, 0.7) 40%, rgba(250, 247, 242, 0.85) 100%),
+        /* Gradient dall'alto */
+        linear-gradient(to top, rgba(250, 247, 242, 0.3) 0%, rgba(250, 247, 242, 0.6) 30%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Contenuto hero sopra */
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* Frecce FUORI dalle foto */
+.hero-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px solid var(--azul-primary);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 3rem;
+    color: var(--azul-primary);
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-weight: 300;
+}
+
+.hero-carousel-btn:hover {
+    background: var(--azul-primary);
+    color: var(--white);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 12px 40px rgba(46, 92, 138, 0.4);
+}
+
+.hero-carousel-btn.prev {
+    left: 30px;
+}
+
+.hero-carousel-btn.next {
+    right: 30px;
+}
+
+/* Indicators sotto il countdown */
+.hero-carousel-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 15;
+}
+
+.hero-carousel-indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.hero-carousel-indicator.active {
+    background: var(--white);
+    transform: scale(1.4);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+}
+
+.hero-carousel-indicator:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+}
+
+/* Countdown con sfondo semi-trasparente per leggibilità */
+.countdown-item {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Testi hero più leggibili */
+.names {
+    text-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 2px 4px rgba(255,255,255,0.8) !important;
+}
+
+.date {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.1), 0 1px 2px rgba(255,255,255,0.6) !important;
+}
+
+.location {
+    text-shadow: 0 2px 6px rgba(0,0,0,0.1), 0 1px 2px rgba(255,255,255,0.5) !important;
+}
+
+/* RSVP Section */
+.rsvp {
+    background:
+        radial-gradient(circle at 20% 80%, rgba(255, 140, 66, 0.2) 0%, transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(124, 185, 232, 0.2) 0%, transparent 60%),
+        linear-gradient(135deg, var(--azul-light) 0%, var(--azul-primary) 100%);
+    color: var(--white);
+    padding: 100px 0;
+}
+
+.rsvp h2 {
+    color: var(--white);
+}
+
+.rsvp .azulejo-divider {
+    background: linear-gradient(90deg, var(--white), rgba(255,255,255,0.8), var(--white));
+}
+
+.rsvp-subtitle {
+    text-align: center;
+    font-size: 1.15rem;
+    margin-bottom: 50px;
+    opacity: 0.95;
+}
+
+/* Responsive Hero Carousel */
+@media (max-width: 768px) {
+    .hero-carousel-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 2.2rem;
+    }
+    
+    .hero-carousel-btn.prev {
+        left: 15px;
+    }
+    
+    .hero-carousel-btn.next {
+        right: 15px;
+    }
+
+    .hero-carousel-indicators {
+        bottom: 20px;
+    }
+
+    .hero-carousel-indicator {
+        width: 11px;
+        height: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-carousel-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+        border-width: 2px;
+    }
+    
+    .hero-carousel-btn.prev {
+        left: 10px;
+    }
+    
+    .hero-carousel-btn.next {
+        right: 10px;
+    }
+
+    .hero-carousel-indicators {
+        bottom: 15px;
+        gap: 10px;
+    }
+
+    .hero-carousel-indicator {
+        width: 9px;
+        height: 9px;
+    }
+}
