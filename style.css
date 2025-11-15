@@ -247,7 +247,7 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     font-weight: 300;
     color: var(--azul-navy);
     margin: 0 auto 20px;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
     position: relative;
     white-space: nowrap;
@@ -1210,7 +1210,7 @@ footer p:first-of-type {
 @media (max-width: 768px) {
     .names {
         font-size: clamp(2.2rem, 7vw, 2.8rem);
-        letter-spacing: 2px;
+        letter-spacing: 0px;
     }
 
     .countdown {
@@ -1373,7 +1373,7 @@ footer p:first-of-type {
     /* Text sizing */
     .names {
         font-size: clamp(1.6rem, 6vw, 2.2rem);
-        letter-spacing: 0px;
+        letter-spacing: 0;
     }
 
     .date {
@@ -2101,7 +2101,7 @@ footer p:first-of-type {
 @media (max-width: 380px) {
     .names {
         font-size: clamp(1.4rem, 5vw, 1.8rem);
-        letter-spacing: -0.5px;
+        letter-spacing: 0;
     }
 
     .hero {
