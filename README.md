@@ -52,20 +52,38 @@ Sito web personalizzato per il matrimonio del 26 settembre 2026, che unisce l'el
 
 ## 📝 Personalizzazione
 
-### Modificare l'email per RSVP
+### Configurare Google Forms per RSVP
 
-Nel file `script.js`, cambia:
-```javascript
-// Linea ~90
-'https://formsubmit.co/ajax/cata.lorenzo.wedding@email.com'
-```
+Il sito usa Google Forms per raccogliere le conferme. È gratuito e illimitato:
 
-E alla linea ~120:
-```javascript
-const mailtoLink = `mailto:cata.lorenzo.wedding@email.com?subject=${subject}&body=${body}`;
-```
+1. **Crea il form**:
+   - Vai su [forms.google.com](https://forms.google.com)
+   - Clicca "+ Vuoto" per creare un nuovo modulo
+   - Titolo: "RSVP - Matrimonio Cata & Lorenzo"
 
-**Importante**: Sostituisci `cata.lorenzo.wedding@email.com` con la tua email reale!
+2. **Aggiungi i campi**:
+   - Nome e Cognome (Risposta breve, obbligatorio)
+   - Telefono (Risposta breve, facoltativo)
+   - Nomi degli ospiti (Paragrafo - per famiglie)
+   - Parteciperà a Cerimonia? (Scelta multipla: Sì/No)
+   - Parteciperà a Ricevimento? (Scelta multipla: Sì/No)
+   - Allergie o intolleranze (Paragrafo, facoltativo)
+   - Un messaggio per noi (Paragrafo, facoltativo)
+
+3. **Ottieni il link**:
+   - Clicca "Invia" in alto a destra
+   - Clicca sull'icona link 🔗
+   - Copia l'URL
+
+4. **Aggiorna il sito**:
+   - Apri `index.html`
+   - Cerca "IL_TUO_GOOGLE_FORM_URL_QUI" (circa riga 128)
+   - Sostituisci con l'URL del tuo Google Form
+
+5. **Vedere le risposte**:
+   - Le risposte arriveranno in tempo reale su Google Forms
+   - Puoi vedere tutto su "Risposte" nel form
+   - Puoi esportare in Google Sheets per analisi
 
 ### Aggiungere foto alla galleria
 
@@ -127,9 +145,9 @@ Mostra giorni, ore, minuti e secondi fino al 26 settembre 2026 ore 15:00.
 Bottoni IT/PT in alto a destra per cambiare tra italiano e portoghese.
 
 ### Form RSVP
-- Raccoglie: nome, email, telefono, numero ospiti, preferenze
-- Invia email automaticamente (via FormSubmit)
-- Fallback: apre client email se il servizio non funziona
+- Raccoglie: nomi ospiti, telefono, preferenze, intolleranze
+- Gratuito e illimitato via Google Forms
+- Risposte in tempo reale, esportabili in Excel
 
 ### Navigazione
 - Menu che appare scrollando
@@ -145,9 +163,9 @@ Bottoni IT/PT in alto a destra per cambiare tra italiano e portoghese.
 ## 🔧 Troubleshooting
 
 ### Il form RSVP non funziona
-1. Verifica che l'email in `script.js` sia corretta
-2. Se usi FormSubmit per la prima volta, devi confermare l'email (riceverai un'email di attivazione)
-3. Se non funziona, il form aprirà automaticamente il client email
+1. Verifica di aver sostituito "IL_TUO_GOOGLE_FORM_URL_QUI" in `index.html` con il link del tuo Google Form
+2. Controlla che il link Google Forms sia completo (inizia con https://forms.gle/ o https://docs.google.com/forms/)
+3. Testa il link cliccando sul bottone "Conferma Presenza" - dovrebbe aprire Google Forms
 
 ### Le immagini non si vedono
 1. Controlla che il percorso sia corretto (es. `images/foto.jpg`)

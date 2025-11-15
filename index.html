@@ -88,17 +88,17 @@
             <h2 data-it="Esplora" data-pt="Explorar">Esplora</h2>
             <div class="links-grid">
                 <a href="localita.html" class="link-card">
-                    <div class="link-icon">📍</div>
+                    <div class="link-icon-elegant"></div>
                     <h3 data-it="Località" data-pt="Localidades">Località</h3>
                     <p data-it="Dove sarà il matrimonio e come arrivare" data-pt="Onde será o casamento e como chegar">Dove sarà il matrimonio e come arrivare</p>
                 </a>
                 <a href="programma.html" class="link-card">
-                    <div class="link-icon">🕐</div>
+                    <div class="link-icon-elegant"></div>
                     <h3 data-it="Programma" data-pt="Programa">Programma</h3>
                     <p data-it="Il programma completo della giornata" data-pt="O programa completo do dia">Il programma completo della giornata</p>
                 </a>
                 <a href="storia.html" class="link-card">
-                    <div class="link-icon">❤️</div>
+                    <div class="link-icon-elegant"></div>
                     <h3 data-it="La Nostra Storia" data-pt="Nossa História">La Nostra Storia</h3>
                     <p data-it="Scopri come ci siamo conosciuti" data-pt="Descobre como nos conhecemos">Scopri come ci siamo conosciuti</p>
                 </a>
@@ -116,57 +116,23 @@
                Ci farebbe molto piacere averti con noi! Per favore conferma entro il 30 giugno 2026
             </p>
 
-            <form id="rsvp-form" class="rsvp-form" action="https://formsubmit.co/ric.pizzorni@gmail.com" method="POST">
-                <!-- FormSubmit Configuration -->
-                <input type="hidden" name="_subject" value="Nuova Conferma RSVP - Matrimonio Cata & Lorenzo">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
+            <!-- ISTRUZIONI:
+                1. Vai su https://forms.google.com e crea un nuovo modulo
+                2. Aggiungi i campi che vuoi (nome ospiti, telefono, intolleranze, ecc.)
+                3. Clicca "Invia" in alto a destra
+                4. Clicca sull'icona del link (🔗)
+                5. Copia l'URL del form
+                6. Sostituisci "IL_TUO_GOOGLE_FORM_URL_QUI" qui sotto con l'URL copiato
+            -->
+            <div class="rsvp-buttons">
+                <a href="IL_TUO_GOOGLE_FORM_URL_QUI" target="_blank" class="btn-rsvp" data-it="Conferma Presenza" data-pt="Confirmar Presença">
+                    Conferma Presenza
+                </a>
+            </div>
 
-                <!-- Lista Ospiti Dinamica -->
-                <div class="form-group">
-                    <label data-it="Chi parteciperà?" data-pt="Quem participará?">Chi parteciperà? *</label>
-                    <div id="guests-list" class="guests-list">
-                        <div class="guest-entry">
-                            <input type="text" name="ospite_1" placeholder="Nome e Cognome" required>
-                            <button type="button" class="remove-guest" onclick="removeGuest(this)" style="display:none;">✕</button>
-                        </div>
-                    </div>
-                    <button type="button" class="add-guest-btn" onclick="addGuest()" data-it="+ Aggiungi ospite" data-pt="+ Adicionar convidado">+ Aggiungi ospite</button>
-                </div>
-
-                <div class="form-group">
-                    <label for="telefono" data-it="Telefono (opzionale)" data-pt="Telefone (opcional)">Telefono (opzionale)</label>
-                    <input type="tel" id="telefono" name="telefono">
-                </div>
-
-                <div class="form-group">
-                    <label data-it="Parteciperò a:" data-pt="Participarei em:">Parteciperò a: *</label>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="cerimonia" value="Si" checked>
-                            <span data-it="Cerimonia" data-pt="Cerimónia">Cerimonia</span>
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="ricevimento" value="Si" checked>
-                            <span data-it="Ricevimento" data-pt="Receção">Ricevimento</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="intolleranze" data-it="Allergie o intolleranze alimentari" data-pt="Alergias ou intolerâncias alimentares">Allergie o intolleranze alimentari</label>
-                    <textarea id="intolleranze" name="intolleranze" rows="3"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="messaggio" data-it="Un messaggio per noi" data-pt="Uma mensagem para nós">Un messaggio per noi</label>
-                    <textarea id="messaggio" name="messaggio" rows="4"></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit" data-it="Conferma Presenza" data-pt="Confirmar Presença">Conferma Presenza</button>
-            </form>
-
-            <div id="form-message" class="form-message"></div>
+            <p class="rsvp-note" data-it="Il modulo si aprirà in una nuova finestra" data-pt="O formulário abrirá numa nova janela">
+                Il modulo si aprirà in una nuova finestra
+            </p>
         </div>
     </section>
 
