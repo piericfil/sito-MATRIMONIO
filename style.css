@@ -247,12 +247,17 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     font-size: clamp(2.8rem, 8vw, 8rem);
     font-weight: 300;
     color: var(--azul-navy);
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
     padding: 0;
     letter-spacing: 0;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
     text-align: center;
     white-space: nowrap;
+    display: block;
+    width: fit-content;
 }
 
 .date {
