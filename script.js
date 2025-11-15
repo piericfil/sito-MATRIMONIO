@@ -394,57 +394,6 @@ if (locationCarouselTrack) {
     startAutoScroll();
 }
 
-// ===== GESTIONE OSPITI DINAMICI RSVP =====
-let guestCount = 1;
-
-function addGuest() {
-    guestCount++;
-    const guestsList = document.getElementById('guests-list');
-
-    const guestEntry = document.createElement('div');
-    guestEntry.classList.add('guest-entry');
-    guestEntry.innerHTML = `
-        <input type="text" name="ospite_${guestCount}" placeholder="Nome e Cognome" required>
-        <button type="button" class="remove-guest" onclick="removeGuest(this)">✕</button>
-    `;
-
-    guestsList.appendChild(guestEntry);
-
-    // Aggiorna traduzioni per il placeholder
-    if (currentLang === 'pt') {
-        guestEntry.querySelector('input').placeholder = 'Nome e Apelido';
-    }
-}
-
-function removeGuest(button) {
-    const guestEntry = button.parentElement;
-    guestEntry.remove();
-
-    // Se resta un solo ospite, nascondi il bottone rimuovi
-    const remainingGuests = document.querySelectorAll('.guest-entry');
-    if (remainingGuests.length === 1) {
-        remainingGuests[0].querySelector('.remove-guest').style.display = 'none';
-    }
-}
-
-// Mostra il bottone rimuovi quando ci sono più ospiti
-document.addEventListener('DOMContentLoaded', () => {
-    const guestsList = document.getElementById('guests-list');
-    if (guestsList) {
-        const observer = new MutationObserver(() => {
-            const guests = document.querySelectorAll('.guest-entry');
-            guests.forEach((guest, index) => {
-                const removeBtn = guest.querySelector('.remove-guest');
-                if (removeBtn) {
-                    removeBtn.style.display = guests.length > 1 ? 'inline-block' : 'none';
-                }
-            });
-        });
-
-        observer.observe(guestsList, { childList: true });
-    }
-});
-
 // Console message
 console.log('💕 Cata & Lorenzo - 26 Settembre 2026 💕');
 console.log('Sito creato con amore per celebrare il nostro giorno speciale');
