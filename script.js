@@ -456,3 +456,54 @@ if (rsvpForm) {
 // Console message
 console.log('💕 Catarina & Lorenzo - 26 Settembre 2026 💕');
 console.log('Sito creato con amore per celebrare il nostro giorno speciale');
+console.log('');
+console.log('🔍 DEBUG MODE - Per testare le immagini vai su: test.html');
+console.log('');
+
+// Image Loading Monitor
+function monitorImages() {
+    const images = document.querySelectorAll('img');
+    console.log(`📊 Totale immagini nella pagina: ${images.length}`);
+
+    let loaded = 0;
+    let errors = 0;
+
+    images.forEach((img, index) => {
+        const imgSrc = img.src || img.getAttribute('data-src');
+
+        if (img.complete) {
+            if (img.naturalHeight === 0) {
+                console.error(`❌ Immagine ${index + 1} ERRORE: ${imgSrc}`);
+                errors++;
+            } else {
+                console.log(`✅ Immagine ${index + 1} OK: ${imgSrc}`);
+                loaded++;
+            }
+        } else {
+            img.addEventListener('load', function() {
+                console.log(`✅ Immagine ${index + 1} caricata: ${imgSrc}`);
+                loaded++;
+            });
+
+            img.addEventListener('error', function() {
+                console.error(`❌ Immagine ${index + 1} ERRORE: ${imgSrc}`);
+                errors++;
+            });
+        }
+    });
+
+    setTimeout(() => {
+        console.log('');
+        console.log('📊 STATISTICHE FINALI:');
+        console.log(`   ✅ Caricate: ${loaded}`);
+        console.log(`   ❌ Errori: ${errors}`);
+        console.log(`   📊 Totale: ${images.length}`);
+    }, 3000);
+}
+
+// Esegui il monitor dopo che il DOM è caricato
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', monitorImages);
+} else {
+    monitorImages();
+}
