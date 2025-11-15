@@ -143,94 +143,6 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     transform: translateY(-2px);
 }
 
-/* Azulejo Patterns - DECORAZIONI PORTOGHESI */
-.azulejo-pattern {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    opacity: 0.15;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.azulejo-pattern::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image:
-        /* Griglia principale */
-        repeating-linear-gradient(0deg, var(--azul-primary) 0px, var(--azul-primary) 3px, transparent 3px, transparent 60px),
-        repeating-linear-gradient(90deg, var(--azul-primary) 0px, var(--azul-primary) 3px, transparent 3px, transparent 60px),
-        /* Cerchi decorativi */
-        radial-gradient(circle at 30px 30px, var(--gold) 8px, transparent 8px),
-        radial-gradient(circle at 30px 30px, var(--azul-light) 12px, transparent 12px),
-        /* Dettagli */
-        radial-gradient(circle at 15px 15px, var(--terracotta) 4px, transparent 4px),
-        radial-gradient(circle at 45px 15px, var(--orange) 4px, transparent 4px),
-        radial-gradient(circle at 15px 45px, var(--peach) 4px, transparent 4px),
-        radial-gradient(circle at 45px 45px, var(--azul-light) 4px, transparent 4px);
-    background-size: 60px 60px;
-    background-position: 0 0;
-}
-
-.azulejo-pattern::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-        repeating-conic-gradient(from 0deg at 30px 30px,
-            var(--azul-primary) 0deg,
-            var(--azul-primary) 45deg,
-            var(--gold) 45deg,
-            var(--gold) 90deg,
-            var(--terracotta) 90deg,
-            var(--terracotta) 135deg,
-            var(--azul-light) 135deg,
-            var(--azul-light) 180deg,
-            var(--azul-primary) 180deg);
-    background-size: 60px 60px;
-    opacity: 0.3;
-    mix-blend-mode: multiply;
-}
-
-.azulejo-top-left {
-    top: 0;
-    left: 0;
-}
-
-.azulejo-top-right {
-    top: 0;
-    right: 0;
-    transform: rotate(90deg);
-}
-
-.azulejo-bottom-left {
-    bottom: 0;
-    left: 0;
-    transform: rotate(-90deg);
-}
-
-.azulejo-bottom-right {
-    bottom: 0;
-    right: 0;
-    transform: rotate(180deg);
-}
-
-.azulejo-footer {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg);
-    width: 400px;
-    height: 150px;
-    opacity: 0.2;
-}
-
 .azulejo-divider {
     width: 120px;
     height: 6px;
@@ -334,12 +246,15 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     font-size: clamp(2.8rem, 8vw, 8rem);
     font-weight: 300;
     color: var(--azul-navy);
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
     letter-spacing: 4px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
     position: relative;
     white-space: nowrap;
     overflow: visible;
+    display: block;
+    text-align: center;
+    width: 100%;
 }
 
 .date {
@@ -1364,11 +1279,6 @@ footer p:first-of-type {
         gap: 12px;
     }
 
-    .azulejo-pattern {
-        width: 120px;
-        height: 120px;
-    }
-
     /* Fix container overflow */
     .container {
         padding: 0 15px;
@@ -1401,11 +1311,6 @@ footer p:first-of-type {
     .language-toggle {
         top: 15px;
         right: 15px;
-    }
-
-    .azulejo-pattern {
-        width: 100px;
-        height: 100px;
     }
 
     .hero-content::before {
