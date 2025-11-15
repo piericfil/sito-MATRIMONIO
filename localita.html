@@ -12,8 +12,8 @@
 <body>
     <!-- Language Toggle -->
     <div class="language-toggle">
-        <button onclick="changeLanguage('it')" id="lang-it" class="active">IT</button>
-        <button onclick="changeLanguage('pt')" id="lang-pt">PT</button>
+        <button onclick="changeLanguage('it')" id="lang-it" class="active">🇮🇹 IT</button>
+        <button onclick="changeLanguage('pt')" id="lang-pt">🇵🇹 PT</button>
     </div>
 
     <!-- Navigation -->
@@ -26,12 +26,38 @@
         </ul>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
+    <!-- Page Header con Carousel -->
+    <section class="page-header location-header">
+        <!-- Carousel Background -->
+        <div class="location-carousel-bg">
+            <div class="carousel-track" id="locationCarouselTrack">
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1920&q=80" alt="Alpi Orobie mountains">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80" alt="Mountain church">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80" alt="Mountain landscape">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80" alt="Italian Alps">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=1920&q=80" alt="Bergamo landscape">
+                </div>
+            </div>
+            <div class="carousel-overlay"></div>
+        </div>
+
+        <!-- Contenuto Header -->
+        <div class="container header-content">
             <h1 data-it="Località" data-pt="Localidades">Località</h1>
             <p data-it="Dove celebreremo il nostro matrimonio" data-pt="Onde celebraremos o nosso casamento">Dove celebreremo il nostro matrimonio</p>
         </div>
+
+        <!-- Indicators -->
+        <div class="location-carousel-indicators" id="locationCarouselIndicators"></div>
     </section>
 
     <!-- L'Evento -->

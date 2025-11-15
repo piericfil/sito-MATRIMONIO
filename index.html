@@ -12,8 +12,8 @@
 <body>
     <!-- Language Toggle -->
     <div class="language-toggle">
-        <button onclick="changeLanguage('it')" id="lang-it" class="active">IT</button>
-        <button onclick="changeLanguage('pt')" id="lang-pt">PT</button>
+        <button onclick="changeLanguage('it')" id="lang-it" class="active">🇮🇹 IT</button>
+        <button onclick="changeLanguage('pt')" id="lang-pt">🇵🇹 PT</button>
     </div>
 
     <!-- Navigation -->
@@ -50,10 +50,6 @@
             <!-- Overlay sfumato -->
             <div class="carousel-overlay"></div>
         </div>
-
-        <!-- Frecce Carousel FUORI -->
-        <button class="hero-carousel-btn prev" onclick="moveHeroCarousel(-1)">‹</button>
-        <button class="hero-carousel-btn next" onclick="moveHeroCarousel(1)">›</button>
 
         <!-- Contenuto Hero SOPRA -->
         <div class="hero-content">
@@ -126,24 +122,21 @@
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
 
+                <!-- Lista Ospiti Dinamica -->
                 <div class="form-group">
-                    <label for="nome" data-it="Nome e Cognome" data-pt="Nome e Apelido">Nome e Cognome *</label>
-                    <input type="text" id="nome" name="nome" required>
+                    <label data-it="Chi parteciperà?" data-pt="Quem participará?">Chi parteciperà? *</label>
+                    <div id="guests-list" class="guests-list">
+                        <div class="guest-entry">
+                            <input type="text" name="ospite_1" placeholder="Nome e Cognome" required>
+                            <button type="button" class="remove-guest" onclick="removeGuest(this)" style="display:none;">✕</button>
+                        </div>
+                    </div>
+                    <button type="button" class="add-guest-btn" onclick="addGuest()" data-it="+ Aggiungi ospite" data-pt="+ Adicionar convidado">+ Aggiungi ospite</button>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="telefono" data-it="Telefono" data-pt="Telefone">Telefono</label>
+                    <label for="telefono" data-it="Telefono (opzionale)" data-pt="Telefone (opcional)">Telefono (opzionale)</label>
                     <input type="tel" id="telefono" name="telefono">
-                </div>
-
-                <div class="form-group">
-                    <label for="ospiti" data-it="Numero di ospiti" data-pt="Número de convidados">Numero di ospiti *</label>
-                    <input type="number" id="ospiti" name="ospiti" min="1" max="10" value="1" required>
                 </div>
 
                 <div class="form-group">

@@ -277,6 +277,174 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// ===== LOCATION CAROUSEL BACKGROUND =====
+const locationCarouselTrack = document.getElementById('locationCarouselTrack');
+const locationCarouselIndicators = document.getElementById('locationCarouselIndicators');
+
+if (locationCarouselTrack) {
+    const slides = Array.from(locationCarouselTrack.children);
+    const slideCount = slides.length;
+    let currentIndex = 0;
+    let autoScrollInterval;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    // Crea indicators
+    if (locationCarouselIndicators) {
+        slides.forEach((_, index) => {
+            const indicator = document.createElement('div');
+            indicator.classList.add('location-carousel-indicator');
+            if (index === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => goToSlide(index));
+            locationCarouselIndicators.appendChild(indicator);
+        });
+    }
+
+    // Funzione per andare a uno slide specifico
+    function goToSlide(index) {
+        currentIndex = index;
+        if (currentIndex < 0) currentIndex = slideCount - 1;
+        if (currentIndex >= slideCount) currentIndex = 0;
+
+        const offset = -currentIndex * 100;
+        locationCarouselTrack.style.transform = `translateX(${offset}%)`;
+
+        // Aggiorna indicators
+        if (locationCarouselIndicators) {
+            const indicators = locationCarouselIndicators.querySelectorAll('.location-carousel-indicator');
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        // Reset auto-scroll
+        resetAutoScroll();
+    }
+
+    // Funzione per muovere il carousel
+    function moveCarousel(direction) {
+        goToSlide(currentIndex + direction);
+    }
+
+    // Auto-scroll ogni 6 secondi
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(() => {
+            moveCarousel(1);
+        }, 6000);
+    }
+
+    function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+    }
+
+    function resetAutoScroll() {
+        stopAutoScroll();
+        startAutoScroll();
+    }
+
+    // Touch/Swipe gestures per mobile
+    const locationHeader = document.querySelector('.location-header');
+    if (locationHeader) {
+        locationHeader.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoScroll();
+        });
+
+        locationHeader.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            resetAutoScroll();
+        });
+    }
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                // Swipe left - next
+                moveCarousel(1);
+            } else {
+                // Swipe right - prev
+                moveCarousel(-1);
+            }
+        }
+    }
+
+    // Click per cambiare slide
+    if (locationHeader) {
+        locationHeader.addEventListener('click', (e) => {
+            // Ignora click su indicators
+            if (e.target.classList.contains('location-carousel-indicator')) return;
+
+            const rect = locationHeader.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const width = rect.width;
+
+            if (clickX < width / 2) {
+                moveCarousel(-1); // Click sinistra = precedente
+            } else {
+                moveCarousel(1); // Click destra = successivo
+            }
+        });
+    }
+
+    // Avvia auto-scroll
+    startAutoScroll();
+}
+
+// ===== GESTIONE OSPITI DINAMICI RSVP =====
+let guestCount = 1;
+
+function addGuest() {
+    guestCount++;
+    const guestsList = document.getElementById('guests-list');
+
+    const guestEntry = document.createElement('div');
+    guestEntry.classList.add('guest-entry');
+    guestEntry.innerHTML = `
+        <input type="text" name="ospite_${guestCount}" placeholder="Nome e Cognome" required>
+        <button type="button" class="remove-guest" onclick="removeGuest(this)">✕</button>
+    `;
+
+    guestsList.appendChild(guestEntry);
+
+    // Aggiorna traduzioni per il placeholder
+    if (currentLang === 'pt') {
+        guestEntry.querySelector('input').placeholder = 'Nome e Apelido';
+    }
+}
+
+function removeGuest(button) {
+    const guestEntry = button.parentElement;
+    guestEntry.remove();
+
+    // Se resta un solo ospite, nascondi il bottone rimuovi
+    const remainingGuests = document.querySelectorAll('.guest-entry');
+    if (remainingGuests.length === 1) {
+        remainingGuests[0].querySelector('.remove-guest').style.display = 'none';
+    }
+}
+
+// Mostra il bottone rimuovi quando ci sono più ospiti
+document.addEventListener('DOMContentLoaded', () => {
+    const guestsList = document.getElementById('guests-list');
+    if (guestsList) {
+        const observer = new MutationObserver(() => {
+            const guests = document.querySelectorAll('.guest-entry');
+            guests.forEach((guest, index) => {
+                const removeBtn = guest.querySelector('.remove-guest');
+                if (removeBtn) {
+                    removeBtn.style.display = guests.length > 1 ? 'inline-block' : 'none';
+                }
+            });
+        });
+
+        observer.observe(guestsList, { childList: true });
+    }
+});
+
 // Console message
 console.log('💕 Cata & Lorenzo - 26 Settembre 2026 💕');
 console.log('Sito creato con amore per celebrare il nostro giorno speciale');
