@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cata & Lorenzo - 26 Settembre 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button onclick="changeLanguage('it')" id="lang-it" class="active">IT</button>
+        <button onclick="changeLanguage('pt')" id="lang-pt">PT</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home" data-it="Home" data-pt="Início">Home</a></li>
+            <li><a href="#storia" data-it="La Nostra Storia" data-pt="Nossa História">La Nostra Storia</a></li>
+            <li><a href="#evento" data-it="L'Evento" data-pt="O Evento">L'Evento</a></li>
+            <li><a href="#logistica" data-it="Logistica" data-pt="Logística">Logistica</a></li>
+            <li><a href="#programma" data-it="Programma" data-pt="Programa">Programma</a></li>
+            <li><a href="#galleria" data-it="Galleria" data-pt="Galeria">Galleria</a></li>
+            <li><a href="#rsvp" data-it="RSVP" data-pt="RSVP">RSVP</a></li>
+            <li><a href="#regali" data-it="Lista Regali" data-pt="Lista de Presentes">Lista Regali</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="azulejo-pattern azulejo-top-left"></div>
+        <div class="azulejo-pattern azulejo-top-right"></div>
+        <div class="hero-content">
+            <h1 class="names">Cata & Lorenzo</h1>
+            <p class="date">26 Settembre 2026</p>
+            <p class="location" data-it="Fondra & San Pellegrino Terme" data-pt="Fondra & San Pellegrino Terme">Fondra & San Pellegrino Terme</p>
+
+            <!-- Countdown -->
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span id="days">0</span>
+                    <p data-it="Giorni" data-pt="Dias">Giorni</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">0</span>
+                    <p data-it="Ore" data-pt="Horas">Ore</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">0</span>
+                    <p data-it="Minuti" data-pt="Minutos">Minuti</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">0</span>
+                    <p data-it="Secondi" data-pt="Segundos">Secondi</p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- La Nostra Storia -->
+    <section id="storia" class="storia">
+        <div class="container">
+            <div class="azulejo-divider"></div>
+            <h2 data-it="La Nostra Storia" data-pt="Nossa História">La Nostra Storia</h2>
+
+            <div class="storia-content">
+                <div class="storia-text">
+                    <div class="storia-chapter">
+                        <h3 data-it="Porto, dove tutto è iniziato" data-pt="Porto, onde tudo começou">Porto, dove tutto è iniziato</h3>
+                        <p data-it="Ci siamo incontrati nella magica città di Porto, dove le strade acciottolate e il fiume Douro hanno fatto da sfondo al nostro primo sguardo. Era un giorno qualunque che si è trasformato nell'inizio della nostra avventura insieme."
+                           data-pt="Conhecemo-nos na mágica cidade do Porto, onde as ruas de paralelepípedos e o rio Douro foram o cenário do nosso primeiro olhar. Era um dia comum que se transformou no início da nossa aventura juntos.">
+                           Ci siamo incontrati nella magica città di Porto, dove le strade acciottolate e il fiume Douro hanno fatto da sfondo al nostro primo sguardo. Era un giorno qualunque che si è trasformato nell'inizio della nostra avventura insieme.
+                        </p>
+                    </div>
+
+                    <div class="storia-chapter">
+                        <h3 data-it="Il Portogallo, la nostra casa" data-pt="Portugal, a nossa casa">Il Portogallo, la nostra casa</h3>
+                        <p data-it="Abbiamo vissuto una fase bellissima della nostra relazione in Portogallo, dove ogni giorno era un'opportunità per scoprire nuovi angoli nascosti, gustare pastel de nata e imparare che 'saudade' è molto più di una parola - è ciò che sentiamo ogni volta che pensiamo a quei momenti."
+                           data-pt="Vivemos uma fase linda do nosso relacionamento em Portugal, onde cada dia era uma oportunidade para descobrir novos recantos escondidos, saborear pastéis de nata e aprender que 'saudade' é muito mais do que uma palavra - é o que sentimos sempre que pensamos nesses momentos.">
+                           Abbiamo vissuto una fase bellissima della nostra relazione in Portogallo, dove ogni giorno era un'opportunità per scoprire nuovi angoli nascosti, gustare pastel de nata e imparare che 'saudade' è molto più di una parola - è ciò che sentiamo ogni volta che pensiamo a quei momenti.
+                        </p>
+                    </div>
+
+                    <div class="storia-chapter">
+                        <h3 data-it="L'Italia e le nostre montagne" data-pt="A Itália e as nossas montanhas">L'Italia e le nostre montagne</h3>
+                        <p data-it="Insieme ci siamo trasferiti in Italia, dove abbiamo trovato casa tra le montagne. Tra escursioni, panorami mozzafiato e momenti semplici, abbiamo costruito la nostra vita quotidiana. Viaggiare, esplorare e condividere la bellezza della natura sono diventati parte di noi."
+                           data-pt="Juntos mudámo-nos para a Itália, onde encontrámos casa entre as montanhas. Entre caminhadas, paisagens deslumbrantes e momentos simples, construímos a nossa vida quotidiana. Viajar, explorar e partilhar a beleza da natureza tornaram-se parte de nós.">
+                           Insieme ci siamo trasferiti in Italia, dove abbiamo trovato casa tra le montagne. Tra escursioni, panorami mozzafiato e momenti semplici, abbiamo costruito la nostra vita quotidiana. Viaggiare, esplorare e condividere la bellezza della natura sono diventati parte di noi.
+                        </p>
+                    </div>
+
+                    <div class="storia-chapter">
+                        <h3 data-it="Il nostro giorno speciale" data-pt="O nosso dia especial">Il nostro giorno speciale</h3>
+                        <p data-it="Ora siamo pronti a celebrare il nostro amore circondati dalle persone che amiamo, in un luogo che unisce le nostre due anime: l'intimità delle montagne italiane con il calore e la vivacità del Portogallo. Sarà una festa semplice, naturale e piena di dettagli che raccontano la nostra storia."
+                           data-pt="Agora estamos prontos para celebrar o nosso amor rodeados pelas pessoas que amamos, num lugar que une as nossas duas almas: a intimidade das montanhas italianas com o calor e a vivacidade de Portugal. Será uma festa simples, natural e cheia de detalhes que contam a nossa história.">
+                           Ora siamo pronti a celebrare il nostro amore circondati dalle persone che amiamo, in un luogo che unisce le nostre due anime: l'intimità delle montagne italiane con il calore e la vivacità del Portogallo. Sarà una festa semplice, naturale e piena di dettagli che raccontano la nostra storia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- L'Evento -->
+    <section id="evento" class="evento">
+        <div class="container">
+            <div class="azulejo-divider"></div>
+            <h2 data-it="L'Evento" data-pt="O Evento">L'Evento</h2>
+
+            <div class="evento-cards">
+                <div class="evento-card">
+                    <div class="azulejo-corner"></div>
+                    <h3 data-it="Cerimonia" data-pt="Cerimónia">Cerimonia</h3>
+                    <h4>Chiesa di Fondra</h4>
+                    <p class="time">Ore 15:00</p>
+                    <p data-it="La cerimonia si terrà nella suggestiva Chiesa di Fondra, un piccolo borgo di montagna immerso nella natura delle Alpi Orobie."
+                       data-pt="A cerimónia terá lugar na sugestiva Igreja de Fondra, uma pequena aldeia de montanha imersa na natureza dos Alpes Oróbios.">
+                       La cerimonia si terrà nella suggestiva Chiesa di Fondra, un piccolo borgo di montagna immerso nella natura delle Alpi Orobie.
+                    </p>
+                    <p class="address">Fondra, 24010 Oltre il Colle (BG)</p>
+                </div>
+
+                <div class="evento-card">
+                    <div class="azulejo-corner"></div>
+                    <h3 data-it="Ricevimento" data-pt="Receção">Ricevimento</h3>
+                    <h4>San Pellegrino Terme</h4>
+                    <p class="time">Ore 18:00</p>
+                    <p data-it="Il ricevimento si svolgerà a San Pellegrino Terme, celebre località termale ai piedi delle montagne bergamasche."
+                       data-pt="A receção terá lugar em San Pellegrino Terme, famosa estância termal aos pés das montanhas bergamascas.">
+                       Il ricevimento si svolgerà a San Pellegrino Terme, celebre località termale ai piedi delle montagne bergamasche.
+                    </p>
+                    <p class="address">San Pellegrino Terme (BG)</p>
+                    <p class="note" data-it="*Maggiori dettagli sul luogo esatto verranno comunicati prossimamente"
+                       data-pt="*Mais detalhes sobre o local exato serão comunicados em breve">
+                       *Maggiori dettagli sul luogo esatto verranno comunicati prossimamente
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logistica -->
+    <section id="logistica" class="logistica">
+        <div class="container">
+            <div class="azulejo-divider"></div>
+            <h2 data-it="Come Arrivare" data-pt="Como Chegar">Come Arrivare</h2>
+
+            <div class="logistica-grid">
+                <div class="logistica-item">
+                    <h3>✈️ <span data-it="Aeroporti" data-pt="Aeroportos">Aeroporti</span></h3>
+                    <div class="logistica-content">
+                        <div class="airport">
+                            <h4>Milano Bergamo (BGY)</h4>
+                            <p data-it="Aeroporto più vicino - 45 km da San Pellegrino Terme"
+                               data-pt="Aeroporto mais próximo - 45 km de San Pellegrino Terme">
+                               Aeroporto più vicino - 45 km da San Pellegrino Terme
+                            </p>
+                        </div>
+                        <div class="airport">
+                            <h4>Milano Malpensa (MXP)</h4>
+                            <p data-it="Alternativa - 110 km da San Pellegrino Terme"
+                               data-pt="Alternativa - 110 km de San Pellegrino Terme">
+                               Alternativa - 110 km da San Pellegrino Terme
+                            </p>
+                        </div>
+                        <div class="airport">
+                            <h4>Milano Linate (LIN)</h4>
+                            <p data-it="Alternativa - 80 km da San Pellegrino Terme"
+                               data-pt="Alternativa - 80 km de San Pellegrino Terme">
+                               Alternativa - 80 km da San Pellegrino Terme
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="logistica-item">
+                    <h3>🚗 <span data-it="In Auto" data-pt="De Carro">In Auto</span></h3>
+                    <div class="logistica-content">
+                        <p data-it="Da Milano: Prendere l'autostrada A4 direzione Bergamo, poi seguire le indicazioni per San Pellegrino Terme (circa 1 ora)"
+                           data-pt="De Milão: Apanhar a autoestrada A4 direção Bergamo, depois seguir as indicações para San Pellegrino Terme (cerca de 1 hora)">
+                           Da Milano: Prendere l'autostrada A4 direzione Bergamo, poi seguire le indicazioni per San Pellegrino Terme (circa 1 ora)
+                        </p>
+                        <p data-it="Da Bergamo: Seguire la SP470 direzione Valle Brembana (circa 30 minuti)"
+                           data-pt="De Bergamo: Seguir a SP470 direção Valle Brembana (cerca de 30 minutos)">
+                           Da Bergamo: Seguire la SP470 direzione Valle Brembana (circa 30 minuti)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="logistica-item">
+                    <h3>🅿️ <span data-it="Parcheggio" data-pt="Estacionamento">Parcheggio</span></h3>
+                    <div class="logistica-content">
+                        <p data-it="Parcheggi disponibili sia a Fondra che a San Pellegrino Terme. Maggiori dettagli verranno comunicati prossimamente."
+                           data-pt="Estacionamento disponível tanto em Fondra como em San Pellegrino Terme. Mais detalhes serão comunicados em breve.">
+                           Parcheggi disponibili sia a Fondra che a San Pellegrino Terme. Maggiori dettagli verranno comunicati prossimamente.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="logistica-item">
+                    <h3>🏨 <span data-it="Alloggio" data-pt="Alojamento">Alloggio</span></h3>
+                    <div class="logistica-content">
+                        <p data-it="San Pellegrino Terme e la Valle Brembana offrono diverse opzioni di alloggio, dagli hotel agli agriturismi. Vi consigliamo di prenotare con anticipo."
+                           data-pt="San Pellegrino Terme e o Valle Brembana oferecem diversas opções de alojamento, desde hotéis a agroturismos. Recomendamos reservar com antecedência.">
+                           San Pellegrino Terme e la Valle Brembana offrono diverse opzioni di alloggio, dagli hotel agli agriturismi. Vi consigliamo di prenotare con anticipo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programma -->
+    <section id="programma" class="programma">
+        <div class="container">
+            <div class="azulejo-divider"></div>
+            <h2 data-it="Programma della Giornata" data-pt="Programa do Dia">Programma della Giornata</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">14:30</div>
+                    <div class="timeline-content">
+                        <h3 data-it="Arrivo degli ospiti" data-pt="Chegada dos convidados">Arrivo degli ospiti</h3>
+                        <p data-it="Chiesa di Fondra" data-pt="Igreja de Fondra">Chiesa di Fondra</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:00</div>
+                    <div class="timeline-content">
+                        <h3 data-it="Cerimonia" data-pt="Cerimónia">Cerimonia</h3>
+                        <p data-it="Celebrazione del matrimonio" data-pt="Celebração do casamento">Celebrazione del matrimonio</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">16:00</div>
+                    <div class="timeline-content">
+                        <h3 data-it="Foto e congratulazioni" data-pt="Fotos e parabéns">Foto e congratulazioni</h3>
+                        <p data-it="Momento per foto di gruppo e saluti" data-pt="Momento para fotos de grupo e cumprimentos">Momento per foto di gruppo e saluti</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">18:00</div>
+                    <div class="timeline-content">
+                        <h3 data-it="Aperitivo di benvenuto" data-pt="Aperitivo de boas-vindas">Aperitivo di benvenuto</h3>
+                        <p data-it="San Pellegrino Terme - Inizio del ricevimento" data-pt="San Pellegrino Terme - Início da receção">San Pellegrino Terme - Inizio del ricevimento</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">20:00</div>
+                    <div class="timeline-content">
+                        <h3 data-it="Cena" data-pt="Jantar">Cena</h3>
+                        <p data-it="Cena con sapori italiani e portoghesi" data-pt="Jantar com sabores italianos e portugueses">Cena con sapori italiani e portoghesi</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">22:30</div>
+                    <div class="timeline-content">
+                        <h3 data-it="Festa e balli" data-pt="Festa e danças">Festa e balli</h3>
+                        <p data-it="Musica, balli e divertimento fino a tardi!" data-pt="Música, dança e diversão até tarde!">Musica, balli e divertimento fino a tardi!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galleria -->
+    <section id="galleria" class="galleria">
+        <div class="container">
+            <div class="azulejo-divider"></div>
+            <h2 data-it="I Nostri Momenti" data-pt="Os Nossos Momentos">I Nostri Momenti</h2>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="placeholder-image">
+                        <p data-it="Porto" data-pt="Porto">Porto</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-image">
+                        <p data-it="Portogallo" data-pt="Portugal">Portogallo</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-image">
+                        <p data-it="Montagne" data-pt="Montanhas">Montagne</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-image">
+                        <p data-it="Viaggi" data-pt="Viagens">Viaggi</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-image">
+                        <p data-it="Noi" data-pt="Nós">Noi</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-image">
+                        <p data-it="Italia" data-pt="Itália">Italia</p>
+                    </div>
+                </div>
+            </div>
+            <p class="gallery-note" data-it="*Le vostre foto preferite saranno aggiunte presto!" data-pt="*As vossas fotos favoritas serão adicionadas em breve!">
+                *Le vostre foto preferite saranno aggiunte presto!
+            </p>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp" class="rsvp">
+        <div class="container">
+            <div class="azulejo-divider"></div>
+            <h2 data-it="Conferma la tua presenza" data-pt="Confirma a tua presença">Conferma la tua presenza</h2>
+            <p class="rsvp-subtitle" data-it="Ci farebbe molto piacere averti con noi! Per favore conferma entro il 30 giugno 2026"
+               data-pt="Ficamos muito felizes em ter-te connosco! Por favor confirma até 30 de junho de 2026">
+               Ci farebbe molto piacere averti con noi! Per favore conferma entro il 30 giugno 2026
+            </p>
+
+            <form id="rsvp-form" class="rsvp-form">
+                <div class="form-group">
+                    <label for="nome" data-it="Nome e Cognome" data-pt="Nome e Apelido">Nome e Cognome *</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono" data-it="Telefono" data-pt="Telefone">Telefono</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+
+                <div class="form-group">
+                    <label for="ospiti" data-it="Numero di ospiti" data-pt="Número de convidados">Numero di ospiti *</label>
+                    <input type="number" id="ospiti" name="ospiti" min="1" max="10" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label data-it="Parteciperò a:" data-pt="Participarei em:">Parteciperò a: *</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="cerimonia" value="cerimonia" checked>
+                            <span data-it="Cerimonia" data-pt="Cerimónia">Cerimonia</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="ricevimento" value="ricevimento" checked>
+                            <span data-it="Ricevimento" data-pt="Receção">Ricevimento</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="intolleranze" data-it="Allergie o intolleranze alimentari" data-pt="Alergias ou intolerâncias alimentares">Allergie o intolleranze alimentari</label>
+                    <textarea id="intolleranze" name="intolleranze" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="messaggio" data-it="Un messaggio per noi" data-pt="Uma mensagem para nós">Un messaggio per noi</label>
+                    <textarea id="messaggio" name="messaggio" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit" data-it="Conferma Presenza" data-pt="Confirmar Presença">Conferma Presenza</button>
+            </form>
+
+            <div id="form-message" class="form-message"></div>
+        </div>
+    </section>
+
+    <!-- Lista Regali -->
+    <section id="regali" class="regali">
+        <div class="container">
+            <div class="azulejo-divider"></div>
+            <h2 data-it="Lista Regali" data-pt="Lista de Presentes">Lista Regali</h2>
+
+            <div class="regali-content">
+                <p data-it="La vostra presenza è il regalo più grande che potremmo desiderare! Se vorrete comunque farci un dono, apprezzeremmo molto un contributo per il nostro viaggio di nozze o per iniziare la nostra vita insieme."
+                   data-pt="A vossa presença é o maior presente que poderíamos desejar! Se mesmo assim quiserem oferecer-nos algo, apreciaríamos muito uma contribuição para a nossa lua de mel ou para começar a nossa vida juntos.">
+                   La vostra presenza è il regalo più grande che potremmo desiderare! Se vorrete comunque farci un dono, apprezzeremmo molto un contributo per il nostro viaggio di nozze o per iniziare la nostra vita insieme.
+                </p>
+
+                <div class="regali-box">
+                    <h3 data-it="💝 Contributo per il nostro futuro" data-pt="💝 Contribuição para o nosso futuro">💝 Contributo per il nostro futuro</h3>
+                    <p data-it="Se desideri inviarci un regalo, scrivici a:" data-pt="Se desejas enviar-nos um presente, escreve-nos para:">
+                        Se desideri inviarci un regalo, scrivici a:
+                    </p>
+                    <a href="mailto:cata.lorenzo.wedding@email.com" class="email-link">cata.lorenzo.wedding@email.com</a>
+                    <p class="note" data-it="Ti invieremo le nostre coordinate bancarie via email" data-pt="Enviar-te-emos as nossas coordenadas bancárias por email">
+                        Ti invieremo le nostre coordinate bancarie via email
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="azulejo-pattern azulejo-footer"></div>
+        <p>Cata & Lorenzo</p>
+        <p>26 Settembre 2026</p>
+        <p class="footer-note" data-it="Con amore da Portogallo e Italia" data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
