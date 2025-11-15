@@ -224,9 +224,11 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     max-width: 800px;
     z-index: 1;
     position: relative;
-    text-align: center;
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Decorazione elegante sopra il titolo */
@@ -247,17 +249,11 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     font-size: clamp(2.8rem, 8vw, 8rem);
     font-weight: 300;
     color: var(--azul-navy);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
     padding: 0;
     letter-spacing: 0;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
-    text-align: center;
     white-space: nowrap;
-    display: block;
-    width: fit-content;
     transform: translateX(-80px);
 }
 
