@@ -143,13 +143,14 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     transform: translateY(-2px);
 }
 
-/* Azulejo Patterns - PIÙ DECORATIVI */
+/* Azulejo Patterns - DECORAZIONI PORTOGHESI */
 .azulejo-pattern {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    opacity: 0.4;
+    width: 250px;
+    height: 250px;
+    opacity: 0.15;
     pointer-events: none;
+    z-index: 0;
 }
 
 .azulejo-pattern::before {
@@ -160,44 +161,74 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     right: 0;
     bottom: 0;
     background-image:
-        repeating-linear-gradient(0deg, var(--azul-primary) 0px, var(--azul-primary) 2px, transparent 2px, transparent 20px),
-        repeating-linear-gradient(90deg, var(--azul-primary) 0px, var(--azul-primary) 2px, transparent 2px, transparent 20px),
-        radial-gradient(circle at 10px 10px, var(--gold) 4px, transparent 4px),
-        radial-gradient(circle at 10px 10px, var(--azul-light) 2px, transparent 2px);
-    background-size: 20px 20px;
+        /* Griglia principale */
+        repeating-linear-gradient(0deg, var(--azul-primary) 0px, var(--azul-primary) 3px, transparent 3px, transparent 60px),
+        repeating-linear-gradient(90deg, var(--azul-primary) 0px, var(--azul-primary) 3px, transparent 3px, transparent 60px),
+        /* Cerchi decorativi */
+        radial-gradient(circle at 30px 30px, var(--gold) 8px, transparent 8px),
+        radial-gradient(circle at 30px 30px, var(--azul-light) 12px, transparent 12px),
+        /* Dettagli */
+        radial-gradient(circle at 15px 15px, var(--terracotta) 4px, transparent 4px),
+        radial-gradient(circle at 45px 15px, var(--orange) 4px, transparent 4px),
+        radial-gradient(circle at 15px 45px, var(--peach) 4px, transparent 4px),
+        radial-gradient(circle at 45px 45px, var(--azul-light) 4px, transparent 4px);
+    background-size: 60px 60px;
     background-position: 0 0;
 }
 
 .azulejo-pattern::after {
     content: '';
     position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background:
-        conic-gradient(from 45deg at 50% 50%, var(--azul-primary) 0deg, transparent 90deg, var(--gold) 180deg, transparent 270deg, var(--azul-primary) 360deg);
-    background-size: 40px 40px;
-    opacity: 0.5;
+        repeating-conic-gradient(from 0deg at 30px 30px,
+            var(--azul-primary) 0deg,
+            var(--azul-primary) 45deg,
+            var(--gold) 45deg,
+            var(--gold) 90deg,
+            var(--terracotta) 90deg,
+            var(--terracotta) 135deg,
+            var(--azul-light) 135deg,
+            var(--azul-light) 180deg,
+            var(--azul-primary) 180deg);
+    background-size: 60px 60px;
+    opacity: 0.3;
+    mix-blend-mode: multiply;
 }
 
 .azulejo-top-left {
-    top: 20px;
-    left: 20px;
+    top: 0;
+    left: 0;
 }
 
 .azulejo-top-right {
-    top: 20px;
-    right: 20px;
+    top: 0;
+    right: 0;
     transform: rotate(90deg);
+}
+
+.azulejo-bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: rotate(-90deg);
+}
+
+.azulejo-bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
 }
 
 .azulejo-footer {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%) rotate(180deg);
-    width: 300px;
-    height: 120px;
+    width: 400px;
+    height: 150px;
+    opacity: 0.2;
 }
 
 .azulejo-divider {
@@ -298,7 +329,7 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
 
 .names {
     font-family: var(--font-serif);
-    font-size: clamp(3.5rem, 9vw, 8rem);
+    font-size: clamp(2.8rem, 8vw, 8rem);
     font-weight: 300;
     color: var(--azul-navy);
     margin-bottom: 20px;
@@ -306,6 +337,7 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
     position: relative;
     white-space: nowrap;
+    overflow: visible;
 }
 
 .date {
@@ -1242,7 +1274,7 @@ footer p:first-of-type {
 /* Responsive */
 @media (max-width: 768px) {
     .names {
-        font-size: 2.8rem;
+        font-size: clamp(2.2rem, 7vw, 2.8rem);
         letter-spacing: 2px;
     }
 
@@ -1415,8 +1447,8 @@ footer p:first-of-type {
 
     /* Text sizing */
     .names {
-        font-size: 2.2rem;
-        letter-spacing: 1px;
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+        letter-spacing: 0px;
     }
 
     .date {
@@ -2137,5 +2169,36 @@ footer p:first-of-type {
     /* Hide carousel buttons on very small screens for cleaner look */
     .hero-carousel-btn {
         opacity: 0.8;
+    }
+}
+
+/* Ultra-small screens - titolo ancora più piccolo per evitare wrapping */
+@media (max-width: 380px) {
+    .names {
+        font-size: clamp(1.4rem, 5vw, 1.8rem);
+        letter-spacing: -0.5px;
+    }
+
+    .hero {
+        padding: 70px 8px 50px;
+    }
+
+    .countdown {
+        gap: 6px;
+        padding: 0 5px;
+    }
+
+    .countdown-item {
+        min-width: 55px;
+        max-width: 70px;
+        padding: 10px 5px;
+    }
+
+    .countdown-item span {
+        font-size: 1.5rem;
+    }
+
+    .countdown-item p {
+        font-size: 0.6rem;
     }
 }
