@@ -247,17 +247,12 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     font-size: clamp(2.8rem, 8vw, 8rem);
     font-weight: 300;
     color: var(--azul-navy);
-    margin: 0 auto 20px;
+    margin: 0;
+    padding: 0;
     letter-spacing: 0;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
-    position: relative;
-    white-space: nowrap;
-    overflow: visible;
-    display: inline-block;
     text-align: center;
-    width: auto;
-    left: 50%;
-    transform: translateX(-50%);
+    white-space: nowrap;
 }
 
 .date {
@@ -1310,6 +1305,10 @@ footer p:first-of-type {
         padding: 80px 10px 60px;
     }
 
+    .hero-content {
+        padding: 0 10px;
+    }
+
     .language-toggle {
         top: 15px;
         right: 15px;
@@ -2106,6 +2105,10 @@ footer p:first-of-type {
 
     .hero {
         padding: 70px 8px 50px;
+    }
+
+    .hero-content {
+        padding: 0 8px;
     }
 
     .countdown {
