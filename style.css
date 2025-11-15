@@ -258,6 +258,7 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     white-space: nowrap;
     display: block;
     width: fit-content;
+    transform: translateX(-20px);
 }
 
 .date {
@@ -1213,6 +1214,7 @@ footer p:first-of-type {
 @media (max-width: 768px) {
     .names {
         font-size: clamp(2.2rem, 7vw, 2.8rem);
+        transform: translateX(-10px);
     }
 
     .countdown {
@@ -1379,6 +1381,7 @@ footer p:first-of-type {
     /* Text sizing */
     .names {
         font-size: clamp(1.6rem, 6vw, 2.2rem);
+        transform: translateX(-5px);
     }
 
     .date {
@@ -2106,6 +2109,7 @@ footer p:first-of-type {
 @media (max-width: 380px) {
     .names {
         font-size: clamp(1.4rem, 5vw, 1.8rem);
+        transform: translateX(-5px);
     }
 
     .hero {
