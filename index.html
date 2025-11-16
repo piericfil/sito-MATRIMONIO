@@ -27,8 +27,22 @@
 <body>
     <!-- Language Toggle -->
     <div class="language-toggle">
-        <button onclick="changeLanguage('it')" id="lang-it" class="active">🇮🇹 IT</button>
-        <button onclick="changeLanguage('pt')" id="lang-pt">🇵🇹 PT</button>
+        <button onclick="changeLanguage('it')" id="lang-it" class="active">
+            <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                <rect width="1" height="2" fill="#009246"/>
+                <rect x="1" width="1" height="2" fill="#fff"/>
+                <rect x="2" width="1" height="2" fill="#ce2b37"/>
+            </svg>
+            IT
+        </button>
+        <button onclick="changeLanguage('pt')" id="lang-pt">
+            <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                <rect width="1.2" height="2" fill="#006600"/>
+                <rect x="1.2" width="1.8" height="2" fill="#FF0000"/>
+                <circle cx="1.2" cy="1" r="0.5" fill="#FFFF00" stroke="#0000FF" stroke-width="0.1"/>
+            </svg>
+            PT
+        </button>
     </div>
 
     <!-- Navigation -->
@@ -195,7 +209,7 @@
 
     <!-- Decorazione Azulejos -->
     <div class="azulejos-decoration">
-        <img src="https://images.pexels.com/photos/3566187/pexels-photo-3566187.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Azulejos Portoghesi" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1920&q=80" alt="Piastrelle Azulejos Portoghesi Blu e Oro" loading="lazy">
     </div>
 
     <!-- Footer -->
