@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Caricamento Immagini - Catarina & Lorenzo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .test-section h2 {
+            margin-bottom: 15px;
+            color: #2E5C8A;
+            font-size: 1.3rem;
+        }
+
+        .image-test {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .image-test.success {
+            border-color: #4CAF50;
+            background: #f1f8f4;
+        }
+
+        .image-test.error {
+            border-color: #f44336;
+            background: #fef1f1;
+        }
+
+        .image-test.loading {
+            border-color: #FFA726;
+            background: #fff8f1;
+        }
+
+        .image-info {
+            margin-bottom: 10px;
+        }
+
+        .image-info strong {
+            display: inline-block;
+            width: 120px;
+        }
+
+        .status {
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .status.success {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .status.error {
+            background: #f44336;
+            color: white;
+        }
+
+        .status.loading {
+            background: #FFA726;
+            color: white;
+        }
+
+        .image-preview {
+            margin-top: 10px;
+            max-width: 300px;
+            max-height: 200px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+        }
+
+        .error-message {
+            color: #f44336;
+            margin-top: 10px;
+            padding: 10px;
+            background: #fef1f1;
+            border-radius: 3px;
+        }
+
+        .console-log {
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+
+        .log-entry {
+            margin-bottom: 5px;
+        }
+
+        .log-entry.error {
+            color: #ff6b6b;
+        }
+
+        .log-entry.success {
+            color: #51cf66;
+        }
+
+        .log-entry.info {
+            color: #74c0fc;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Test Caricamento Immagini - Sito Matrimonio</h1>
+
+    <div class="test-section">
+        <h2>📊 Statistiche</h2>
+        <div id="stats">
+            <p><strong>Totale immagini:</strong> <span id="total">0</span></p>
+            <p><strong>Caricate con successo:</strong> <span id="success">0</span></p>
+            <p><strong>Errori:</strong> <span id="errors">0</span></p>
+            <p><strong>In caricamento:</strong> <span id="loading">0</span></p>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>📋 Dettagli Test</h2>
+        <div id="tests"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>🖥️ Console Log</h2>
+        <div class="console-log" id="console"></div>
+    </div>
+
+    <script>
+        // Array di tutte le immagini del sito
+        const images = [
+            // Hero Carousel - index.html
+            {
+                url: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80',
+                name: 'Hero Carousel 1',
+                page: 'index.html'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1920&q=80',
+                name: 'Hero Carousel 2',
+                page: 'index.html'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1920&q=80',
+                name: 'Hero Carousel 3',
+                page: 'index.html'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1920&q=80',
+                name: 'Hero Carousel 4',
+                page: 'index.html'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1920&q=80',
+                name: 'Hero Carousel 5',
+                page: 'index.html'
+            },
+            // Azulejos - index.html
+            {
+                url: 'https://images.pexels.com/photos/3566187/pexels-photo-3566187.jpeg?auto=compress&cs=tinysrgb&w=1920',
+                name: 'Azulejos Index',
+                page: 'index.html'
+            },
+            // Location Carousel - localita.html
+            {
+                url: 'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1920&q=80',
+                name: 'Location Carousel 1',
+                page: 'localita.html'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80',
+                name: 'Location Carousel 2',
+                page: 'localita.html'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80',
+                name: 'Location Carousel 3',
+                page: 'localita.html'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?w=1920&q=80',
+                name: 'Location Carousel 4',
+                page: 'localita.html'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=1920&q=80',
+                name: 'Location Carousel 5',
+                page: 'localita.html'
+            },
+            // Azulejos - localita.html
+            {
+                url: 'https://images.pexels.com/photos/1534560/pexels-photo-1534560.jpeg?auto=compress&cs=tinysrgb&w=1920',
+                name: 'Azulejos Località',
+                page: 'localita.html'
+            },
+            // Gallery - storia.html
+            {
+                url: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&q=80',
+                name: 'Gallery Porto',
+                page: 'storia.html'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/800px-Cristiano_Ronaldo_2018.jpg',
+                name: 'Cristiano Ronaldo',
+                page: 'storia.html'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
+                name: 'Gallery Mountains',
+                page: 'storia.html'
+            },
+            {
+                url: 'https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg?auto=compress&cs=tinysrgb&w=600',
+                name: 'Gallery Italia',
+                page: 'storia.html'
+            },
+            {
+                url: 'https://images.pexels.com/photos/208733/pexels-photo-208733.jpeg?auto=compress&cs=tinysrgb&w=600',
+                name: 'Gallery Portugal',
+                page: 'storia.html'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=600&q=80',
+                name: 'Gallery Italy',
+                page: 'storia.html'
+            },
+            // Azulejos - storia.html
+            {
+                url: 'https://images.pexels.com/photos/9527631/pexels-photo-9527631.jpeg?auto=compress&cs=tinysrgb&w=1920',
+                name: 'Azulejos Storia',
+                page: 'storia.html'
+            },
+            // Programma Timeline - programma.html
+            {
+                url: 'https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=600&q=80',
+                name: 'Timeline Chiesa',
+                page: 'programma.html'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=80',
+                name: 'Timeline Cerimonia',
+                page: 'programma.html'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80',
+                name: 'Timeline Foto',
+                page: 'programma.html'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=80',
+                name: 'Timeline Aperitivo',
+                page: 'programma.html'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80',
+                name: 'Timeline Cena',
+                page: 'programma.html'
+            },
+            {
+                url: 'https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600',
+                name: 'Timeline Festa',
+                page: 'programma.html'
+            },
+            // Azulejos - programma.html
+            {
+                url: 'https://images.pexels.com/photos/11424532/pexels-photo-11424532.jpeg?auto=compress&cs=tinysrgb&w=1920',
+                name: 'Azulejos Programma',
+                page: 'programma.html'
+            }
+        ];
+
+        let stats = {
+            total: images.length,
+            success: 0,
+            errors: 0,
+            loading: images.length
+        };
+
+        function log(message, type = 'info') {
+            const consoleEl = document.getElementById('console');
+            const timestamp = new Date().toLocaleTimeString();
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            entry.textContent = `[${timestamp}] ${message}`;
+            consoleEl.appendChild(entry);
+            consoleEl.scrollTop = consoleEl.scrollHeight;
+
+            // Log anche nella console del browser
+            if (type === 'error') {
+                console.error(message);
+            } else if (type === 'success') {
+                console.log('✅', message);
+            } else {
+                console.log('ℹ️', message);
+            }
+        }
+
+        function updateStats() {
+            document.getElementById('total').textContent = stats.total;
+            document.getElementById('success').textContent = stats.success;
+            document.getElementById('errors').textContent = stats.errors;
+            document.getElementById('loading').textContent = stats.loading;
+        }
+
+        function testImage(imageData, index) {
+            const testsEl = document.getElementById('tests');
+            const testDiv = document.createElement('div');
+            testDiv.className = 'image-test loading';
+            testDiv.id = `test-${index}`;
+
+            testDiv.innerHTML = `
+                <div class="image-info">
+                    <strong>Nome:</strong> ${imageData.name}
+                </div>
+                <div class="image-info">
+                    <strong>Pagina:</strong> ${imageData.page}
+                </div>
+                <div class="image-info">
+                    <strong>URL:</strong> <a href="${imageData.url}" target="_blank">${imageData.url.substring(0, 60)}...</a>
+                </div>
+                <div class="image-info">
+                    <strong>Status:</strong> <span class="status loading">CARICAMENTO...</span>
+                </div>
+            `;
+
+            testsEl.appendChild(testDiv);
+
+            log(`Testing: ${imageData.name} (${imageData.page})`, 'info');
+
+            const img = new Image();
+
+            img.onload = function() {
+                stats.loading--;
+                stats.success++;
+                updateStats();
+
+                testDiv.className = 'image-test success';
+                testDiv.querySelector('.status').className = 'status success';
+                testDiv.querySelector('.status').textContent = '✅ SUCCESSO';
+
+                const preview = document.createElement('img');
+                preview.src = imageData.url;
+                preview.className = 'image-preview';
+                preview.alt = imageData.name;
+                testDiv.appendChild(preview);
+
+                log(`✅ SUCCESS: ${imageData.name} caricata correttamente (${this.width}x${this.height})`, 'success');
+            };
+
+            img.onerror = function(e) {
+                stats.loading--;
+                stats.errors++;
+                updateStats();
+
+                testDiv.className = 'image-test error';
+                testDiv.querySelector('.status').className = 'status error';
+                testDiv.querySelector('.status').textContent = '❌ ERRORE';
+
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'error-message';
+                errorDiv.innerHTML = `
+                    <strong>Errore di caricamento!</strong><br>
+                    Possibili cause:<br>
+                    • URL non valido o immagine rimossa<br>
+                    • CORS (Cross-Origin Resource Sharing) bloccato<br>
+                    • Timeout di connessione<br>
+                    • Servizio immagini non disponibile
+                `;
+                testDiv.appendChild(errorDiv);
+
+                log(`❌ ERROR: ${imageData.name} - Impossibile caricare l'immagine`, 'error');
+                log(`   URL: ${imageData.url}`, 'error');
+            };
+
+            // Timeout dopo 10 secondi
+            setTimeout(() => {
+                if (testDiv.className === 'image-test loading') {
+                    stats.loading--;
+                    stats.errors++;
+                    updateStats();
+
+                    testDiv.className = 'image-test error';
+                    testDiv.querySelector('.status').className = 'status error';
+                    testDiv.querySelector('.status').textContent = '⏱️ TIMEOUT';
+
+                    log(`⏱️ TIMEOUT: ${imageData.name} - Caricamento troppo lento (>10s)`, 'error');
+                }
+            }, 10000);
+
+            img.src = imageData.url;
+        }
+
+        // Inizia i test
+        log('🚀 Inizio test caricamento immagini...', 'info');
+        log(`📊 Totale immagini da testare: ${images.length}`, 'info');
+
+        updateStats();
+
+        images.forEach((img, index) => {
+            // Aggiungi un piccolo delay tra ogni test per non sovraccaricare
+            setTimeout(() => {
+                testImage(img, index);
+            }, index * 100);
+        });
+
+        log('✨ Test avviati. Attendere il completamento...', 'info');
+    </script>
+</body>
+</html>

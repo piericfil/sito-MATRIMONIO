@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Nostra Storia - Catarina & Lorenzo</title>
+    <meta name="description" content="Scopri come ci siamo conosciuti e innamorati: da Porto al Portogallo, fino all'Italia.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button onclick="changeLanguage('it')" id="lang-it" class="active">
+            <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                <rect width="1" height="2" fill="#009246"/>
+                <rect x="1" width="1" height="2" fill="#fff"/>
+                <rect x="2" width="1" height="2" fill="#ce2b37"/>
+            </svg>
+            IT
+        </button>
+        <button onclick="changeLanguage('pt')" id="lang-pt">
+            <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                <rect width="1.2" height="2" fill="#006600"/>
+                <rect x="1.2" width="1.8" height="2" fill="#FF0000"/>
+                <circle cx="1.2" cy="1" r="0.5" fill="#FFFF00" stroke="#0000FF" stroke-width="0.1"/>
+            </svg>
+            PT
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="visible">
+        <ul>
+            <li><a href="index.html" data-it="Home" data-pt="Início">Home</a></li>
+            <li><a href="localita.html" data-it="Località" data-pt="Localidades">Località</a></li>
+            <li><a href="programma.html" data-it="Programma" data-pt="Programa">Programma</a></li>
+            <li><a href="storia.html" class="active" data-it="La Nostra Storia" data-pt="Nossa História">La Nostra Storia</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-it="La Nostra Storia" data-pt="Nossa História">La Nostra Storia</h1>
+            <p data-it="Il nostro viaggio insieme" data-pt="A nossa jornada juntos">Il nostro viaggio insieme</p>
+        </div>
+    </section>
+
+    <!-- Storia Section -->
+    <section class="storia">
+        <div class="container">
+            <div class="azulejo-divider"></div>
+
+            <div class="storia-content">
+                <div class="storia-chapter">
+                    <h3 data-it="Porto, dove tutto è iniziato" data-pt="Porto, onde tudo começou">Porto, dove tutto è iniziato</h3>
+                    <p data-it="Ci siamo incontrati nella magica città di Porto, dove le strade acciottolate e il fiume Douro hanno fatto da sfondo al nostro primo sguardo. Era un giorno qualunque che si è trasformato nell'inizio della nostra avventura insieme."
+                       data-pt="Conhecemo-nos na mágica cidade do Porto, onde as ruas de paralelepípedos e o rio Douro foram o cenário do nosso primeiro olhar. Era um dia comum que se transformou no início da nossa aventura juntos.">
+                       Ci siamo incontrati nella magica città di Porto, dove le strade acciottolate e il fiume Douro hanno fatto da sfondo al nostro primo sguardo. Era un giorno qualunque che si è trasformato nell'inizio della nostra avventura insieme.
+                    </p>
+                </div>
+
+                <div class="storia-chapter">
+                    <h3 data-it="Il Portogallo, la nostra casa" data-pt="Portugal, a nossa casa">Il Portogallo, la nostra casa</h3>
+                    <p data-it="Abbiamo vissuto una fase bellissima della nostra relazione in Portogallo, dove ogni giorno era un'opportunità per scoprire nuovi angoli nascosti, gustare pastel de nata e imparare che 'saudade' è molto più di una parola - è ciò che sentiamo ogni volta che pensiamo a quei momenti."
+                       data-pt="Vivemos uma fase linda do nosso relacionamento em Portugal, onde cada dia era uma oportunidade para descobrir novos recantos escondidos, saborear pastéis de nata e aprender que 'saudade' é muito mais do que uma palavra - é o que sentimos sempre que pensamos nesses momentos.">
+                       Abbiamo vissuto una fase bellissima della nostra relazione in Portogallo, dove ogni giorno era un'opportunità per scoprire nuovi angoli nascosti, gustare pastel de nata e imparare che 'saudade' è molto più di una parola - è ciò che sentiamo ogni volta che pensiamo a quei momenti.
+                    </p>
+                </div>
+
+                <div class="storia-chapter">
+                    <h3 data-it="L'Italia e le nostre montagne" data-pt="A Itália e as nossas montanhas">L'Italia e le nostre montagne</h3>
+                    <p data-it="Insieme ci siamo trasferiti in Italia, dove abbiamo trovato casa tra le montagne. Tra escursioni, panorami mozzafiato e momenti semplici, abbiamo costruito la nostra vita quotidiana. Viaggiare, esplorare e condividere la bellezza della natura sono diventati parte di noi."
+                       data-pt="Juntos mudámo-nos para a Itália, onde encontrámos casa entre as montanhas. Entre caminhadas, paisagens deslumbrantes e momentos simples, construímos a nossa vida quotidiana. Viajar, explorar e partilhar a beleza da natureza tornaram-se parte de nós.">
+                       Insieme ci siamo trasferiti in Italia, dove abbiamo trovato casa tra le montagne. Tra escursioni, panorami mozzafiato e momenti semplici, abbiamo costruito la nostra vita quotidiana. Viaggiare, esplorare e condividere la bellezza della natura sono diventati parte di noi.
+                    </p>
+                </div>
+
+                <div class="storia-chapter">
+                    <h3 data-it="Il nostro giorno speciale" data-pt="O nosso dia especial">Il nostro giorno speciale</h3>
+                    <p data-it="Ora siamo pronti a celebrare il nostro amore circondati dalle persone che amiamo, in un luogo che unisce le nostre due anime: l'intimità delle montagne italiane con il calore e la vivacità del Portogallo. Sarà una festa semplice, naturale e piena di dettagli che raccontano la nostra storia."
+                       data-pt="Agora estamos prontos para celebrar o nosso amor rodeados pelas pessoas que amamos, num lugar que une as nossas duas almas: a intimidade das montanhas italianas com o calor e a vivacidade de Portugal. Será uma festa simples, natural e cheia de detalhes que contam a nossa história.">
+                       Ora siamo pronti a celebrare il nostro amore circondati dalle persone che amiamo, in un luogo che unisce le nostre due anime: l'intimità delle montagne italiane con il calore e la vivacità del Portogallo. Sarà una festa semplice, naturale e piena di dettagli che raccontano la nostra storia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galleria -->
+    <section class="galleria">
+        <div class="container">
+            <div class="azulejo-divider"></div>
+            <h2 data-it="I Nostri Momenti" data-pt="Os Nossos Momentos">I Nostri Momenti</h2>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&q=80" alt="Porto" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/800px-Cristiano_Ronaldo_2018.jpg" alt="Cristiano Ronaldo - Nazionale Portogallo" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Mountains" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Italia" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/208733/pexels-photo-208733.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Portugal" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=600&q=80" alt="Italy" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                </div>
+            </div>
+            <p class="gallery-note" data-it="*Presto aggiungeremo le nostre foto personali!" data-pt="*Em breve adicionaremos as nossas fotos pessoais!">
+                *Presto aggiungeremo le nostre foto personali!
+            </p>
+        </div>
+    </section>
+
+    <!-- Decorazione Azulejos -->
+    <div class="azulejos-decoration">
+        <img src="https://images.unsplash.com/photo-1604084861058-6e27bf0263c0?w=1920&q=80" alt="Azulejos Pattern Portoghesi - Tradizione e Amore" loading="lazy">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Catarina & Lorenzo</p>
+        <p>26 Settembre 2026</p>
+        <p class="footer-note" data-it="Con amore da Portogallo e Italia" data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
