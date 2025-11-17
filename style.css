@@ -257,7 +257,7 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
 
 .names {
     font-family: var(--font-serif);
-    font-size: clamp(2.8rem, 8vw, 8rem);
+    font-size: clamp(2.8rem, 8vw, 6rem);
     font-weight: 300;
     color: var(--azul-navy);
     margin: 0 0 20px 0;
@@ -265,7 +265,6 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     letter-spacing: 0;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
     white-space: nowrap;
-    transform: translateX(-150px);
 }
 
 .date {
@@ -283,7 +282,7 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     font-weight: 300;
 }
 
-/* Countdown - Design migliorato */
+/* Countdown - Design semplificato */
 .countdown {
     display: flex;
     justify-content: center;
@@ -300,43 +299,18 @@ html, body, .hero, .hero-carousel-bg, .carousel-overlay,
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 18px;
-    box-shadow:
-        0 8px 32px rgba(0,0,0,0.1),
-        inset 0 1px 2px rgba(255,255,255,0.8);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
     flex: 1;
     min-width: 0;
     max-width: 140px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 184, 77, 0.3);
     position: relative;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
-}
-
-.countdown-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg,
-        rgba(217, 118, 66, 0.15),
-        rgba(244, 164, 96, 0.15),
-        rgba(46, 92, 138, 0.15));
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 0;
-}
-
-.countdown-item:hover::before {
-    opacity: 1;
+    transition: all 0.3s ease;
 }
 
 .countdown-item:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.15),
-        inset 0 1px 2px rgba(255,255,255,0.9);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.18);
     border-color: var(--gold);
 }
 
@@ -570,6 +544,76 @@ section h2::before {
     font-style: italic;
     color: #666;
     margin-top: 15px;
+}
+
+/* Map Container */
+.map-container {
+    margin-top: 25px;
+}
+
+.map-container iframe {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.map-container iframe:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.btn-map {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--azul-primary), var(--azul-light));
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(46, 92, 138, 0.3);
+}
+
+.btn-map:hover {
+    background: linear-gradient(135deg, var(--azul-light), var(--azul-primary));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(46, 92, 138, 0.5);
+}
+
+/* Admin instructions */
+.admin-instruction {
+    background: rgba(255, 184, 77, 0.15);
+    padding: 12px 18px;
+    border-radius: 10px;
+    border-left: 4px solid var(--gold);
+    font-size: 0.9rem;
+    font-style: normal !important;
+}
+
+/* Editable elements (per admin mode) */
+.editable-text {
+    position: relative;
+}
+
+.admin-mode .editable-text {
+    outline: 2px dashed var(--gold);
+    outline-offset: 4px;
+    cursor: pointer;
+}
+
+.admin-mode .editable-text:hover {
+    background: rgba(255, 184, 77, 0.1);
+}
+
+.admin-mode .editable-image {
+    outline: 2px dashed var(--terracotta);
+    outline-offset: 4px;
+    cursor: pointer;
+}
+
+.admin-mode .editable-image:hover {
+    outline-color: var(--orange);
+    transform: scale(1.02);
 }
 
 /* Logistica Section */
@@ -984,7 +1028,7 @@ section h2::before {
 .btn-submit {
     width: 100%;
     padding: 18px;
-    background: linear-gradient(135deg, var(--terracotta), var(--orange), var(--gold));
+    background: var(--terracotta);
     color: var(--white);
     border: none;
     border-radius: 12px;
@@ -1000,7 +1044,7 @@ section h2::before {
 .btn-submit:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(232, 106, 62, 0.5);
-    background: linear-gradient(135deg, var(--orange), var(--gold), var(--terracotta));
+    background: var(--orange);
 }
 
 /* Gestione Ospiti Dinamici */
@@ -1199,7 +1243,7 @@ section h2::before {
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, var(--azul-navy) 0%, var(--azul-primary) 100%);
+    background: var(--azul-navy);
     color: var(--white);
     text-align: center;
     padding: 70px 20px 50px;
@@ -1213,8 +1257,8 @@ footer::before {
     top: 0;
     left: 0;
     right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, var(--terracotta), var(--orange), var(--gold), var(--azul-light));
+    height: 4px;
+    background: linear-gradient(90deg, var(--terracotta), var(--gold), var(--azul-light));
 }
 
 footer p {
@@ -2160,5 +2204,216 @@ footer p:first-of-type {
 
     .countdown-item p {
         font-size: 0.6rem;
+    }
+}
+
+/* ===== ADMIN MODE STYLES ===== */
+
+/* Admin Notification */
+.admin-notification {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--gold), var(--orange));
+    color: var(--white);
+    padding: 18px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transform: translateX(400px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    max-width: 350px;
+}
+
+.admin-notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Admin Modal */
+.admin-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+}
+
+.admin-modal.show {
+    opacity: 1;
+}
+
+.admin-modal-content {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 25px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.admin-modal.show .admin-modal-content {
+    transform: scale(1);
+}
+
+.admin-modal-content h3 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--azul-navy);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.admin-form-group {
+    margin-bottom: 20px;
+}
+
+.admin-form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.admin-form-group textarea,
+.admin-form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--cream);
+    border-radius: 12px;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.admin-form-group textarea:focus,
+.admin-form-group input:focus {
+    outline: none;
+    border-color: var(--azul-primary);
+    box-shadow: 0 4px 15px rgba(46, 92, 138, 0.15);
+}
+
+.admin-modal-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.btn-save,
+.btn-cancel,
+.btn-remove,
+.btn-admin {
+    flex: 1;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.btn-save {
+    background: var(--azul-primary);
+    color: var(--white);
+}
+
+.btn-save:hover {
+    background: var(--azul-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 92, 138, 0.4);
+}
+
+.btn-cancel {
+    background: #ccc;
+    color: var(--dark);
+}
+
+.btn-cancel:hover {
+    background: #bbb;
+}
+
+.btn-remove {
+    background: #e74c3c;
+    color: var(--white);
+}
+
+.btn-remove:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+.btn-admin {
+    background: linear-gradient(135deg, var(--gold), var(--orange));
+    color: var(--white);
+    margin: 5px;
+}
+
+.btn-admin:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 184, 77, 0.4);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e74c3c, #c0392b) !important;
+}
+
+/* Admin Mode Body */
+body.admin-mode {
+    outline: 3px dashed var(--gold);
+    outline-offset: -3px;
+}
+
+/* Responsive Admin */
+@media (max-width: 768px) {
+    .admin-notification {
+        top: 70px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+        font-size: 0.85rem;
+        padding: 14px 18px;
+    }
+
+    .admin-modal-content {
+        padding: 25px 20px;
+        max-height: 85vh;
+    }
+
+    .admin-modal-content h3 {
+        font-size: 1.6rem;
+    }
+
+    .admin-modal-buttons {
+        flex-direction: column;
+    }
+
+    .btn-save,
+    .btn-cancel,
+    .btn-remove,
+    .btn-admin {
+        width: 100%;
+        min-width: auto;
     }
 }

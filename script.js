@@ -72,26 +72,30 @@ function changeLanguage(lang) {
     document.getElementById('lang-it').classList.toggle('active', lang === 'it');
     document.getElementById('lang-pt').classList.toggle('active', lang === 'pt');
 
-    // Aggiorna tutti gli elementi con traduzione
+    // Aggiorna tutti gli elementi con traduzione testo
     document.querySelectorAll('[data-it][data-pt]').forEach(element => {
         const text = element.getAttribute(`data-${lang}`);
         if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-            element.placeholder = text;
+            // NON modificare placeholder qui (gestito sotto)
         } else {
             element.textContent = text;
         }
+    });
+
+    // Aggiorna placeholder bilingue
+    document.querySelectorAll('[data-placeholder-it][data-placeholder-pt]').forEach(element => {
+        const placeholder = element.getAttribute(`data-placeholder-${lang}`);
+        element.placeholder = placeholder;
     });
 
     // Salva preferenza
     localStorage.setItem('language', lang);
 }
 
-// Carica lingua salvata
+// Carica lingua salvata e inizializza placeholder
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('language');
-    if (savedLang) {
-        changeLanguage(savedLang);
-    }
+    const savedLang = localStorage.getItem('language') || 'it';
+    changeLanguage(savedLang);
 });
 
 // ===== HERO CAROUSEL BACKGROUND =====
