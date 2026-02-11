@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programma - Catarina & Lorenzo</title>
+    <meta name="description" content="Il programma completo della giornata: cerimonia, foto, aperitivo, cena e festeggiamenti.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Programma - Catarina & Lorenzo">
+    <meta property="og:description" content="Il programma completo della giornata: cerimonia, foto, aperitivo, cena e festeggiamenti.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Programma - Catarina & Lorenzo">
+    <meta name="twitter:description" content="Il programma completo della giornata: cerimonia, foto, aperitivo, cena e festeggiamenti.">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400;600&family=Crimson+Text:wght@400;600&family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Italiana&family=Josefin+Sans:wght@300;400;600&family=Julius+Sans+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;600&family=Montserrat:wght@300;400;500;600&family=Parisienne&family=Playfair+Display:wght@400;600;700&family=Poiret+One&family=Poppins:wght@300;400;600&family=Quicksand:wght@400;600&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button onclick="changeLanguage('it')" id="lang-it" class="active">
+            <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                <rect width="1" height="2" fill="#009246"/>
+                <rect x="1" width="1" height="2" fill="#fff"/>
+                <rect x="2" width="1" height="2" fill="#ce2b37"/>
+            </svg>
+            IT
+        </button>
+        <button onclick="changeLanguage('pt')" id="lang-pt">
+            <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                <rect width="1.2" height="2" fill="#006600"/>
+                <rect x="1.2" width="1.8" height="2" fill="#FF0000"/>
+                <circle cx="1.2" cy="1" r="0.5" fill="#FFFF00" stroke="#0000FF" stroke-width="0.1"/>
+            </svg>
+            PT
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="visible">
+        <div class="navbar-admin-section">
+            <button id="admin-mode-btn" class="admin-mode-button" data-it="Admin Mode" data-pt="Modo Admin">Admin Mode</button>
+            <button id="admin-help-btn" class="admin-help-button" aria-label="Admin mode help">?</button>
+        </div>
+        <ul>
+            <li><a href="index.html" data-it="Home" data-pt="Início">Home</a></li>
+            <li><a href="localita.html" data-it="Località" data-pt="Localidades">Località</a></li>
+            <li><a href="programma.html" class="active" data-it="Programma" data-pt="Programa">Programma</a></li>
+            <li><a href="storia.html" data-it="La Nostra Storia" data-pt="Nossa História">La Nostra Storia</a></li>
+            <li><a href="lista-nozze.html" data-it="Lista Nozze" data-pt="Lista de Presentes">Lista Nozze</a></li>
+        </ul>
+    </nav>
+
+    <!-- Admin Help Popup -->
+    <div id="admin-help-popup" class="admin-help-popup hidden">
+        <div class="admin-help-content">
+            <button class="admin-help-close" aria-label="Chiudi">&times;</button>
+            <h3 data-it="Modalità Admin" data-pt="Modo Admin">Modalità Admin</h3>
+            <div class="admin-help-section">
+                <h4 data-it="Come Attivare" data-pt="Como Ativar">Come Attivare</h4>
+                <ul>
+                    <li data-it="Clicca il pulsante &quot;Admin Mode&quot;" data-pt="Clica no botão &quot;Modo Admin&quot;">Clicca il pulsante "Admin Mode"</li>
+                    <li data-it="Oppure premi Ctrl + Alt + A" data-pt="Ou prime Ctrl + Alt + A">Oppure premi <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd></li>
+                </ul>
+            </div>
+            <div class="admin-help-section">
+                <h4 data-it="Cosa Puoi Fare" data-pt="O Que Podes Fazer">Cosa Puoi Fare</h4>
+                <ul>
+                    <li data-it="✏️ Modificare testi con editor ricco" data-pt="✏️ Editar textos com editor rico">✏️ Modificare testi con editor ricco</li>
+                    <li data-it="🎨 Cambiare stili (font, colori, dimensioni)" data-pt="🎨 Mudar estilos (fontes, cores, tamanhos)">🎨 Cambiare stili (font, colori, dimensioni)</li>
+                    <li data-it="🖼️ Caricare e modificare immagini" data-pt="🖼️ Carregar e editar imagens">🖼️ Caricare e modificare immagini</li>
+                    <li data-it="🎠 Gestire carousel e gallerie" data-pt="🎠 Gerir carrosséis e galerias">🎠 Gestire carousel e gallerie</li>
+                    <li data-it="📅 Modificare la timeline del programma" data-pt="📅 Editar a timeline do programa">📅 Modificare la timeline del programma</li>
+                </ul>
+            </div>
+            <p class="admin-help-note" data-it="Tasto destro sugli elementi per il menu di modifica" data-pt="Clique direito nos elementos para o menu de edição">Tasto destro sugli elementi per il menu di modifica</p>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="editable-text" data-style-editable data-it="Programma della Giornata" data-pt="Programa do Dia">Programma della Giornata</h1>
+            <p class="editable-paragraph" data-style-editable data-it="Tutti i dettagli del nostro giorno speciale" data-pt="Todos os detalhes do nosso dia especial">Tutti i dettagli del nostro giorno speciale</p>
+        </div>
+    </section>
+
+    <!-- Programma -->
+    <section class="programma">
+        <div class="container">
+            <div class="azulejo-divider"></div>
+            <h2 class="editable-text" data-style-editable>26 Settembre 2026</h2>
+
+            <div class="timeline-zigzag" data-timeline-editable>
+                <!-- Item 1: Sinistra -->
+                <div class="timeline-zigzag-item left" data-timeline-id="event-1">
+                    <div class="timeline-zigzag-content">
+                        <div class="timeline-time editable-paragraph" data-style-editable>14:30</div>
+                        <h3 class="editable-text" data-style-editable data-it="Arrivo degli ospiti" data-pt="Chegada dos convidados">Arrivo degli ospiti</h3>
+                        <p class="editable-paragraph" data-style-editable data-it="Chiesa di Fondra - Vi accoglieremo davanti alla chiesa" data-pt="Igreja de Fondra - Daremos as boas-vindas à frente da igreja">Chiesa di Fondra - Vi accoglieremo davanti alla chiesa</p>
+                    </div>
+                    <div class="timeline-zigzag-image">
+                        <img class="editable-image" data-image-id="timeline-1" src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=600&q=80" alt="Chiesa di montagna" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Item 2: Destra -->
+                <div class="timeline-zigzag-item right" data-timeline-id="event-2">
+                    <div class="timeline-zigzag-image">
+                        <img class="editable-image" data-image-id="timeline-2" src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=80" alt="Cerimonia matrimonio" loading="lazy">
+                    </div>
+                    <div class="timeline-zigzag-content">
+                        <div class="timeline-time editable-paragraph" data-style-editable>15:00</div>
+                        <h3 class="editable-text" data-style-editable data-it="Cerimonia" data-pt="Cerimónia">Cerimonia</h3>
+                        <p class="editable-paragraph" data-style-editable data-it="Celebrazione del matrimonio nella suggestiva chiesa di Fondra" data-pt="Celebração do casamento na sugestiva igreja de Fondra">Celebrazione del matrimonio nella suggestiva chiesa di Fondra</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Sinistra -->
+                <div class="timeline-zigzag-item left" data-timeline-id="event-3">
+                    <div class="timeline-zigzag-content">
+                        <div class="timeline-time editable-paragraph" data-style-editable>16:00</div>
+                        <h3 class="editable-text" data-style-editable data-it="Foto e congratulazioni" data-pt="Fotos e parabéns">Foto e congratulazioni</h3>
+                        <p class="editable-paragraph" data-style-editable data-it="Momento speciale per foto di gruppo, saluti e auguri" data-pt="Momento especial para fotos de grupo, cumprimentos e felicitações">Momento speciale per foto di gruppo, saluti e auguri</p>
+                    </div>
+                    <div class="timeline-zigzag-image">
+                        <img class="editable-image" data-image-id="timeline-3" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80" alt="Festeggiamenti matrimonio" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Item 4: Destra -->
+                <div class="timeline-zigzag-item right" data-timeline-id="event-4">
+                    <div class="timeline-zigzag-image">
+                        <img class="editable-image" data-image-id="timeline-4" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=80" alt="Aperitivo brindisi" loading="lazy">
+                    </div>
+                    <div class="timeline-zigzag-content">
+                        <div class="timeline-time editable-paragraph" data-style-editable>18:00</div>
+                        <h3 class="editable-text" data-style-editable data-it="Aperitivo di benvenuto" data-pt="Aperitivo de boas-vindas">Aperitivo di benvenuto</h3>
+                        <p class="editable-paragraph" data-style-editable data-it="San Pellegrino Terme - Brindisi e stuzzichini per iniziare la festa" data-pt="San Pellegrino Terme - Brinde e petiscos para começar a festa">San Pellegrino Terme - Brindisi e stuzzichini per iniziare la festa</p>
+                    </div>
+                </div>
+
+                <!-- Item 5: Sinistra -->
+                <div class="timeline-zigzag-item left" data-timeline-id="event-5">
+                    <div class="timeline-zigzag-content">
+                        <div class="timeline-time editable-paragraph" data-style-editable>20:00</div>
+                        <h3 class="editable-text" data-style-editable data-it="Cena" data-pt="Jantar">Cena</h3>
+                        <p class="editable-paragraph" data-style-editable data-it="Cena raffinata con sapori italiani e portoghesi" data-pt="Jantar refinado com sabores italianos e portugueses">Cena raffinata con sapori italiani e portoghesi</p>
+                    </div>
+                    <div class="timeline-zigzag-image">
+                        <img class="editable-image" data-image-id="timeline-5" src="https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80" alt="Tavola imbandita" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Item 6: Destra -->
+                <div class="timeline-zigzag-item right" data-timeline-id="event-6">
+                    <div class="timeline-zigzag-image">
+                        <img class="editable-image" data-image-id="timeline-6" src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Festa e balli" loading="lazy">
+                    </div>
+                    <div class="timeline-zigzag-content">
+                        <div class="timeline-time editable-paragraph" data-style-editable>22:30</div>
+                        <h3 class="editable-text" data-style-editable data-it="Festa e balli" data-pt="Festa e danças">Festa e balli</h3>
+                        <p class="editable-paragraph" data-style-editable data-it="Musica, balli e divertimento fino a notte fonda!" data-pt="Música, dança e diversão até de madrugada!">Musica, balli e divertimento fino a notte fonda!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Decorazione Azulejos -->
+    <div class="azulejos-decoration">
+        <img class="editable-image" data-image-id="azulejos-programma" src="foto-piastrelle-azulejos.jpg" alt="Azulejos Decorativi - Pattern Portoghese" loading="lazy">
+    </div>
+
+    <!-- Footer -->
+    <footer class="editable-footer" data-style-editable data-footer-editable>
+        <p class="editable-paragraph" data-style-editable>Catarina & Lorenzo</p>
+        <p class="editable-paragraph" data-style-editable>26 Settembre 2026</p>
+        <p class="footer-note editable-paragraph" data-style-editable data-it="Con amore da Portogallo e Italia" data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
+
+        <!-- View Counter -->
+        <div class="view-counter">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <span id="view-count">0</span>
+            <span data-it="visualizzazioni" data-pt="visualizações">visualizzazioni</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="admin-advanced.js"></script>
+</body>
+</html>
