@@ -567,7 +567,7 @@ if (document.readyState === 'loading') {
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
         // Feedback visivo
-        const btn = document.querySelector('.copy-btn');
+        const btn = document.querySelector('.copy-btn, .copy-btn-simple');
         if (btn) {
             const tooltip = btn.querySelector('.tooltip');
             if (tooltip) {
@@ -586,3 +586,90 @@ function copyToClipboard(text) {
         console.error('Errore nella copia: ', err);
     });
 }
+
+// ===== LIGHTBOX GALLERY =====
+document.addEventListener('DOMContentLoaded', () => {
+    // Crea elementi lightbox se non esistono
+    if (!document.querySelector('.lightbox-modal')) {
+        const lightboxHTML = `
+            <div class="lightbox-modal">
+                <button class="lightbox-close">&times;</button>
+                <button class="lightbox-prev">&#10094;</button>
+                <div class="lightbox-content">
+                    <img class="lightbox-img" src="" alt="Gallery Image">
+                </div>
+                <button class="lightbox-next">&#10095;</button>
+            </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+    }
+
+    const modal = document.querySelector('.lightbox-modal');
+    const modalImg = document.querySelector('.lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const prevBtn = document.querySelector('.lightbox-prev');
+    const nextBtn = document.querySelector('.lightbox-next');
+    // Seleziona solo le immagini della griglia galleria
+    const galleryItems = document.querySelectorAll('.gallery-grid .gallery-img');
+
+    if (galleryItems.length === 0) return;
+
+    let currentIndex = 0;
+
+    // Open Lightbox
+    galleryItems.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            currentIndex = index;
+            updateLightboxImage();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    });
+
+    // Close Lightbox
+    function closeLightbox() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+
+    // Chiudi cliccando fuori dall'immagine
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeLightbox();
+            }
+        });
+    }
+
+    // Navigation
+    function showNext() {
+        currentIndex = (currentIndex + 1) % galleryItems.length;
+        updateLightboxImage();
+    }
+
+    function showPrev() {
+        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        updateLightboxImage();
+    }
+
+    function updateLightboxImage() {
+        const img = galleryItems[currentIndex];
+        // Usa src diretto o data-src se lazy loaded
+        modalImg.src = img.src || img.getAttribute('data-src');
+        modalImg.alt = img.alt || 'Gallery Image';
+    }
+
+    if (nextBtn) nextBtn.addEventListener('click', showNext);
+    if (prevBtn) prevBtn.addEventListener('click', showPrev);
+
+    // Keyboard Navigation
+    document.addEventListener('keydown', (e) => {
+        if (!modal || !modal.classList.contains('active')) return;
+
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') showPrev();
+    });
+});
