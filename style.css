@@ -623,6 +623,13 @@ section h2::before {
     opacity: 0.6;
 }
 
+.storia-single-card p.editable-paragraph {
+    font-size: 1.35rem;
+    /* Aumentato per leggibilità (anziani) */
+    line-height: 2;
+    color: var(--dark);
+}
+
 .storia-chapter {
     margin-bottom: 50px;
     padding: 35px;
