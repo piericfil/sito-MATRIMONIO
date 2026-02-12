@@ -78,7 +78,7 @@ function changeLanguage(lang) {
         if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
             // NON modificare placeholder qui (gestito sotto)
         } else {
-            element.textContent = text;
+            element.innerHTML = text;
         }
     });
 
@@ -249,7 +249,7 @@ if (heroCarouselTrack) {
     startAutoScroll();
 
     // Funzione globale per i bottoni
-    window.moveHeroCarousel = function(direction) {
+    window.moveHeroCarousel = function (direction) {
         moveCarousel(direction);
     };
 }
@@ -403,7 +403,7 @@ const rsvpForm = document.getElementById('rsvp-form');
 const formMessage = document.getElementById('form-message');
 
 if (rsvpForm) {
-    rsvpForm.addEventListener('submit', async function(e) {
+    rsvpForm.addEventListener('submit', async function (e) {
         e.preventDefault();
 
         // Disabilita il bottone durante l'invio
@@ -484,12 +484,12 @@ function monitorImages() {
                 loaded++;
             }
         } else {
-            img.addEventListener('load', function() {
+            img.addEventListener('load', function () {
                 console.log(`✅ Immagine ${index + 1} caricata: ${imgSrc}`);
                 loaded++;
             });
 
-            img.addEventListener('error', function() {
+            img.addEventListener('error', function () {
                 console.error(`❌ Immagine ${index + 1} ERRORE: ${imgSrc}`);
                 errors++;
             });
