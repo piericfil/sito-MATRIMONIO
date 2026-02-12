@@ -628,9 +628,16 @@ section h2::before {
     /* Aumentato per leggibilità (anziani) */
     line-height: 2;
     color: var(--dark);
-    text-wrap: balance;
-    /* Bilancia la lunghezza delle righe */
-    max-width: 100%;
+    text-align: justify;
+    /* Crea blocco perfetto */
+    text-align-last: center;
+    /* L'ultima riga rimane centrata ed elegante */
+    max-width: 900px;
+    /* Limite per evitare righe troppo lunghe che rompono la giustificazione */
+    margin-left: auto;
+    margin-right: auto;
+    text-wrap: pretty;
+    /* Migliore del balance per il giustificato */
 }
 
 .storia-chapter {
