@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Località - Catarina & Lorenzo</title>
-    <meta name="description" content="Scopri dove celebreremo il matrimonio: Fondra per la cerimonia e San Pellegrino Terme per il ricevimento.">
+    <meta name="description"
+        content="Scopri dove celebreremo il matrimonio: Fondra per la cerimonia e San Pellegrino Terme per il ricevimento.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Località - Catarina & Lorenzo">
-    <meta property="og:description" content="Scopri dove celebreremo il matrimonio: Fondra per la cerimonia e San Pellegrino Terme per il ricevimento.">
+    <meta property="og:description"
+        content="Scopri dove celebreremo il matrimonio: Fondra per la cerimonia e San Pellegrino Terme per il ricevimento.">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Località - Catarina & Lorenzo">
-    <meta name="twitter:description" content="Scopri dove celebreremo il matrimonio: Fondra per la cerimonia e San Pellegrino Terme per il ricevimento.">
+    <meta name="twitter:description"
+        content="Scopri dove celebreremo il matrimonio: Fondra per la cerimonia e San Pellegrino Terme per il ricevimento.">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400;600&family=Crimson+Text:wght@400;600&family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Italiana&family=Josefin+Sans:wght@300;400;600&family=Julius+Sans+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;600&family=Montserrat:wght@300;400;500;600&family=Parisienne&family=Playfair+Display:wght@400;600;700&family=Poiret+One&family=Poppins:wght@300;400;600&family=Quicksand:wght@400;600&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400;600&family=Crimson+Text:wght@400;600&family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Italiana&family=Josefin+Sans:wght@300;400;600&family=Julius+Sans+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;600&family=Montserrat:wght@300;400;500;600&family=Parisienne&family=Playfair+Display:wght@400;600;700&family=Poiret+One&family=Poppins:wght@300;400;600&family=Quicksand:wght@400;600&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Language Toggle -->
     <div class="language-toggle">
         <button onclick="changeLanguage('it')" id="lang-it" class="active">
             <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
-                <rect width="1" height="2" fill="#009246"/>
-                <rect x="1" width="1" height="2" fill="#fff"/>
-                <rect x="2" width="1" height="2" fill="#ce2b37"/>
+                <rect width="1" height="2" fill="#009246" />
+                <rect x="1" width="1" height="2" fill="#fff" />
+                <rect x="2" width="1" height="2" fill="#ce2b37" />
             </svg>
             IT
         </button>
         <button onclick="changeLanguage('pt')" id="lang-pt">
             <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
-                <rect width="1.2" height="2" fill="#006600"/>
-                <rect x="1.2" width="1.8" height="2" fill="#FF0000"/>
-                <circle cx="1.2" cy="1" r="0.5" fill="#FFFF00" stroke="#0000FF" stroke-width="0.1"/>
+                <rect width="1.2" height="2" fill="#006600" />
+                <rect x="1.2" width="1.8" height="2" fill="#FF0000" />
+                <circle cx="1.2" cy="1" r="0.5" fill="#FFFF00" stroke="#0000FF" stroke-width="0.1" />
             </svg>
             PT
         </button>
@@ -46,7 +53,8 @@
     <!-- Navigation -->
     <nav id="navbar" class="visible">
         <div class="navbar-admin-section">
-            <button id="admin-mode-btn" class="admin-mode-button" data-it="Admin Mode" data-pt="Modo Admin">Admin Mode</button>
+            <button id="admin-mode-btn" class="admin-mode-button" data-it="Admin Mode" data-pt="Modo Admin">Admin
+                Mode</button>
             <button id="admin-help-btn" class="admin-help-button" aria-label="Admin mode help">?</button>
         </div>
         <ul>
@@ -66,21 +74,31 @@
             <div class="admin-help-section">
                 <h4 data-it="Come Attivare" data-pt="Como Ativar">Come Attivare</h4>
                 <ul>
-                    <li data-it="Clicca il pulsante &quot;Admin Mode&quot;" data-pt="Clica no botão &quot;Modo Admin&quot;">Clicca il pulsante "Admin Mode"</li>
-                    <li data-it="Oppure premi Ctrl + Alt + A" data-pt="Ou prime Ctrl + Alt + A">Oppure premi <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd></li>
+                    <li data-it="Clicca il pulsante &quot;Admin Mode&quot;"
+                        data-pt="Clica no botão &quot;Modo Admin&quot;">Clicca il pulsante "Admin Mode"</li>
+                    <li data-it="Oppure premi Ctrl + Alt + A" data-pt="Ou prime Ctrl + Alt + A">Oppure premi
+                        <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd></li>
                 </ul>
             </div>
             <div class="admin-help-section">
                 <h4 data-it="Cosa Puoi Fare" data-pt="O Que Podes Fazer">Cosa Puoi Fare</h4>
                 <ul>
-                    <li data-it="✏️ Modificare testi con editor ricco" data-pt="✏️ Editar textos com editor rico">✏️ Modificare testi con editor ricco</li>
-                    <li data-it="🎨 Cambiare stili (font, colori, dimensioni)" data-pt="🎨 Mudar estilos (fontes, cores, tamanhos)">🎨 Cambiare stili (font, colori, dimensioni)</li>
-                    <li data-it="🖼️ Caricare e modificare immagini" data-pt="🖼️ Carregar e editar imagens">🖼️ Caricare e modificare immagini</li>
-                    <li data-it="🎠 Gestire carousel e gallerie" data-pt="🎠 Gerir carrosséis e galerias">🎠 Gestire carousel e gallerie</li>
-                    <li data-it="📅 Modificare la timeline del programma" data-pt="📅 Editar a timeline do programa">📅 Modificare la timeline del programma</li>
+                    <li data-it="✏️ Modificare testi con editor ricco" data-pt="✏️ Editar textos com editor rico">✏️
+                        Modificare testi con editor ricco</li>
+                    <li data-it="🎨 Cambiare stili (font, colori, dimensioni)"
+                        data-pt="🎨 Mudar estilos (fontes, cores, tamanhos)">🎨 Cambiare stili (font, colori,
+                        dimensioni)</li>
+                    <li data-it="🖼️ Caricare e modificare immagini" data-pt="🖼️ Carregar e editar imagens">🖼️
+                        Caricare e modificare immagini</li>
+                    <li data-it="🎠 Gestire carousel e gallerie" data-pt="🎠 Gerir carrosséis e galerias">🎠 Gestire
+                        carousel e gallerie</li>
+                    <li data-it="📅 Modificare la timeline del programma" data-pt="📅 Editar a timeline do programa">📅
+                        Modificare la timeline del programma</li>
                 </ul>
             </div>
-            <p class="admin-help-note" data-it="Tasto destro sugli elementi per il menu di modifica" data-pt="Clique direito nos elementos para o menu de edição">Tasto destro sugli elementi per il menu di modifica</p>
+            <p class="admin-help-note" data-it="Tasto destro sugli elementi per il menu di modifica"
+                data-pt="Clique direito nos elementos para o menu de edição">Tasto destro sugli elementi per il menu di
+                modifica</p>
         </div>
     </div>
 
@@ -90,19 +108,29 @@
         <div class="location-carousel-bg editable-carousel" data-carousel-editable data-carousel-id="location">
             <div class="carousel-track" id="locationCarouselTrack">
                 <div class="carousel-slide">
-                    <img class="editable-image" data-image-id="localita-1" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1920&q=80" alt="Alpi Orobie mountains" loading="lazy">
+                    <img class="editable-image" data-image-id="localita-1"
+                        src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1920&q=80"
+                        alt="Alpi Orobie mountains" loading="lazy">
                 </div>
                 <div class="carousel-slide">
-                    <img class="editable-image" data-image-id="localita-2" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80" alt="Mountain church" loading="lazy">
+                    <img class="editable-image" data-image-id="localita-2"
+                        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80"
+                        alt="Mountain church" loading="lazy">
                 </div>
                 <div class="carousel-slide">
-                    <img class="editable-image" data-image-id="localita-3" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80" alt="Mountain landscape" loading="lazy">
+                    <img class="editable-image" data-image-id="localita-3"
+                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80"
+                        alt="Mountain landscape" loading="lazy">
                 </div>
                 <div class="carousel-slide">
-                    <img class="editable-image" data-image-id="localita-4" src="https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?w=1920&q=80" alt="Italian Alps valley" loading="lazy">
+                    <img class="editable-image" data-image-id="localita-4"
+                        src="https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?w=1920&q=80"
+                        alt="Italian Alps valley" loading="lazy">
                 </div>
                 <div class="carousel-slide">
-                    <img class="editable-image" data-image-id="localita-5" src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=1920&q=80" alt="Bergamo landscape" loading="lazy">
+                    <img class="editable-image" data-image-id="localita-5"
+                        src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=1920&q=80"
+                        alt="Bergamo landscape" loading="lazy">
                 </div>
             </div>
             <div class="carousel-overlay"></div>
@@ -111,7 +139,8 @@
         <!-- Contenuto Header -->
         <div class="container header-content">
             <h1 class="editable-text" data-style-editable data-it="Località" data-pt="Localidades">Località</h1>
-            <p class="editable-paragraph" data-style-editable data-it="Dove celebreremo il nostro matrimonio" data-pt="Onde celebraremos o nosso casamento">Dove celebreremo il nostro matrimonio</p>
+            <p class="editable-paragraph" data-style-editable data-it="Dove celebreremo il nostro matrimonio"
+                data-pt="Onde celebraremos o nosso casamento">Dove celebreremo il nostro matrimonio</p>
         </div>
 
         <!-- Indicators -->
@@ -130,18 +159,22 @@
                     <h3 class="editable-text" data-style-editable data-it="Cerimonia" data-pt="Cerimónia">Cerimonia</h3>
                     <h4 class="editable-text" data-style-editable>Chiesa di Fondra</h4>
                     <p class="time editable-paragraph" data-style-editable>Ore 15:00</p>
-                    <p class="editable-paragraph" data-style-editable data-it="La cerimonia si terrà nella suggestiva Chiesa di Fondra, un piccolo borgo di montagna immerso nella natura delle Alpi Orobie."
-                       data-pt="A cerimónia terá lugar na sugestiva Igreja de Fondra, uma pequena aldeia de montanha imersa na natureza dos Alpes Oróbios.">
-                       La cerimonia si terrà nella suggestiva Chiesa di Fondra, un piccolo borgo di montagna immerso nella natura delle Alpi Orobie.
+                    <p class="editable-paragraph" data-style-editable
+                        data-it="La cerimonia si terrà nella suggestiva Chiesa di Fondra, un piccolo borgo di montagna immerso nella natura delle Alpi Orobie."
+                        data-pt="A cerimónia terá lugar na sugestiva Igreja de Fondra, uma pequena aldeia de montanha imersa na natureza dos Alpes Oróbios.">
+                        La cerimonia si terrà nella suggestiva Chiesa di Fondra, un piccolo borgo di montagna immerso
+                        nella natura delle Alpi Orobie.
                     </p>
                     <p class="address editable-paragraph" data-style-editable>📍 Fondra, 24010 Oltre il Colle (BG)</p>
 
                     <!-- Google Maps -->
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2774.5!2d9.8!3d45.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDU3JzAwLjAiTiA5wrA0OCcwMC4wIkU!5e0!3m2!1sit!2sit!4v1620000000000!5m2!1sit!2sit"
-                                width="100%" height="300" style="border:0; border-radius: 15px; margin-top: 20px;"
-                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <a href="https://www.google.com/maps/search/Chiesa+Fondra+Oltre+il+Colle" target="_blank" class="btn-map" data-it="🗺️ Apri in Google Maps" data-pt="🗺️ Abrir no Google Maps">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2773.2258055431!2d9.733698!3d45.9667493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4783f0ca1195efd9%3A0x5f8143be5f82c9c5!2s24010%20Fondra%20BG!5e0!3m2!1sit!2sit!4v1770938937431!5m2!1sit!2sit"
+                            width="100%" height="300" style="border:0; border-radius: 15px; margin-top: 20px;"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <a href="https://maps.app.goo.gl/KPkrpNNo2zt1fumr7?g_st=iw" target="_blank" class="btn-map"
+                            data-it="🗺️ Apri in Google Maps" data-pt="🗺️ Abrir no Google Maps">
                             🗺️ Apri in Google Maps
                         </a>
                     </div>
@@ -149,21 +182,28 @@
 
                 <div class="evento-card">
                     <div class="azulejo-corner"></div>
-                    <h3 class="editable-text" data-style-editable data-it="Ricevimento" data-pt="Receção">Ricevimento</h3>
-                    <h4 class="editable-text" data-style-editable data-text-id="reception-venue">Nome Location (da modificare)</h4>
+                    <h3 class="editable-text" data-style-editable data-it="Ricevimento" data-pt="Receção">Ricevimento
+                    </h3>
+                    <h4 class="editable-text" data-style-editable data-text-id="reception-venue">Nome Location (da
+                        modificare)</h4>
                     <p class="time editable-paragraph" data-style-editable>Ore 18:00</p>
-                    <p class="editable-paragraph" data-style-editable data-it="Il ricevimento si svolgerà a San Pellegrino Terme, celebre località termale ai piedi delle montagne bergamasche."
-                       data-pt="A receção terá lugar em San Pellegrino Terme, famosa estância termal aos pés das montanhas bergamascas.">
-                       Il ricevimento si svolgerà a San Pellegrino Terme, celebre località termale ai piedi delle montagne bergamasche.
+                    <p class="editable-paragraph" data-style-editable
+                        data-it="Il ricevimento si svolgerà a San Pellegrino Terme, celebre località termale ai piedi delle montagne bergamasche."
+                        data-pt="A receção terá lugar em San Pellegrino Terme, famosa estância termal aos pés das montanhas bergamascas.">
+                        Il ricevimento si svolgerà a San Pellegrino Terme, celebre località termale ai piedi delle
+                        montagne bergamasche.
                     </p>
-                    <p class="address editable-paragraph" data-style-editable data-text-id="reception-address">📍 Indirizzo completo da inserire</p>
+                    <p class="address editable-paragraph" data-style-editable data-text-id="reception-address">📍
+                        Indirizzo completo da inserire</p>
 
                     <!-- Google Maps -->
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11098!2d9.65!3d45.84!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47842b0f0e0a0a0f%3A0x0!2zNDXCsDUwJzI0LjAiTiA5wrAzOScwMC4wIkU!5e0!3m2!1sit!2sit!4v1620000000000!5m2!1sit!2sit"
-                                width="100%" height="300" style="border:0; border-radius: 15px; margin-top: 20px;"
-                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <a href="https://www.google.com/maps/search/San+Pellegrino+Terme" target="_blank" class="btn-map" data-it="🗺️ Apri in Google Maps" data-pt="🗺️ Abrir no Google Maps">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11098!2d9.65!3d45.84!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47842b0f0e0a0a0f%3A0x0!2zNDXCsDUwJzI0LjAiTiA5wrAzOScwMC4wIkU!5e0!3m2!1sit!2sit!4v1620000000000!5m2!1sit!2sit"
+                            width="100%" height="300" style="border:0; border-radius: 15px; margin-top: 20px;"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <a href="https://www.google.com/maps/search/San+Pellegrino+Terme" target="_blank"
+                            class="btn-map" data-it="🗺️ Apri in Google Maps" data-pt="🗺️ Abrir no Google Maps">
                             🗺️ Apri in Google Maps
                         </a>
                     </div>
@@ -177,56 +217,68 @@
     <section class="logistica">
         <div class="container">
             <div class="azulejo-divider"></div>
-            <h2 class="editable-text" data-style-editable data-it="Come Arrivare" data-pt="Como Chegar">Come Arrivare</h2>
+            <h2 class="editable-text" data-style-editable data-it="Come Arrivare" data-pt="Como Chegar">Come Arrivare
+            </h2>
 
             <div class="logistica-grid">
                 <div class="logistica-item">
-                    <h3 class="editable-text" data-style-editable>✈️ <span data-it="Aeroporti" data-pt="Aeroportos">Aeroporti</span></h3>
+                    <h3 class="editable-text" data-style-editable>✈️ <span data-it="Aeroporti"
+                            data-pt="Aeroportos">Aeroporti</span></h3>
                     <div class="logistica-content">
                         <div class="airport">
                             <h4 class="editable-text" data-style-editable>Milano Bergamo (BGY)</h4>
-                            <p class="editable-paragraph" data-style-editable data-it="Aeroporto più vicino - 45 km da San Pellegrino Terme"
-                               data-pt="Aeroporto mais próximo - 45 km de San Pellegrino Terme">
-                               Aeroporto più vicino - 45 km da San Pellegrino Terme
+                            <p class="editable-paragraph" data-style-editable
+                                data-it="Aeroporto più vicino - 45 km da San Pellegrino Terme"
+                                data-pt="Aeroporto mais próximo - 45 km de San Pellegrino Terme">
+                                Aeroporto più vicino - 45 km da San Pellegrino Terme
                             </p>
                         </div>
                         <div class="airport">
                             <h4 class="editable-text" data-style-editable>Milano Malpensa (MXP)</h4>
-                            <p class="editable-paragraph" data-style-editable data-it="Alternativa - 110 km da San Pellegrino Terme"
-                               data-pt="Alternativa - 110 km de San Pellegrino Terme">
-                               Alternativa - 110 km da San Pellegrino Terme
+                            <p class="editable-paragraph" data-style-editable
+                                data-it="Alternativa - 110 km da San Pellegrino Terme"
+                                data-pt="Alternativa - 110 km de San Pellegrino Terme">
+                                Alternativa - 110 km da San Pellegrino Terme
                             </p>
                         </div>
                         <div class="airport">
                             <h4 class="editable-text" data-style-editable>Milano Linate (LIN)</h4>
-                            <p class="editable-paragraph" data-style-editable data-it="Alternativa - 80 km da San Pellegrino Terme"
-                               data-pt="Alternativa - 80 km de San Pellegrino Terme">
-                               Alternativa - 80 km da San Pellegrino Terme
+                            <p class="editable-paragraph" data-style-editable
+                                data-it="Alternativa - 80 km da San Pellegrino Terme"
+                                data-pt="Alternativa - 80 km de San Pellegrino Terme">
+                                Alternativa - 80 km da San Pellegrino Terme
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <div class="logistica-item">
-                    <h3 class="editable-text" data-style-editable>🚗 <span data-it="In Auto" data-pt="De Carro">In Auto</span></h3>
+                    <h3 class="editable-text" data-style-editable>🚗 <span data-it="In Auto" data-pt="De Carro">In
+                            Auto</span></h3>
                     <div class="logistica-content">
-                        <p class="editable-paragraph" data-style-editable data-it="Da Milano: Prendere l'autostrada A4 direzione Bergamo, poi seguire le indicazioni per San Pellegrino Terme (circa 1 ora)"
-                           data-pt="De Milão: Apanhar a autoestrada A4 direção Bergamo, depois seguir as indicações para San Pellegrino Terme (cerca de 1 hora)">
-                           Da Milano: Prendere l'autostrada A4 direzione Bergamo, poi seguire le indicazioni per San Pellegrino Terme (circa 1 ora)
+                        <p class="editable-paragraph" data-style-editable
+                            data-it="Da Milano: Prendere l'autostrada A4 direzione Bergamo, poi seguire le indicazioni per San Pellegrino Terme (circa 1 ora)"
+                            data-pt="De Milão: Apanhar a autoestrada A4 direção Bergamo, depois seguir as indicações para San Pellegrino Terme (cerca de 1 hora)">
+                            Da Milano: Prendere l'autostrada A4 direzione Bergamo, poi seguire le indicazioni per San
+                            Pellegrino Terme (circa 1 ora)
                         </p>
-                        <p class="editable-paragraph" data-style-editable data-it="Da Bergamo: Seguire la SP470 direzione Valle Brembana (circa 30 minuti)"
-                           data-pt="De Bergamo: Seguir a SP470 direção Valle Brembana (cerca de 30 minutos)">
-                           Da Bergamo: Seguire la SP470 direzione Valle Brembana (circa 30 minuti)
+                        <p class="editable-paragraph" data-style-editable
+                            data-it="Da Bergamo: Seguire la SP470 direzione Valle Brembana (circa 30 minuti)"
+                            data-pt="De Bergamo: Seguir a SP470 direção Valle Brembana (cerca de 30 minutos)">
+                            Da Bergamo: Seguire la SP470 direzione Valle Brembana (circa 30 minuti)
                         </p>
                     </div>
                 </div>
 
                 <div class="logistica-item">
-                    <h3 class="editable-text" data-style-editable>🅿️ <span data-it="Parcheggio" data-pt="Estacionamento">Parcheggio</span></h3>
+                    <h3 class="editable-text" data-style-editable>🅿️ <span data-it="Parcheggio"
+                            data-pt="Estacionamento">Parcheggio</span></h3>
                     <div class="logistica-content">
-                        <p class="editable-paragraph" data-style-editable data-it="Parcheggi disponibili sia a Fondra che a San Pellegrino Terme. Maggiori dettagli verranno comunicati prossimamente."
-                           data-pt="Estacionamento disponível tanto em Fondra como em San Pellegrino Terme. Mais detalhes serão comunicados em breve.">
-                           Parcheggi disponibili sia a Fondra che a San Pellegrino Terme. Maggiori dettagli verranno comunicati prossimamente.
+                        <p class="editable-paragraph" data-style-editable
+                            data-it="Parcheggi disponibili sia a Fondra che a San Pellegrino Terme. Maggiori dettagli verranno comunicati prossimamente."
+                            data-pt="Estacionamento disponível tanto em Fondra como em San Pellegrino Terme. Mais detalhes serão comunicados em breve.">
+                            Parcheggi disponibili sia a Fondra che a San Pellegrino Terme. Maggiori dettagli verranno
+                            comunicati prossimamente.
                         </p>
                     </div>
                 </div>
@@ -236,14 +288,16 @@
 
     <!-- Decorazione Azulejos -->
     <div class="azulejos-decoration">
-        <img class="editable-image" data-image-id="localita-azulejos" src="foto-piastrelle-azulejos.jpg" alt="Azulejos Porto - Pattern Tradizionali Portoghesi" loading="lazy">
+        <img class="editable-image" data-image-id="localita-azulejos" src="foto-piastrelle-azulejos.jpg"
+            alt="Azulejos Porto - Pattern Tradizionali Portoghesi" loading="lazy">
     </div>
 
     <!-- Footer -->
     <footer class="editable-footer" data-style-editable data-footer-editable>
         <p class="editable-paragraph" data-style-editable>Catarina & Lorenzo</p>
         <p class="editable-paragraph" data-style-editable>26 Settembre 2026</p>
-        <p class="footer-note editable-paragraph" data-style-editable data-it="Con amore da Portogallo e Italia" data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
+        <p class="footer-note editable-paragraph" data-style-editable data-it="Con amore da Portogallo e Italia"
+            data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
 
         <!-- View Counter -->
         <div class="view-counter">
@@ -259,4 +313,5 @@
     <script src="script.js"></script>
     <script src="admin-advanced.js"></script>
 </body>
+
 </html>
