@@ -628,6 +628,9 @@ section h2::before {
     /* Aumentato per leggibilità (anziani) */
     line-height: 2;
     color: var(--dark);
+    text-wrap: balance;
+    /* Bilancia la lunghezza delle righe */
+    max-width: 100%;
 }
 
 .storia-chapter {
