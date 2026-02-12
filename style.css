@@ -4350,129 +4350,70 @@ body.admin-mode {
     }
 }
 
-/* IBAN Card Styling - Refined */
-.iban-card .option-icon {
-    background-color: rgba(232, 106, 62, 0.1);
-    color: var(--terracotta);
-    font-size: 2rem;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin: 0 auto 1.5rem;
-}
-
-.iban-details {
-    text-align: center;
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-    /* Ombra più morbida ed elegante */
-    border: 1px solid rgba(232, 106, 62, 0.15);
-    /* Bordo sottile terracotta */
-    margin-top: 1rem;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Barretta decorativa in alto */
-.iban-details::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--terracotta), var(--gold));
-}
-
-.iban-label {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 0.95rem;
-    color: var(--terracotta);
-    /* Colore terracotta per le etichette */
-    margin-bottom: 0.3rem;
-    margin-top: 1.2rem;
-}
-
-.iban-label:first-child {
-    margin-top: 0;
-}
-
-.iban-value {
-    font-family: var(--font-sans);
-    font-size: 1.15rem;
-    color: var(--dark);
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-/* Container riga IBAN */
-.iban-row {
+/* IBAN Box Styling - Semplificato */
+.iban-simple-info {
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
-    /* Colonna su mobile per evitare overflow */
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.iban-text {
+    font-size: 1rem;
+    color: var(--dark);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.iban-code-simple {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px dashed #ddd;
+    /* Effetto leggero */
+    font-weight: 700;
+    color: var(--dark);
+    word-break: break-all;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+/* Tasto Copia Semplice (Simile a btn-lista) */
+.copy-btn-simple {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    background: #f8f9fa;
-    /* Sfondo leggero per evidenziare */
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px dashed #ddd;
-    /* Effetto "tagliando" */
-    margin: 1rem 0;
-}
-
-.iban-code {
-    font-family: 'Courier New', monospace;
-    font-size: 1rem;
-    /* Leggermente più piccolo per sicurezza */
-    color: #333;
-    font-weight: 700;
-    word-break: break-all;
-    /* FONDAMENTALE: manda a capo se troppo lungo */
-    line-height: 1.4;
-    text-align: center;
-    border: none;
-    background: transparent;
-    padding: 0;
-}
-
-/* Tasto Copia */
-.copy-btn {
-    background: white;
-    color: var(--terracotta);
-    border: 1px solid var(--terracotta);
-    padding: 6px 12px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.85rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.copy-btn:hover {
+    gap: 8px;
     background: var(--terracotta);
     color: white;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(232, 106, 62, 0.2);
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    align-self: center;
+    /* Centrato nel flex column */
+    position: relative;
+    max-width: 200px;
+    width: 100%;
+    margin-top: 0.5rem;
 }
 
-.copy-btn svg {
-    width: 14px;
-    height: 14px;
+.copy-btn-simple:hover {
+    background: #d14e35;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(232, 106, 62, 0.3);
 }
 
-.copy-btn .tooltip {
+.copy-btn-simple .tooltip {
     visibility: hidden;
     background-color: var(--dark);
     color: #fff;
@@ -4491,7 +4432,7 @@ body.admin-mode {
     white-space: nowrap;
 }
 
-.copy-btn:hover .tooltip {
+.copy-btn-simple:hover .tooltip {
     visibility: visible;
     opacity: 1;
 }

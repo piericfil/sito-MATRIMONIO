@@ -77,7 +77,8 @@
                     <li data-it="Clicca il pulsante &quot;Admin Mode&quot;"
                         data-pt="Clica no botão &quot;Modo Admin&quot;">Clicca il pulsante "Admin Mode"</li>
                     <li data-it="Oppure premi Ctrl + Alt + A" data-pt="Ou prime Ctrl + Alt + A">Oppure premi
-                        <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd></li>
+                        <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd>
+                    </li>
                 </ul>
             </div>
             <div class="admin-help-section">
@@ -121,13 +122,13 @@
             <div class="lista-box-simple">
 
                 <!-- Messaggio Principale -->
-                <div class="lista-message">
+                <div class="lista-message" style="max-width: 900px;"> <!-- Increased max-width for 2 lines -->
                     <p class="editable-paragraph message-text" data-style-editable data-text-id="lista-message">
                         <span
-                            data-it="Il miglior regalo è avervi con noi in questo giorno così speciale. Se desiderate contribuire alla nostra luna di miele/nuovo capitolo, potete farlo tramite il seguente IBAN:"
-                            data-pt="O melhor presente é ter-vos connosco neste dia tão especial. Se desejarem contribuir para a nossa lua de mel/novo capítulo, podem fazê-lo através do seguinte IBAN:">
+                            data-it="Il miglior regalo è avervi con noi in questo giorno così speciale. Se desiderate contribuire alla nostra luna di miele/nuovo capitolo, potete farlo tramite le seguenti informazioni:"
+                            data-pt="O melhor presente é ter-vos connosco neste dia tão especial. Se desejarem contribuir para a nossa lua de mel/novo capítulo, podem fazê-lo através das seguintes informações:">
                             Il miglior regalo è avervi con noi in questo giorno così speciale. Se desiderate contribuire
-                            alla nostra luna di miele/nuovo capitolo, potete farlo tramite il seguente IBAN:
+                            alla nostra luna di miele/nuovo capitolo, potete farlo tramite le seguenti informazioni:
                         </span>
                     </p>
                 </div>
@@ -152,35 +153,29 @@
                         </div>
                     </div>
 
-                    <!-- Opzione 2: IBAN / Bonifico -->
-                    <div class="option-item iban-card">
+                    <!-- Opzione 2: IBAN / Bonifico (Semplificato) -->
+                    <div class="option-item">
                         <div class="option-icon">🏦</div>
                         <div class="option-content">
-                            <h3 class="editable-text" data-style-editable data-text-id="iban-title"
-                                data-it="Bonifico Bancario" data-pt="Transferência Bancária">Bonifico Bancario</h3>
+                            <h3 class="editable-text" data-style-editable data-text-id="iban-title" data-it="IBAN"
+                                data-pt="IBAN">IBAN</h3>
 
-                            <div class="iban-details">
-                                <p class="iban-label" data-it="Intestatario:" data-pt="Beneficiário:">Intestatario:</p>
-                                <p class="iban-value selection-enabled">Lorenzo Bagordo</p>
+                            <div class="iban-simple-info">
+                                <p class="iban-text"><strong>Intestatario:</strong> Lorenzo Bagordo</p>
+                                <p class="iban-text"><strong>BIC/SWIFT:</strong> BCITITMM</p>
 
-                                <p class="iban-label">IBAN:</p>
-                                <div class="iban-row">
-                                    <p class="iban-code selection-enabled" id="iban-text">IT45Z0306920705100000018778
-                                    </p>
-                                    <button class="copy-btn" onclick="copyToClipboard('IT45Z0306920705100000018778')"
-                                        aria-label="Copia IBAN">
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                        <span class="tooltip" data-it="Copia" data-pt="Copiar">Copia</span>
-                                    </button>
-                                </div>
+                                <p class="iban-code-simple selection-enabled">IT45Z0306920705100000018778</p>
 
-                                <p class="iban-label">BIC/SWIFT:</p>
-                                <p class="iban-value selection-enabled">BCITITMM</p>
+                                <button class="copy-btn-simple" onclick="copyToClipboard('IT45Z0306920705100000018778')"
+                                    aria-label="Copia IBAN">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    <span data-it="Copia IBAN" data-pt="Copiar IBAN">Copia IBAN</span>
+                                    <span class="tooltip" data-it="Copia" data-pt="Copiar">Copia</span>
+                                </button>
                             </div>
                         </div>
                     </div>
