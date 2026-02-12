@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Nostra Storia - Catarina & Lorenzo</title>
-    <meta name="description" content="Scopri come ci siamo conosciuti e innamorati: da Porto al Portogallo, fino all'Italia.">
+    <meta name="description"
+        content="Scopri come ci siamo conosciuti e innamorati: da Porto al Portogallo, fino all'Italia.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="La Nostra Storia - Catarina & Lorenzo">
-    <meta property="og:description" content="Scopri come ci siamo conosciuti e innamorati: da Porto al Portogallo, fino all'Italia.">
+    <meta property="og:description"
+        content="Scopri come ci siamo conosciuti e innamorati: da Porto al Portogallo, fino all'Italia.">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="La Nostra Storia - Catarina & Lorenzo">
-    <meta name="twitter:description" content="Scopri come ci siamo conosciuti e innamorati: da Porto al Portogallo, fino all'Italia.">
+    <meta name="twitter:description"
+        content="Scopri come ci siamo conosciuti e innamorati: da Porto al Portogallo, fino all'Italia.">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400;600&family=Crimson+Text:wght@400;600&family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Italiana&family=Josefin+Sans:wght@300;400;600&family=Julius+Sans+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;600&family=Montserrat:wght@300;400;500;600&family=Parisienne&family=Playfair+Display:wght@400;600;700&family=Poiret+One&family=Poppins:wght@300;400;600&family=Quicksand:wght@400;600&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400;600&family=Crimson+Text:wght@400;600&family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Italiana&family=Josefin+Sans:wght@300;400;600&family=Julius+Sans+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;600&family=Montserrat:wght@300;400;500;600&family=Parisienne&family=Playfair+Display:wght@400;600;700&family=Poiret+One&family=Poppins:wght@300;400;600&family=Quicksand:wght@400;600&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Language Toggle -->
     <div class="language-toggle">
         <button onclick="changeLanguage('it')" id="lang-it" class="active">
             <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
-                <rect width="1" height="2" fill="#009246"/>
-                <rect x="1" width="1" height="2" fill="#fff"/>
-                <rect x="2" width="1" height="2" fill="#ce2b37"/>
+                <rect width="1" height="2" fill="#009246" />
+                <rect x="1" width="1" height="2" fill="#fff" />
+                <rect x="2" width="1" height="2" fill="#ce2b37" />
             </svg>
             IT
         </button>
         <button onclick="changeLanguage('pt')" id="lang-pt">
             <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
-                <rect width="1.2" height="2" fill="#006600"/>
-                <rect x="1.2" width="1.8" height="2" fill="#FF0000"/>
-                <circle cx="1.2" cy="1" r="0.5" fill="#FFFF00" stroke="#0000FF" stroke-width="0.1"/>
+                <rect width="1.2" height="2" fill="#006600" />
+                <rect x="1.2" width="1.8" height="2" fill="#FF0000" />
+                <circle cx="1.2" cy="1" r="0.5" fill="#FFFF00" stroke="#0000FF" stroke-width="0.1" />
             </svg>
             PT
         </button>
@@ -46,14 +53,16 @@
     <!-- Navigation -->
     <nav id="navbar" class="visible">
         <div class="navbar-admin-section">
-            <button id="admin-mode-btn" class="admin-mode-button" data-it="Admin Mode" data-pt="Modo Admin">Admin Mode</button>
+            <button id="admin-mode-btn" class="admin-mode-button" data-it="Admin Mode" data-pt="Modo Admin">Admin
+                Mode</button>
             <button id="admin-help-btn" class="admin-help-button" aria-label="Admin mode help">?</button>
         </div>
         <ul>
             <li><a href="index.html" data-it="Home" data-pt="Início">Home</a></li>
             <li><a href="localita.html" data-it="Località" data-pt="Localidades">Località</a></li>
             <li><a href="programma.html" data-it="Programma" data-pt="Programa">Programma</a></li>
-            <li><a href="storia.html" class="active" data-it="La Nostra Storia" data-pt="Nossa História">La Nostra Storia</a></li>
+            <li><a href="storia.html" class="active" data-it="La Nostra Storia" data-pt="Nossa História">La Nostra
+                    Storia</a></li>
             <li><a href="lista-nozze.html" data-it="Lista Nozze" data-pt="Lista de Presentes">Lista Nozze</a></li>
         </ul>
     </nav>
@@ -66,29 +75,42 @@
             <div class="admin-help-section">
                 <h4 data-it="Come Attivare" data-pt="Como Ativar">Come Attivare</h4>
                 <ul>
-                    <li data-it="Clicca il pulsante &quot;Admin Mode&quot;" data-pt="Clica no botão &quot;Modo Admin&quot;">Clicca il pulsante "Admin Mode"</li>
-                    <li data-it="Oppure premi Ctrl + Alt + A" data-pt="Ou prime Ctrl + Alt + A">Oppure premi <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd></li>
+                    <li data-it="Clicca il pulsante &quot;Admin Mode&quot;"
+                        data-pt="Clica no botão &quot;Modo Admin&quot;">Clicca il pulsante "Admin Mode"</li>
+                    <li data-it="Oppure premi Ctrl + Alt + A" data-pt="Ou prime Ctrl + Alt + A">Oppure premi
+                        <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd>
+                    </li>
                 </ul>
             </div>
             <div class="admin-help-section">
                 <h4 data-it="Cosa Puoi Fare" data-pt="O Que Podes Fazer">Cosa Puoi Fare</h4>
                 <ul>
-                    <li data-it="✏️ Modificare testi con editor ricco" data-pt="✏️ Editar textos com editor rico">✏️ Modificare testi con editor ricco</li>
-                    <li data-it="🎨 Cambiare stili (font, colori, dimensioni)" data-pt="🎨 Mudar estilos (fontes, cores, tamanhos)">🎨 Cambiare stili (font, colori, dimensioni)</li>
-                    <li data-it="🖼️ Caricare e modificare immagini" data-pt="🖼️ Carregar e editar imagens">🖼️ Caricare e modificare immagini</li>
-                    <li data-it="🎠 Gestire carousel e gallerie" data-pt="🎠 Gerir carrosséis e galerias">🎠 Gestire carousel e gallerie</li>
-                    <li data-it="📅 Modificare la timeline del programma" data-pt="📅 Editar a timeline do programa">📅 Modificare la timeline del programma</li>
+                    <li data-it="✏️ Modificare testi con editor ricco" data-pt="✏️ Editar textos com editor rico">✏️
+                        Modificare testi con editor ricco</li>
+                    <li data-it="🎨 Cambiare stili (font, colori, dimensioni)"
+                        data-pt="🎨 Mudar estilos (fontes, cores, tamanhos)">🎨 Cambiare stili (font, colori,
+                        dimensioni)</li>
+                    <li data-it="🖼️ Caricare e modificare immagini" data-pt="🖼️ Carregar e editar imagens">🖼️
+                        Caricare e modificare immagini</li>
+                    <li data-it="🎠 Gestire carousel e gallerie" data-pt="🎠 Gerir carrosséis e galerias">🎠 Gestire
+                        carousel e gallerie</li>
+                    <li data-it="📅 Modificare la timeline del programma" data-pt="📅 Editar a timeline do programa">📅
+                        Modificare la timeline del programma</li>
                 </ul>
             </div>
-            <p class="admin-help-note" data-it="Tasto destro sugli elementi per il menu di modifica" data-pt="Clique direito nos elementos para o menu de edição">Tasto destro sugli elementi per il menu di modifica</p>
+            <p class="admin-help-note" data-it="Tasto destro sugli elementi per il menu di modifica"
+                data-pt="Clique direito nos elementos para o menu de edição">Tasto destro sugli elementi per il menu di
+                modifica</p>
         </div>
     </div>
 
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1 class="editable-text" data-style-editable data-it="La Nostra Storia" data-pt="Nossa História">La Nostra Storia</h1>
-            <p class="editable-paragraph" data-style-editable data-it="Il nostro viaggio insieme" data-pt="A nossa jornada juntos">Il nostro viaggio insieme</p>
+            <h1 class="editable-text" data-style-editable data-it="La Nostra Storia" data-pt="Nossa História">La Nostra
+                Storia</h1>
+            <p class="editable-paragraph" data-style-editable data-it="Il nostro viaggio insieme"
+                data-pt="A nossa jornada juntos">Il nostro viaggio insieme</p>
         </div>
     </section>
 
@@ -99,41 +121,55 @@
 
             <div class="storia-content">
                 <div class="storia-chapter editable-text" data-text-id="storia-chapter-1">
-                    <h3 class="editable-text" data-style-editable data-it="Il nostro primo incontro" data-pt="O nosso primeiro encontro">Il nostro primo incontro</h3>
+                    <h3 class="editable-text" data-style-editable data-it="Un Ballo a Porto"
+                        data-pt="Uma Dança no Porto">Un Ballo a Porto</h3>
                     <p class="editable-paragraph" data-style-editable data-text-id="storia-p-1">
-                        <span data-it="Raccontate qui come vi siete conosciuti! Inserite la data, il luogo preciso, cosa ricordate di quel momento magico. Rendete questa storia unica e personale! 💕"
-                              data-pt="Contem aqui como se conheceram! Incluam a data, o local exato, o que se lembram desse momento mágico. Tornem esta história única e pessoal! 💕">
-                            Raccontate qui come vi siete conosciuti! Inserite la data, il luogo preciso, cosa ricordate di quel momento magico. Rendete questa storia unica e personale! 💕
+                        <span
+                            data-it="Tutto è cominciato in una notte a Porto, quando mi hai chiesto di ballare. Un gesto semplice, inatteso, ma capace di cambiare per sempre il destino delle nostre vite."
+                            data-pt="Tudo começou numa noite no Porto, quando me pediste para dançar. Um gesto simples, inesperado, mas capaz de mudar para sempre o destino das nossas vidas.">
+                            Tutto è cominciato in una notte a Porto, quando mi hai chiesto di ballare. Un gesto
+                            semplice, inatteso, ma capace di cambiare per sempre il destino delle nostre vite.
                         </span>
                     </p>
                 </div>
 
                 <div class="storia-chapter editable-text" data-text-id="storia-chapter-2">
-                    <h3 class="editable-text" data-style-editable data-it="I primi momenti insieme" data-pt="Os primeiros momentos juntos">I primi momenti insieme</h3>
+                    <h3 class="editable-text" data-style-editable data-it="La Nostra Magia" data-pt="A Nossa Magia">La
+                        Nostra Magia</h3>
                     <p class="editable-paragraph" data-style-editable data-text-id="storia-p-2">
-                        <span data-it="Raccontate i primi appuntamenti, i viaggi, le scoperte reciproche. Quali sono stati i momenti che vi hanno fatto capire che era speciale? ❤️"
-                              data-pt="Contem os primeiros encontros, as viagens, as descobertas mútuas. Quais foram os momentos que vos fizeram perceber que era especial? ❤️">
-                            Raccontate i primi appuntamenti, i viaggi, le scoperte reciproche. Quali sono stati i momenti che vi hanno fatto capire che era speciale? ❤️
+                        <span
+                            data-it="Tra sorrisi, conversazioni infinite e quella magia che nasce solo una volta, il nostro amore ha preso forma — forte, sincero e pieno di luce."
+                            data-pt="Entre sorrisos, conversas infinitas e aquela magia que nasce apenas uma vez, o nosso amor ganhou forma — forte, sincero e cheio de luz.">
+                            Tra sorrisi, conversazioni infinite e quella magia che nasce solo una volta, il nostro amore
+                            ha preso forma — forte, sincero e pieno di luce.
                         </span>
                     </p>
                 </div>
 
                 <div class="storia-chapter editable-text" data-text-id="storia-chapter-3">
-                    <h3 class="editable-text" data-style-editable data-it="La proposta" data-pt="O pedido">La proposta</h3>
+                    <h3 class="editable-text" data-style-editable data-it="Il Dono Più Grande"
+                        data-pt="O Maior Presente">Il Dono Più Grande</h3>
                     <p class="editable-paragraph" data-style-editable data-text-id="storia-p-3">
-                        <span data-it="Come è stata la proposta di matrimonio? Dove, quando, come? Raccontate quel momento indimenticabile! 💍"
-                              data-pt="Como foi o pedido de casamento? Onde, quando, como? Contem esse momento inesquecível! 💍">
-                            Come è stata la proposta di matrimonio? Dove, quando, come? Raccontate quel momento indimenticabile! 💍
+                        <span
+                            data-it="Poi la vita ci ha fatto il regalo più grande: la nascita di Santiago, la nostra gioia più pura, il cuore della nostra famiglia, il sogno diventato realtà."
+                            data-pt="Depois a vida deu-nos o maior presente: o nascimento do Santiago, a nossa alegria mais pura, o coração da nossa família, o sonho tornado realidade.">
+                            Poi la vita ci ha fatto il regalo più grande: la nascita di Santiago, la nostra gioia più
+                            pura, il cuore della nostra famiglia, il sogno diventato realtà.
                         </span>
                     </p>
                 </div>
 
                 <div class="storia-chapter editable-text" data-text-id="storia-chapter-4">
-                    <h3 class="editable-text" data-style-editable data-it="Il nostro giorno speciale" data-pt="O nosso dia speciale">Il nostro giorno speciale</h3>
+                    <h3 class="editable-text" data-style-editable data-it="Verso il Futuro" data-pt="Rumo ao Futuro">
+                        Verso il Futuro</h3>
                     <p class="editable-paragraph" data-style-editable data-text-id="storia-p-4">
-                        <span data-it="Ora siamo pronti a celebrare il nostro amore circondati dalle persone che amiamo. Questo matrimonio rappresenta l'unione di due culture, due famiglie, due cuori che battono all'unisono. 🎉"
-                              data-pt="Agora estamos prontos para celebrar o nosso amor rodeados pelas pessoas que amamos. Este casamento representa a união de duas culturas, duas famílias, dois corações que batem em uníssono. 🎉">
-                            Ora siamo pronti a celebrare il nostro amore circondati dalle persone che amiamo. Questo matrimonio rappresenta l'unione di due culture, due famiglie, due cuori che battono all'unisono. 🎉
+                        <span
+                            data-it="E con il coraggio che nasce dall’amore, abbiamo lasciato il Portogallo per iniziare una nuova vita in Italia, mano nella mano, costruendo ogni giorno la nostra casa, la nostra storia, il nostro futuro. Adesso, con il cuore colmo di gratitudine, facciamo il passo più bello: celebrare questo amore che è nato da un ballo e che oggi ci guida verso il domani."
+                            data-pt="E com a coragem que nasce do amor, deixámos Portugal para iniciar uma nova vida em Itália, de mãos dadas, construindo a cada dia a nossa casa, a nossa história, o nosso futuro. Agora, com o coração cheio de gratidão, damos o passo mais bonito: celebrar este amor que nasceu de uma dança e que hoje nos guia para o amanhã.">
+                            E con il coraggio che nasce dall’amore, abbiamo lasciato il Portogallo per iniziare una
+                            nuova vita in Italia, mano nella mano, costruendo ogni giorno la nostra casa, la nostra
+                            storia, il nostro futuro. Adesso, con il cuore colmo di gratitudine, facciamo il passo più
+                            bello: celebrare questo amore che è nato da un ballo e che oggi ci guida verso il domani.
                         </span>
                     </p>
                 </div>
@@ -145,7 +181,8 @@
     <section class="galleria">
         <div class="container">
             <div class="azulejo-divider"></div>
-            <h2 class="editable-text" data-style-editable data-it="I Nostri Momenti" data-pt="Os Nossos Momentos">I Nostri Momenti</h2>
+            <h2 class="editable-text" data-style-editable data-it="I Nostri Momenti" data-pt="Os Nossos Momentos">I
+                Nostri Momenti</h2>
 
             <div class="gallery-grid">
                 <div class="gallery-item editable-image" data-image-id="gallery-1">
@@ -184,14 +221,16 @@
 
     <!-- Decorazione Azulejos -->
     <div class="azulejos-decoration">
-        <img class="editable-image" data-image-id="azulejos-storia" src="foto-piastrelle-azulejos.jpg" alt="Azulejos Pattern Portoghesi - Tradizione e Amore" loading="lazy">
+        <img class="editable-image" data-image-id="azulejos-storia" src="foto-piastrelle-azulejos.jpg"
+            alt="Azulejos Pattern Portoghesi - Tradizione e Amore" loading="lazy">
     </div>
 
     <!-- Footer -->
     <footer class="editable-footer" data-style-editable data-footer-editable>
         <p class="editable-paragraph" data-style-editable>Catarina & Lorenzo</p>
         <p class="editable-paragraph" data-style-editable>26 Settembre 2026</p>
-        <p class="footer-note editable-paragraph" data-style-editable data-it="Con amore da Portogallo e Italia" data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
+        <p class="footer-note editable-paragraph" data-style-editable data-it="Con amore da Portogallo e Italia"
+            data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
 
         <!-- View Counter -->
         <div class="view-counter">
@@ -207,4 +246,5 @@
     <script src="script.js"></script>
     <script src="admin-advanced.js"></script>
 </body>
+
 </html>
