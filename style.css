@@ -624,8 +624,8 @@ section h2::before {
 }
 
 .storia-single-card p.editable-paragraph {
-    font-size: 1.10rem;
-    /* Ridotto a 1.10rem come richiesto */
+    font-size: 1.15rem;
+    /* Aggiustato a 1.15rem come richiesto */
     line-height: 2;
     color: var(--dark);
     text-align: justify;
