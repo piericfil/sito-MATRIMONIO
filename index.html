@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catarina & Lorenzo - 26 Settembre 2026</title>
-    <meta name="description" content="Unisciti a noi per celebrare il matrimonio di Catarina & Lorenzo il 26 settembre 2026 a Fondra e San Pellegrino Terme. Un giorno speciale che unisce Portogallo e Italia.">
+    <meta name="description"
+        content="Unisciti a noi per celebrare il matrimonio di Catarina & Lorenzo il 26 settembre 2026 a Fondra e San Pellegrino Terme. Un giorno speciale che unisce Portogallo e Italia.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -12,7 +14,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Catarina & Lorenzo - 26 Settembre 2026">
-    <meta property="og:description" content="Unisciti a noi per celebrare il matrimonio di Catarina & Lorenzo. Fondra & San Pellegrino Terme.">
+    <meta property="og:description"
+        content="Unisciti a noi per celebrare il matrimonio di Catarina & Lorenzo. Fondra & San Pellegrino Terme.">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -22,24 +25,27 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400;600&family=Crimson+Text:wght@400;600&family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Italiana&family=Josefin+Sans:wght@300;400;600&family=Julius+Sans+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;600&family=Montserrat:wght@300;400;500;600&family=Parisienne&family=Playfair+Display:wght@400;600;700&family=Poiret+One&family=Poppins:wght@300;400;600&family=Quicksand:wght@400;600&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400;600&family=Crimson+Text:wght@400;600&family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Italiana&family=Josefin+Sans:wght@300;400;600&family=Julius+Sans+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;600&family=Montserrat:wght@300;400;500;600&family=Parisienne&family=Playfair+Display:wght@400;600;700&family=Poiret+One&family=Poppins:wght@300;400;600&family=Quicksand:wght@400;600&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Language Toggle -->
     <div class="language-toggle">
         <button onclick="changeLanguage('it')" id="lang-it" class="active">
             <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
-                <rect width="1" height="2" fill="#009246"/>
-                <rect x="1" width="1" height="2" fill="#fff"/>
-                <rect x="2" width="1" height="2" fill="#ce2b37"/>
+                <rect width="1" height="2" fill="#009246" />
+                <rect x="1" width="1" height="2" fill="#fff" />
+                <rect x="2" width="1" height="2" fill="#ce2b37" />
             </svg>
             IT
         </button>
         <button onclick="changeLanguage('pt')" id="lang-pt">
             <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
-                <rect width="1.2" height="2" fill="#006600"/>
-                <rect x="1.2" width="1.8" height="2" fill="#FF0000"/>
-                <circle cx="1.2" cy="1" r="0.5" fill="#FFFF00" stroke="#0000FF" stroke-width="0.1"/>
+                <rect width="1.2" height="2" fill="#006600" />
+                <rect x="1.2" width="1.8" height="2" fill="#FF0000" />
+                <circle cx="1.2" cy="1" r="0.5" fill="#FFFF00" stroke="#0000FF" stroke-width="0.1" />
             </svg>
             PT
         </button>
@@ -48,7 +54,8 @@
     <!-- Navigation -->
     <nav id="navbar" class="visible">
         <div class="navbar-admin-section">
-            <button id="admin-mode-btn" class="admin-mode-button" data-it="Admin Mode" data-pt="Modo Admin">Admin Mode</button>
+            <button id="admin-mode-btn" class="admin-mode-button" data-it="Admin Mode" data-pt="Modo Admin">Admin
+                Mode</button>
             <button id="admin-help-btn" class="admin-help-button" aria-label="Admin mode help">?</button>
         </div>
         <ul>
@@ -68,43 +75,62 @@
             <div class="admin-help-section">
                 <h4 data-it="Come Attivare" data-pt="Como Ativar">Come Attivare</h4>
                 <ul>
-                    <li data-it="Clicca il pulsante &quot;Admin Mode&quot;" data-pt="Clica no botão &quot;Modo Admin&quot;">Clicca il pulsante "Admin Mode"</li>
-                    <li data-it="Oppure premi Ctrl + Alt + A" data-pt="Ou prime Ctrl + Alt + A">Oppure premi <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd></li>
+                    <li data-it="Clicca il pulsante &quot;Admin Mode&quot;"
+                        data-pt="Clica no botão &quot;Modo Admin&quot;">Clicca il pulsante "Admin Mode"</li>
+                    <li data-it="Oppure premi Ctrl + Alt + A" data-pt="Ou prime Ctrl + Alt + A">Oppure premi
+                        <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd></li>
                 </ul>
             </div>
             <div class="admin-help-section">
                 <h4 data-it="Cosa Puoi Fare" data-pt="O Que Podes Fazer">Cosa Puoi Fare</h4>
                 <ul>
-                    <li data-it="✏️ Modificare testi con editor ricco" data-pt="✏️ Editar textos com editor rico">✏️ Modificare testi con editor ricco</li>
-                    <li data-it="🎨 Cambiare stili (font, colori, dimensioni)" data-pt="🎨 Mudar estilos (fontes, cores, tamanhos)">🎨 Cambiare stili (font, colori, dimensioni)</li>
-                    <li data-it="🖼️ Caricare e modificare immagini" data-pt="🖼️ Carregar e editar imagens">🖼️ Caricare e modificare immagini</li>
-                    <li data-it="🎠 Gestire carousel e gallerie" data-pt="🎠 Gerir carrosséis e galerias">🎠 Gestire carousel e gallerie</li>
-                    <li data-it="📅 Modificare la timeline del programma" data-pt="📅 Editar a timeline do programa">📅 Modificare la timeline del programma</li>
+                    <li data-it="✏️ Modificare testi con editor ricco" data-pt="✏️ Editar textos com editor rico">✏️
+                        Modificare testi con editor ricco</li>
+                    <li data-it="🎨 Cambiare stili (font, colori, dimensioni)"
+                        data-pt="🎨 Mudar estilos (fontes, cores, tamanhos)">🎨 Cambiare stili (font, colori,
+                        dimensioni)</li>
+                    <li data-it="🖼️ Caricare e modificare immagini" data-pt="🖼️ Carregar e editar imagens">🖼️
+                        Caricare e modificare immagini</li>
+                    <li data-it="🎠 Gestire carousel e gallerie" data-pt="🎠 Gerir carrosséis e galerias">🎠 Gestire
+                        carousel e gallerie</li>
+                    <li data-it="📅 Modificare la timeline del programma" data-pt="📅 Editar a timeline do programa">📅
+                        Modificare la timeline del programma</li>
                 </ul>
             </div>
-            <p class="admin-help-note" data-it="Tasto destro sugli elementi per il menu di modifica" data-pt="Clique direito nos elementos para o menu de edição">Tasto destro sugli elementi per il menu di modifica</p>
+            <p class="admin-help-note" data-it="Tasto destro sugli elementi per il menu di modifica"
+                data-pt="Clique direito nos elementos para o menu de edição">Tasto destro sugli elementi per il menu di
+                modifica</p>
         </div>
     </div>
 
     <!-- Hero Section con Carousel Background -->
     <section class="hero" aria-label="Hero section with wedding photos carousel">
         <!-- Carousel Background -->
-        <div class="hero-carousel-bg editable-carousel" data-carousel-editable data-carousel-id="hero" role="region" aria-label="Wedding photos background carousel">
+        <div class="hero-carousel-bg editable-carousel" data-carousel-editable data-carousel-id="hero" role="region"
+            aria-label="Wedding photos background carousel">
             <div class="carousel-track" id="carouselTrack">
                 <div class="carousel-slide">
-                    <img class="editable-image" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80" alt="Coppia di sposi felici" loading="lazy" data-image-id="hero-1">
+                    <img class="editable-image"
+                        src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80"
+                        alt="Coppia di sposi felici" loading="lazy" data-image-id="hero-1">
                 </div>
                 <div class="carousel-slide">
-                    <img class="editable-image" src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1920&q=80" alt="Cerimonia matrimoniale in chiesa" loading="lazy" data-image-id="hero-2">
+                    <img class="editable-image"
+                        src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1920&q=80"
+                        alt="Cerimonia matrimoniale in chiesa" loading="lazy" data-image-id="hero-2">
                 </div>
                 <div class="carousel-slide">
-                    <img class="editable-image" src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1920&q=80" alt="Festeggiamenti matrimonio" loading="lazy" data-image-id="hero-3">
+                    <img class="editable-image" src="immagini/1.jpeg" alt="Foto Personale 3" loading="lazy"
+                        data-image-id="hero-3">
                 </div>
                 <div class="carousel-slide">
-                    <img class="editable-image" src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1920&q=80" alt="Bouquet di fiori matrimoniali" loading="lazy" data-image-id="hero-4">
+                    <img class="editable-image"
+                        src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1920&q=80"
+                        alt="Bouquet di fiori matrimoniali" loading="lazy" data-image-id="hero-4">
                 </div>
                 <div class="carousel-slide">
-                    <img class="editable-image" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1920&q=80" alt="Ritratto coppia di sposi" loading="lazy" data-image-id="hero-5">
+                    <img class="editable-image" src="immagini/2.jpeg" alt="Foto Personale 5" loading="lazy"
+                        data-image-id="hero-5">
                 </div>
             </div>
             <!-- Overlay sfumato -->
@@ -115,13 +141,15 @@
         <div class="hero-content">
             <h1 class="names editable-text" data-style-editable>Catarina & Lorenzo</h1>
             <p class="date editable-paragraph" data-style-editable>26 Settembre 2026</p>
-            <p class="location editable-paragraph" data-style-editable data-it="Fondra & San Pellegrino Terme" data-pt="Fondra & San Pellegrino Terme">Fondra & San Pellegrino Terme</p>
+            <p class="location editable-paragraph" data-style-editable data-it="Fondra & San Pellegrino Terme"
+                data-pt="Fondra & San Pellegrino Terme">Fondra & San Pellegrino Terme</p>
 
             <!-- Countdown -->
             <div class="countdown editable-countdown" data-countdown-editable data-style-editable>
                 <div class="countdown-item" data-style-editable>
                     <span id="days" class="countdown-number" data-style-editable>0</span>
-                    <p class="countdown-label editable-text" data-it="Giorni" data-pt="Dias" data-style-editable>Giorni</p>
+                    <p class="countdown-label editable-text" data-it="Giorni" data-pt="Dias" data-style-editable>Giorni
+                    </p>
                 </div>
                 <div class="countdown-item" data-style-editable>
                     <span id="hours" class="countdown-number" data-style-editable>0</span>
@@ -129,11 +157,13 @@
                 </div>
                 <div class="countdown-item" data-style-editable>
                     <span id="minutes" class="countdown-number" data-style-editable>0</span>
-                    <p class="countdown-label editable-text" data-it="Minuti" data-pt="Minutos" data-style-editable>Minuti</p>
+                    <p class="countdown-label editable-text" data-it="Minuti" data-pt="Minutos" data-style-editable>
+                        Minuti</p>
                 </div>
                 <div class="countdown-item" data-style-editable>
                     <span id="seconds" class="countdown-number" data-style-editable>0</span>
-                    <p class="countdown-label editable-text" data-it="Secondi" data-pt="Segundos" data-style-editable>Secondi</p>
+                    <p class="countdown-label editable-text" data-it="Secondi" data-pt="Segundos" data-style-editable>
+                        Secondi</p>
                 </div>
             </div>
         </div>
@@ -150,22 +180,30 @@
                 <a href="localita.html" class="link-card">
                     <div class="link-icon-elegant"></div>
                     <h3 class="editable-text" data-style-editable data-it="Località" data-pt="Localidades">Località</h3>
-                    <p class="editable-paragraph" data-style-editable data-it="Dove sarà il matrimonio e come arrivare" data-pt="Onde será o casamento e como chegar">Dove sarà il matrimonio e come arrivare</p>
+                    <p class="editable-paragraph" data-style-editable data-it="Dove sarà il matrimonio e come arrivare"
+                        data-pt="Onde será o casamento e como chegar">Dove sarà il matrimonio e come arrivare</p>
                 </a>
                 <a href="programma.html" class="link-card">
                     <div class="link-icon-elegant"></div>
                     <h3 class="editable-text" data-style-editable data-it="Programma" data-pt="Programa">Programma</h3>
-                    <p class="editable-paragraph" data-style-editable data-it="Il programma completo della giornata" data-pt="O programa completo do dia">Il programma completo della giornata</p>
+                    <p class="editable-paragraph" data-style-editable data-it="Il programma completo della giornata"
+                        data-pt="O programa completo do dia">Il programma completo della giornata</p>
                 </a>
                 <a href="storia.html" class="link-card">
                     <div class="link-icon-elegant"></div>
-                    <h3 class="editable-text" data-style-editable data-it="La Nostra Storia" data-pt="Nossa História">La Nostra Storia</h3>
-                    <p class="editable-paragraph" data-style-editable data-it="Scopri come ci siamo conosciuti" data-pt="Descobre como nos conhecemos">Scopri come ci siamo conosciuti</p>
+                    <h3 class="editable-text" data-style-editable data-it="La Nostra Storia" data-pt="Nossa História">La
+                        Nostra Storia</h3>
+                    <p class="editable-paragraph" data-style-editable data-it="Scopri come ci siamo conosciuti"
+                        data-pt="Descobre como nos conhecemos">Scopri come ci siamo conosciuti</p>
                 </a>
                 <a href="lista-nozze.html" class="link-card">
                     <div class="link-icon-elegant"></div>
-                    <h3 class="editable-text" data-style-editable data-it="Lista Nozze" data-pt="Lista de Presentes">Lista Nozze</h3>
-                    <p class="editable-paragraph" data-style-editable data-it="Scopri come contribuire al nostro futuro insieme" data-pt="Descobre como contribuir para o nosso futuro juntos">Scopri come contribuire al nostro futuro insieme</p>
+                    <h3 class="editable-text" data-style-editable data-it="Lista Nozze" data-pt="Lista de Presentes">
+                        Lista Nozze</h3>
+                    <p class="editable-paragraph" data-style-editable
+                        data-it="Scopri come contribuire al nostro futuro insieme"
+                        data-pt="Descobre como contribuir para o nosso futuro juntos">Scopri come contribuire al nostro
+                        futuro insieme</p>
                 </a>
             </div>
         </div>
@@ -175,10 +213,12 @@
     <section class="rsvp">
         <div class="container">
             <div class="azulejo-divider"></div>
-            <h2 class="editable-text" data-style-editable data-it="Conferma la tua presenza" data-pt="Confirma a tua presença">Conferma la tua presenza</h2>
-            <p class="rsvp-subtitle editable-paragraph" data-style-editable data-it="Ci farebbe molto piacere averti con noi! Per favore conferma entro il 30 giugno 2026"
-               data-pt="Ficamos muito felizes em ter-te connosco! Por favor confirma até 30 de junho de 2026">
-               Ci farebbe molto piacere averti con noi! Per favore conferma entro il 30 giugno 2026
+            <h2 class="editable-text" data-style-editable data-it="Conferma la tua presenza"
+                data-pt="Confirma a tua presença">Conferma la tua presenza</h2>
+            <p class="rsvp-subtitle editable-paragraph" data-style-editable
+                data-it="Ci farebbe molto piacere averti con noi! Per favore conferma entro il 30 giugno 2026"
+                data-pt="Ficamos muito felizes em ter-te connosco! Por favor confirma até 30 de junho de 2026">
+                Ci farebbe molto piacere averti con noi! Per favore conferma entro il 30 giugno 2026
             </p>
 
             <!-- Form RSVP con Web3Forms -->
@@ -190,27 +230,37 @@
 
                 <!-- Nome principale -->
                 <div class="form-group">
-                    <label for="nome" data-it="Il tuo Nome e Cognome" data-pt="O teu Nome e Apelido">Il tuo Nome e Cognome *</label>
-                    <input type="text" id="nome" name="nome" required data-placeholder-it="es: Mario Rossi" data-placeholder-pt="ex: João Silva">
+                    <label for="nome" data-it="Il tuo Nome e Cognome" data-pt="O teu Nome e Apelido">Il tuo Nome e
+                        Cognome *</label>
+                    <input type="text" id="nome" name="nome" required data-placeholder-it="es: Mario Rossi"
+                        data-placeholder-pt="ex: João Silva">
                 </div>
 
                 <!-- Nomi altri ospiti (per famiglie) -->
                 <div class="form-group">
-                    <label for="altri_ospiti" data-it="Altri ospiti che parteciperanno con te" data-pt="Outros convidados que participarão contigo">Altri ospiti che parteciperanno con te</label>
-                    <textarea id="altri_ospiti" name="altri_ospiti" rows="3" data-placeholder-it="es: Maria Rossi, Luca Rossi (uno per riga)" data-placeholder-pt="ex: Maria Silva, Pedro Silva (um por linha)"></textarea>
-                    <small data-it="Lascia vuoto se partecipi da solo" data-pt="Deixa vazio se participas sozinho">Lascia vuoto se partecipi da solo</small>
+                    <label for="altri_ospiti" data-it="Altri ospiti che parteciperanno con te"
+                        data-pt="Outros convidados que participarão contigo">Altri ospiti che parteciperanno con
+                        te</label>
+                    <textarea id="altri_ospiti" name="altri_ospiti" rows="3"
+                        data-placeholder-it="es: Maria Rossi, Luca Rossi (uno per riga)"
+                        data-placeholder-pt="ex: Maria Silva, Pedro Silva (um por linha)"></textarea>
+                    <small data-it="Lascia vuoto se partecipi da solo"
+                        data-pt="Deixa vazio se partecipas sozinho">Lascia vuoto se partecipi da solo</small>
                 </div>
 
                 <!-- Email -->
                 <div class="form-group">
                     <label for="email" data-it="Email (opzionale)" data-pt="Email (opcional)">Email (opzionale)</label>
-                    <input type="email" id="email" name="email" data-placeholder-it="es: mario.rossi@email.com" data-placeholder-pt="ex: joao.silva@email.com">
+                    <input type="email" id="email" name="email" data-placeholder-it="es: mario.rossi@email.com"
+                        data-placeholder-pt="ex: joao.silva@email.com">
                 </div>
 
                 <!-- Telefono -->
                 <div class="form-group">
-                    <label for="telefono" data-it="Telefono (opzionale)" data-pt="Telefone (opcional)">Telefono (opzionale)</label>
-                    <input type="tel" id="telefono" name="telefono" data-placeholder-it="+39 123 456 7890" data-placeholder-pt="+351 912 345 678">
+                    <label for="telefono" data-it="Telefono (opzionale)" data-pt="Telefone (opcional)">Telefono
+                        (opzionale)</label>
+                    <input type="tel" id="telefono" name="telefono" data-placeholder-it="+39 123 456 7890"
+                        data-placeholder-pt="+351 912 345 678">
                 </div>
 
                 <!-- Partecipazione -->
@@ -226,32 +276,45 @@
                             <span data-it="Ricevimento (18:00)" data-pt="Receção (18:00)">Ricevimento (18:00)</span>
                         </label>
                     </div>
-                    <small data-it="Seleziona almeno una opzione" data-pt="Seleciona pelo menos uma opção" style="color: var(--terracotta); font-weight: 500;">Seleziona almeno una opzione</small>
+                    <small data-it="Seleziona almeno una opzione" data-pt="Seleciona pelo menos uma opção"
+                        style="color: var(--terracotta); font-weight: 500;">Seleziona almeno una opzione</small>
                 </div>
 
                 <!-- Allergie -->
                 <div class="form-group">
-                    <label for="intolleranze" data-it="Allergie o intolleranze alimentari" data-pt="Alergias ou intolerâncias alimentares">Allergie o intolleranze alimentari</label>
-                    <textarea id="intolleranze" name="intolleranze" rows="2" data-placeholder-it="es: Celiaco, Intollerante al lattosio..." data-placeholder-pt="ex: Celíaco, Intolerante à lactose..."></textarea>
+                    <label for="intolleranze" data-it="Allergie o intolleranze alimentari"
+                        data-pt="Alergias ou intolerâncias alimentares">Allergie o intolleranze alimentari</label>
+                    <textarea id="intolleranze" name="intolleranze" rows="2"
+                        data-placeholder-it="es: Celiaco, Intollerante al lattosio..."
+                        data-placeholder-pt="ex: Celíaco, Intolerante à lactose..."></textarea>
                 </div>
 
                 <!-- Messaggio -->
                 <div class="form-group">
-                    <label for="messaggio" data-it="Un messaggio per noi" data-pt="Uma mensagem para nós">Un messaggio per noi</label>
-                    <textarea id="messaggio" name="messaggio" rows="3" data-placeholder-it="Auguri, richieste particolari..." data-placeholder-pt="Parabéns, pedidos especiais..."></textarea>
+                    <label for="messaggio" data-it="Un messaggio per noi" data-pt="Uma mensagem para nós">Un messaggio
+                        per noi</label>
+                    <textarea id="messaggio" name="messaggio" rows="3"
+                        data-placeholder-it="Auguri, richieste particolari..."
+                        data-placeholder-pt="Parabéns, pedidos especiais..."></textarea>
                 </div>
 
                 <!-- Privacy Consent -->
                 <div class="form-group privacy-consent">
                     <label class="checkbox-label">
                         <input type="checkbox" name="privacy_consent" required>
-                        <span data-it="Acconsento al trattamento dei miei dati personali per l'organizzazione del matrimonio" data-pt="Consinto o tratamento dos meus dados pessoais para a organização do casamento">Acconsento al trattamento dei miei dati personali per l'organizzazione del matrimonio</span>
+                        <span
+                            data-it="Acconsento al trattamento dei miei dati personali per l'organizzazione del matrimonio"
+                            data-pt="Consinto o tratamento dos meus dados pessoais para a organização do casamento">Acconsento
+                            al trattamento dei miei dati personali per l'organizzazione del matrimonio</span>
                     </label>
-                    <small data-it="I dati saranno utilizzati solo per questo evento e poi eliminati" data-pt="Os dados serão usados apenas para este evento e depois eliminados">I dati saranno utilizzati solo per questo evento e poi eliminati</small>
+                    <small data-it="I dati saranno utilizzati solo per questo evento e poi eliminati"
+                        data-pt="Os dados serão usados apenas para este evento e depois eliminados">I dati saranno
+                        utilizzati solo per questo evento e poi eliminati</small>
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="btn-submit" data-it="Conferma Presenza" data-pt="Confirmar Presença">Conferma Presenza</button>
+                <button type="submit" class="btn-submit" data-it="Conferma Presenza"
+                    data-pt="Confirmar Presença">Conferma Presenza</button>
             </form>
 
             <!-- Messaggio di conferma/errore -->
@@ -261,14 +324,16 @@
 
     <!-- Decorazione Azulejos -->
     <div class="azulejos-decoration">
-        <img class="editable-image" data-image-id="index-azulejos" src="foto-piastrelle-azulejos.jpg" alt="Piastrelle Azulejos Portoghesi Tradizionali" loading="lazy">
+        <img class="editable-image" data-image-id="index-azulejos" src="foto-piastrelle-azulejos.jpg"
+            alt="Piastrelle Azulejos Portoghesi Tradizionali" loading="lazy">
     </div>
 
     <!-- Footer -->
     <footer class="editable-footer" data-style-editable data-footer-editable>
         <p class="editable-paragraph" data-style-editable>Catarina & Lorenzo</p>
         <p class="editable-paragraph" data-style-editable>26 Settembre 2026</p>
-        <p class="footer-note editable-paragraph" data-it="Con amore da Portogallo e Italia" data-pt="Com amor de Portugal e Itália" data-style-editable>Con amore da Portogallo e Italia</p>
+        <p class="footer-note editable-paragraph" data-it="Con amore da Portogallo e Italia"
+            data-pt="Com amor de Portugal e Itália" data-style-editable>Con amore da Portogallo e Italia</p>
 
         <!-- View Counter -->
         <div class="view-counter">
@@ -284,4 +349,5 @@
     <script src="script.js"></script>
     <script src="admin-advanced.js"></script>
 </body>
+
 </html>
