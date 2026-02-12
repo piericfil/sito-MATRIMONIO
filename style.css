@@ -624,14 +624,12 @@ section h2::before {
 }
 
 .storia-single-card p.editable-paragraph {
-    font-size: 1.25rem;
-    /* Ridotto leggermente come richiesto (era 1.35rem) */
+    font-size: 1.10rem;
+    /* Ridotto a 1.10rem come richiesto */
     line-height: 2;
     color: var(--dark);
     text-align: justify;
-    /* Crea blocco perfetto */
     text-align-last: center;
-    /* L'ultima riga rimane centrata ed elegante */
     max-width: 900px;
     /* Limite per evitare righe troppo lunghe che rompono la giustificazione */
     margin-left: auto;
