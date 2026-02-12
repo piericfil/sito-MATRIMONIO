@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,24 +23,27 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400;600&family=Crimson+Text:wght@400;600&family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Italiana&family=Josefin+Sans:wght@300;400;600&family=Julius+Sans+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;600&family=Montserrat:wght@300;400;500;600&family=Parisienne&family=Playfair+Display:wght@400;600;700&family=Poiret+One&family=Poppins:wght@300;400;600&family=Quicksand:wght@400;600&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400;600&family=Crimson+Text:wght@400;600&family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Italiana&family=Josefin+Sans:wght@300;400;600&family=Julius+Sans+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;600&family=Montserrat:wght@300;400;500;600&family=Parisienne&family=Playfair+Display:wght@400;600;700&family=Poiret+One&family=Poppins:wght@300;400;600&family=Quicksand:wght@400;600&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Language Toggle -->
     <div class="language-toggle">
         <button onclick="changeLanguage('it')" id="lang-it" class="active">
             <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
-                <rect width="1" height="2" fill="#009246"/>
-                <rect x="1" width="1" height="2" fill="#fff"/>
-                <rect x="2" width="1" height="2" fill="#ce2b37"/>
+                <rect width="1" height="2" fill="#009246" />
+                <rect x="1" width="1" height="2" fill="#fff" />
+                <rect x="2" width="1" height="2" fill="#ce2b37" />
             </svg>
             IT
         </button>
         <button onclick="changeLanguage('pt')" id="lang-pt">
             <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
-                <rect width="1.2" height="2" fill="#006600"/>
-                <rect x="1.2" width="1.8" height="2" fill="#FF0000"/>
-                <circle cx="1.2" cy="1" r="0.5" fill="#FFFF00" stroke="#0000FF" stroke-width="0.1"/>
+                <rect width="1.2" height="2" fill="#006600" />
+                <rect x="1.2" width="1.8" height="2" fill="#FF0000" />
+                <circle cx="1.2" cy="1" r="0.5" fill="#FFFF00" stroke="#0000FF" stroke-width="0.1" />
             </svg>
             PT
         </button>
@@ -48,7 +52,8 @@
     <!-- Navigation -->
     <nav id="navbar" class="visible">
         <div class="navbar-admin-section">
-            <button id="admin-mode-btn" class="admin-mode-button" data-it="Admin Mode" data-pt="Modo Admin">Admin Mode</button>
+            <button id="admin-mode-btn" class="admin-mode-button" data-it="Admin Mode" data-pt="Modo Admin">Admin
+                Mode</button>
             <button id="admin-help-btn" class="admin-help-button" aria-label="Admin mode help">?</button>
         </div>
         <ul>
@@ -56,7 +61,8 @@
             <li><a href="localita.html" data-it="Località" data-pt="Localidades">Località</a></li>
             <li><a href="programma.html" data-it="Programma" data-pt="Programa">Programma</a></li>
             <li><a href="storia.html" data-it="La Nostra Storia" data-pt="Nossa História">La Nostra Storia</a></li>
-            <li><a href="lista-nozze.html" class="active" data-it="Lista Nozze" data-pt="Lista de Presentes">Lista Nozze</a></li>
+            <li><a href="lista-nozze.html" class="active" data-it="Lista Nozze" data-pt="Lista de Presentes">Lista
+                    Nozze</a></li>
         </ul>
     </nav>
 
@@ -68,29 +74,43 @@
             <div class="admin-help-section">
                 <h4 data-it="Come Attivare" data-pt="Como Ativar">Come Attivare</h4>
                 <ul>
-                    <li data-it="Clicca il pulsante &quot;Admin Mode&quot;" data-pt="Clica no botão &quot;Modo Admin&quot;">Clicca il pulsante "Admin Mode"</li>
-                    <li data-it="Oppure premi Ctrl + Alt + A" data-pt="Ou prime Ctrl + Alt + A">Oppure premi <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd></li>
+                    <li data-it="Clicca il pulsante &quot;Admin Mode&quot;"
+                        data-pt="Clica no botão &quot;Modo Admin&quot;">Clicca il pulsante "Admin Mode"</li>
+                    <li data-it="Oppure premi Ctrl + Alt + A" data-pt="Ou prime Ctrl + Alt + A">Oppure premi
+                        <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd></li>
                 </ul>
             </div>
             <div class="admin-help-section">
                 <h4 data-it="Cosa Puoi Fare" data-pt="O Que Podes Fazer">Cosa Puoi Fare</h4>
                 <ul>
-                    <li data-it="✏️ Modificare testi con editor ricco" data-pt="✏️ Editar textos com editor rico">✏️ Modificare testi con editor ricco</li>
-                    <li data-it="🎨 Cambiare stili (font, colori, dimensioni)" data-pt="🎨 Mudar estilos (fontes, cores, tamanhos)">🎨 Cambiare stili (font, colori, dimensioni)</li>
-                    <li data-it="🖼️ Caricare e modificare immagini" data-pt="🖼️ Carregar e editar imagens">🖼️ Caricare e modificare immagini</li>
-                    <li data-it="🎠 Gestire carousel e gallerie" data-pt="🎠 Gerir carrosséis e galerias">🎠 Gestire carousel e gallerie</li>
-                    <li data-it="📅 Modificare la timeline del programma" data-pt="📅 Editar a timeline do programa">📅 Modificare la timeline del programma</li>
+                    <li data-it="✏️ Modificare testi con editor ricco" data-pt="✏️ Editar textos com editor rico">✏️
+                        Modificare testi con editor ricco</li>
+                    <li data-it="🎨 Cambiare stili (font, colori, dimensioni)"
+                        data-pt="🎨 Mudar estilos (fontes, cores, tamanhos)">🎨 Cambiare stili (font, colori,
+                        dimensioni)</li>
+                    <li data-it="🖼️ Caricare e modificare immagini" data-pt="🖼️ Carregar e editar imagens">🖼️
+                        Caricare e modificare immagini</li>
+                    <li data-it="🎠 Gestire carousel e gallerie" data-pt="🎠 Gerir carrosséis e galerias">🎠 Gestire
+                        carousel e gallerie</li>
+                    <li data-it="📅 Modificare la timeline del programma" data-pt="📅 Editar a timeline do programa">📅
+                        Modificare la timeline del programma</li>
                 </ul>
             </div>
-            <p class="admin-help-note" data-it="Tasto destro sugli elementi per il menu di modifica" data-pt="Clique direito nos elementos para o menu de edição">Tasto destro sugli elementi per il menu di modifica</p>
+            <p class="admin-help-note" data-it="Tasto destro sugli elementi per il menu di modifica"
+                data-pt="Clique direito nos elementos para o menu de edição">Tasto destro sugli elementi per il menu di
+                modifica</p>
         </div>
     </div>
 
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1 class="editable-text" data-style-editable data-it="Lista Nozze" data-pt="Lista de Presentes">Lista Nozze</h1>
-            <p class="editable-paragraph" data-style-editable data-text-id="lista-subtitle" data-it="Il vostro amore e la vostra presenza sono il regalo più grande" data-pt="O vosso amor e a vossa presença são o melhor presente">Il vostro amore e la vostra presenza sono il regalo più grande</p>
+            <h1 class="editable-text" data-style-editable data-it="Lista Nozze" data-pt="Lista de Presentes">Lista Nozze
+            </h1>
+            <p class="editable-paragraph" data-style-editable data-text-id="lista-subtitle"
+                data-it="Il vostro amore e la vostra presenza sono il regalo più grande"
+                data-pt="O vosso amor e a vossa presença são o melhor presente">Il vostro amore e la vostra presenza
+                sono il regalo più grande</p>
         </div>
     </section>
 
@@ -103,8 +123,11 @@
                 <!-- Messaggio Principale -->
                 <div class="lista-message">
                     <p class="editable-paragraph message-text" data-style-editable data-text-id="lista-message">
-                        <span data-it="Cari amici e famiglia, la cosa più preziosa per noi è condividere questo giorno speciale con voi. Se desiderate farci un dono, di seguito trovate alcune idee." data-pt="Queridos amigos e família, o mais precioso para nós é partilhar este dia especial convosco. Se desejam oferecer-nos um presente, abaixo encontram algumas ideias.">
-                        Cari amici e famiglia, la cosa più preziosa per noi è condividere questo giorno speciale con voi. Se desiderate farci un dono, di seguito trovate alcune idee.
+                        <span
+                            data-it="Il miglior regalo è avervi con noi in questo giorno così speciale. Se desiderate contribuire alla nostra luna di miele/nuovo capitolo, potete farlo tramite il seguente IBAN:"
+                            data-pt="O melhor presente é ter-vos connosco neste dia tão especial. Se desejarem contribuir para a nossa lua de mel/novo capítulo, podem fazê-lo através do seguinte IBAN:">
+                            Il miglior regalo è avervi con noi in questo giorno così speciale. Se desiderate contribuire
+                            alla nostra luna di miele/nuovo capitolo, potete farlo tramite il seguente IBAN:
                         </span>
                     </p>
                 </div>
@@ -116,28 +139,49 @@
                     <div class="option-item">
                         <div class="option-icon">🎁</div>
                         <div class="option-content">
-                            <h3 class="editable-text" data-style-editable data-text-id="option1-title" data-it="Lista Online" data-pt="Lista Online">Lista Online</h3>
+                            <h3 class="editable-text" data-style-editable data-text-id="option1-title"
+                                data-it="Lista Online" data-pt="Lista Online">Lista Online</h3>
                             <p class="editable-paragraph" data-style-editable data-text-id="option1-desc">
                                 <span data-it="Abbiamo creato una lista presso:" data-pt="Criámos uma lista em:">
-                                Abbiamo creato una lista presso:
+                                    Abbiamo creato una lista presso:
                                 </span>
                             </p>
-                            <a href="#" class="btn-lista editable-text" data-style-editable data-text-id="option1-link" target="_blank" data-it="[Inserisci link alla lista]" data-pt="[Insere link para lista]">[Inserisci link alla lista]</a>
+                            <a href="#" class="btn-lista editable-text" data-style-editable data-text-id="option1-link"
+                                target="_blank" data-it="[Inserisci link alla lista]"
+                                data-pt="[Insere link para lista]">[Inserisci link alla lista]</a>
                         </div>
                     </div>
 
-                    <!-- Opzione 2: Contatto -->
-                    <div class="option-item">
-                        <div class="option-icon">💌</div>
+                    <!-- Opzione 2: IBAN / Bonifico -->
+                    <div class="option-item iban-card">
+                        <div class="option-icon">🏦</div>
                         <div class="option-content">
-                            <h3 class="editable-text" data-style-editable data-text-id="option2-title" data-it="Contattateci" data-pt="Contactem-nos">Contattateci</h3>
-                            <p class="editable-paragraph" data-style-editable data-text-id="option2-desc">
-                                <span data-it="Per informazioni o preferenze particolari:" data-pt="Para informações ou preferências particulares:">
-                                Per informazioni o preferenze particolari:
-                                </span>
-                            </p>
-                            <p class="contact-detail editable-paragraph" data-style-editable data-text-id="contact-email">📧 email@esempio.com</p>
-                            <p class="contact-detail editable-paragraph" data-style-editable data-text-id="contact-phone">📱 +39 123 456 7890</p>
+                            <h3 class="editable-text" data-style-editable data-text-id="iban-title"
+                                data-it="Bonifico Bancario" data-pt="Transferência Bancária">Bonifico Bancario</h3>
+
+                            <div class="iban-details">
+                                <p class="iban-label" data-it="Intestatario:" data-pt="Beneficiário:">Intestatario:</p>
+                                <p class="iban-value selection-enabled">Lorenzo Bagordo</p>
+
+                                <p class="iban-label">IBAN:</p>
+                                <div class="iban-row">
+                                    <p class="iban-code selection-enabled" id="iban-text">IT45Z0306920705100000018778
+                                    </p>
+                                    <button class="copy-btn" onclick="copyToClipboard('IT45Z0306920705100000018778')"
+                                        aria-label="Copia IBAN">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                        </svg>
+                                        <span class="tooltip" data-it="Copia" data-pt="Copiar">Copia</span>
+                                    </button>
+                                </div>
+
+                                <p class="iban-label">BIC/SWIFT:</p>
+                                <p class="iban-value selection-enabled">BCITITMM</p>
+                            </div>
                         </div>
                     </div>
 
@@ -146,11 +190,15 @@
                 <!-- Messaggio di Chiusura -->
                 <div class="lista-closing">
                     <p class="editable-paragraph closing-text" data-style-editable data-text-id="lista-closing">
-                        <span data-it="Qualunque sia il vostro pensiero, lo accoglieremo con gratitudine. Ciò che conta davvero è celebrare insieme questo momento." data-pt="Seja qual for o vosso pensamento, acolhemo-lo com gratidão. O que realmente importa é celebrar juntos este momento.">
-                        Qualunque sia il vostro pensiero, lo accoglieremo con gratitudine. Ciò che conta davvero è celebrare insieme questo momento.
+                        <span
+                            data-it="Qualunque sia il vostro pensiero, lo accoglieremo con gratitudine. Ciò che conta davvero è celebrare insieme questo momento."
+                            data-pt="Seja qual for o vosso pensamento, acolhemo-lo com gratidão. O que realmente importa é celebrar juntos este momento.">
+                            Qualunque sia il vostro pensiero, lo accoglieremo con gratitudine. Ciò che conta davvero è
+                            celebrare insieme questo momento.
                         </span>
                     </p>
-                    <p class="signature-simple editable-paragraph" data-style-editable data-text-id="lista-signature" data-it="Catarina & Lorenzo" data-pt="Catarina & Lorenzo">Catarina & Lorenzo</p>
+                    <p class="signature-simple editable-paragraph" data-style-editable data-text-id="lista-signature"
+                        data-it="Catarina & Lorenzo" data-pt="Catarina & Lorenzo">Catarina & Lorenzo</p>
                 </div>
 
             </div>
@@ -159,14 +207,16 @@
 
     <!-- Decorazione Azulejos -->
     <div class="azulejos-decoration">
-        <img class="editable-image" data-image-id="lista-azulejos" src="foto-piastrelle-azulejos.jpg" alt="Piastrelle Azulejos Portoghesi Tradizionali" loading="lazy">
+        <img class="editable-image" data-image-id="lista-azulejos" src="foto-piastrelle-azulejos.jpg"
+            alt="Piastrelle Azulejos Portoghesi Tradizionali" loading="lazy">
     </div>
 
     <!-- Footer -->
     <footer class="editable-footer" data-style-editable data-footer-editable>
         <p class="editable-paragraph" data-style-editable>Catarina & Lorenzo</p>
         <p class="editable-paragraph" data-style-editable>26 Settembre 2026</p>
-        <p class="footer-note editable-paragraph" data-style-editable data-it="Con amore da Portogallo e Italia" data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
+        <p class="footer-note editable-paragraph" data-style-editable data-it="Con amore da Portogallo e Italia"
+            data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
 
         <!-- View Counter -->
         <div class="view-counter">
@@ -182,4 +232,5 @@
     <script src="script.js"></script>
     <script src="admin-advanced.js"></script>
 </body>
+
 </html>

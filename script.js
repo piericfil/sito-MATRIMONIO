@@ -562,3 +562,27 @@ if (document.readyState === 'loading') {
 } else {
     initViewCounter();
 }
+
+// Funzione per copiare testo (IBAN)
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        // Feedback visivo
+        const btn = document.querySelector('.copy-btn');
+        if (btn) {
+            const tooltip = btn.querySelector('.tooltip');
+            if (tooltip) {
+                const originalText = tooltip.textContent;
+
+                // Cambia testo tooltip
+                tooltip.textContent = (typeof currentLang !== 'undefined' && currentLang === 'it') ? "Copiato!" : "Copiado!";
+
+                // Ripristina dopo 2 secondi
+                setTimeout(() => {
+                    tooltip.textContent = originalText;
+                }, 2000);
+            }
+        }
+    }).catch(err => {
+        console.error('Errore nella copia: ', err);
+    });
+}
