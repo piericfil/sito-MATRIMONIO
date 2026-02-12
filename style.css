@@ -2255,6 +2255,7 @@ footer p:first-of-type {
 }
 
 /* Carousel come background */
+/* Carousel come background */
 .hero-carousel-bg {
     position: absolute;
     top: 0;
@@ -2262,37 +2263,72 @@ footer p:first-of-type {
     width: 100%;
     height: 100%;
     z-index: 0;
+    background: #000;
+    /* Fallback dark background */
 }
 
 .hero-carousel-bg .carousel-track {
     height: 100%;
+    display: flex;
+    /* Ensure slides sit side-by-side */
+    transition: transform 0.5s ease-in-out;
 }
 
 .hero-carousel-bg .carousel-slide {
     height: 100%;
+    min-width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero-carousel-bg .carousel-slide img {
+/* SMART BLUR EFFECT STYLES */
+
+/* 1. Sfondo sfuocato */
+.slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px) brightness(0.6);
+    /* Sfuocatura forte e scurimento per far risaltare il testo */
+    transform: scale(1.1);
+    /* Zoom per evitare bordi bianchi della sfuocatura */
+    z-index: 1;
 }
 
-/* Overlay sfumato per rendere leggibile il testo */
+/* 2. Immagine principale nitida */
+.hero-carousel-bg .carousel-slide img.slide-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    /* Altezza piena */
+    width: auto;
+    /* Larghezza automatica per mantenere aspect ratio */
+    max-width: 100%;
+    object-fit: contain;
+    /* Assicura che l'immagine sia interamente visibile */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    /* Ombra per staccare dal fondo */
+}
+
+/* Overlay aggiuntivo per leggibilità testo (opzionale se brightness è sufficiente) */
 .carousel-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background:
-        /* Vignette sfumata ai bordi */
-        radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.1) 100%),
-        /* Gradient dal basso */
-        linear-gradient(to bottom, rgba(250, 247, 242, 0.15) 0%, rgba(250, 247, 242, 0.35) 50%, rgba(250, 247, 242, 0.55) 100%),
-        /* Gradient dall'alto */
-        linear-gradient(to top, rgba(250, 247, 242, 0.1) 0%, rgba(250, 247, 242, 0.25) 40%);
-    z-index: 1;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.1) 40%,
+            rgba(0, 0, 0, 0.4) 100%);
+    z-index: 3;
     pointer-events: none;
 }
 
