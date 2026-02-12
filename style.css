@@ -2068,10 +2068,23 @@ footer p:first-of-type {
 
 .links-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
-    gap: 35px;
-    max-width: 1000px;
+    /* Force 4 columns on desktop */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    /* Reduced gap slightly to fit better */
+    max-width: 1300px;
+    /* Increased max-width */
     margin: 0 auto;
+    padding: 0 20px;
+    /* Add side padding to prevent touching edges */
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+    .links-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+    }
 }
 
 .link-card {
