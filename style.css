@@ -2320,22 +2320,22 @@ footer p:first-of-type {
 
 /* FOTO 1 (La prima): Modifica la % per alzare/abbassare (50% = centro perfetto) */
 .hero-carousel-bg .carousel-slide:nth-child(1) img.slide-content {
-    object-position: center 50%;
+    object-position: center 150%;
 }
 
 /* FOTO 2: Aumenta la % per vedere più in basso (alza il soggetto) */
 .hero-carousel-bg .carousel-slide:nth-child(2) img.slide-content {
-    object-position: center 80%;
+    object-position: center 140%;
 }
 
 /* FOTO 3 */
 .hero-carousel-bg .carousel-slide:nth-child(3) img.slide-content {
-    object-position: center 80%;
+    object-position: center 140%;
 }
 
 /* FOTO 4 */
 .hero-carousel-bg .carousel-slide:nth-child(4) img.slide-content {
-    object-position: center 80%;
+    object-position: center 140%;
 }
 
 /* Specific adjustment for mobile if needed */
