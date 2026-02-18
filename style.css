@@ -2251,8 +2251,6 @@ footer p:first-of-type {
 .hero {
     position: relative;
     overflow: hidden;
-    height: 100vh;
-    /* Ripristino altezza schermo intero */
     background: none !important;
 }
 
@@ -2309,20 +2307,16 @@ footer p:first-of-type {
 /* --- CONFIGURAZIONE POSIZIONE FOTO CAROSELLO HOME --- */
 
 /* Regola Base (default) per tutte le foto del carosello */
+/* Regola Base (default) per tutte le foto del carosello */
 .hero-carousel-bg .carousel-slide img.slide-content {
-    position: absolute !important;
-    /* Forza posizione assoluta nel contenitore */
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    /* Fondamentale per far funzionare object-position */
-    object-position: center 50%;
-    /* Centro default */
+    position: relative;
     z-index: 2;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
     box-shadow: none;
-    display: block !important;
+    object-position: center 50%;
+    /* Default 50% (centro) */
 }
 
 /* FOTO 1 (La prima): 60% = Alzata LEGGERMENTE (per liberare i volti dal countdown) */
