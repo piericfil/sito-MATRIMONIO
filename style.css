@@ -2320,19 +2320,28 @@ footer p:first-of-type {
     /* Ombra per staccare dal fondo */
 }
 
-/* Overlay aggiuntivo per leggibilità testo (opzionale se brightness è sufficiente) */
-.carousel-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Force cover for Location Carousel */
+.location-carousel-bg .carousel-slide img.slide-content {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.3) 0%,
-            rgba(0, 0, 0, 0.1) 40%,
-            rgba(0, 0, 0, 0.4) 100%);
-    z-index: 3;
-    pointer-events: none;
+    object-fit: cover !important;
+    /* Force cover per richiesta utente */
+    object-position: center;
+    box-shadow: none;
+    /* Rimuovi ombra se non vogliamo stacco */
+}
+
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(0, 0, 0, 0.4) 100%);
+z-index: 3;
+pointer-events: none;
 }
 
 /* Contenuto hero sopra */
