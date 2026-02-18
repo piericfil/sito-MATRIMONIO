@@ -4091,16 +4091,22 @@ body.admin-mode {
 }
 
 .iban-code-simple {
-    background: #f8f9fa;
-    border: 1px dashed #cbd5e0;
-    padding: 15px;
+    background: transparent;
+    /* No background */
+    border: none;
+    /* No border */
+    padding: 10px;
     font-family: monospace;
-    font-size: 1.2rem;
-    color: var(--azul-content);
-    margin: 25px 0;
-    border-radius: 8px;
-    letter-spacing: 1px;
+    font-size: 1.5rem;
+    /* Larger text */
+    color: var(--azul-navy);
+    /* Darker color */
+    margin: 20px auto;
+    /* Center block */
+    letter-spacing: 2px;
     word-break: break-all;
+    display: table;
+    /* Or inline-block to center with margin auto if needed, or just let text-align center handle it */
 }
 
 .copy-btn-simple {
