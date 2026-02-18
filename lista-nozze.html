@@ -133,38 +133,29 @@
                     </p>
                 </div>
 
-                <!-- Opzioni Chiare -->
-                <div class="lista-options">
+                <!-- Opzione Unica: IBAN / Bonifico (Semplificato) -->
+                <div class="iban-direct-container" style="text-align: center; margin: 40px 0;">
+                    <div class="option-icon" style="margin: 0 auto 20px;">🏦</div>
+                    <h3 class="editable-text" data-style-editable data-text-id="iban-title" data-it="IBAN"
+                        data-pt="IBAN">IBAN</h3>
 
-                    <!-- Opzione Unica: IBAN / Bonifico -->
+                    <div class="iban-simple-info">
+                        <p class="iban-text"><strong>Intestatario:</strong> Lorenzo Bagordo</p>
+                        <p class="iban-text"><strong>BIC/SWIFT:</strong> BCITITMM</p>
 
-                    <!-- Opzione 2: IBAN / Bonifico (Semplificato) -->
-                    <div class="option-item">
-                        <div class="option-icon">🏦</div>
-                        <div class="option-content">
-                            <h3 class="editable-text" data-style-editable data-text-id="iban-title" data-it="IBAN"
-                                data-pt="IBAN">IBAN</h3>
+                        <p class="iban-code-simple selection-enabled">IT45Z0306920705100000018778</p>
 
-                            <div class="iban-simple-info">
-                                <p class="iban-text"><strong>Intestatario:</strong> Lorenzo Bagordo</p>
-                                <p class="iban-text"><strong>BIC/SWIFT:</strong> BCITITMM</p>
-
-                                <p class="iban-code-simple selection-enabled">IT45Z0306920705100000018778</p>
-
-                                <button class="copy-btn-simple" onclick="copyToClipboard('IT45Z0306920705100000018778')"
-                                    aria-label="Copia IBAN">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                    </svg>
-                                    <span data-it="Copia IBAN" data-pt="Copiar IBAN">Copia IBAN</span>
-                                    <span class="tooltip" data-it="Copia" data-pt="Copiar">Copia</span>
-                                </button>
-                            </div>
-                        </div>
+                        <button class="copy-btn-simple" onclick="copyToClipboard('IT45Z0306920705100000018778')"
+                            aria-label="Copia IBAN">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            <span data-it="Copia IBAN" data-pt="Copiar IBAN">Copia IBAN</span>
+                            <span class="tooltip" data-it="Copia" data-pt="Copiar">Copia</span>
+                        </button>
                     </div>
-
                 </div>
 
                 <!-- Messaggio di Chiusura -->
