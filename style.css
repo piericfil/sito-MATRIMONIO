@@ -2311,8 +2311,8 @@ footer p:first-of-type {
     width: 100%;
     object-fit: cover;
     /* Riempie tutto, niente bordi */
-    object-position: center 30%;
-    /* Focus spostato leggermente in alto per i volti */
+    object-position: center 55%;
+    /* Alziamo il focus (vediamo più in basso) */
     box-shadow: none;
 }
 
