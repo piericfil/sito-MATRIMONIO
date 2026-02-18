@@ -2318,24 +2318,24 @@ footer p:first-of-type {
     /* Default 50% (centro) */
 }
 
-/* FOTO 1 (La prima): Modifica la % per alzare/abbassare (50% = centro perfetto) */
+/* FOTO 1 (La prima) */
 .hero-carousel-bg .carousel-slide:nth-child(1) img.slide-content {
-    object-position: center 150%;
+    object-position: center 150% !important;
 }
 
-/* FOTO 2: Aumenta la % per vedere più in basso (alza il soggetto) */
+/* FOTO 2 */
 .hero-carousel-bg .carousel-slide:nth-child(2) img.slide-content {
-    object-position: center 140%;
+    object-position: center 140% !important;
 }
 
 /* FOTO 3 */
 .hero-carousel-bg .carousel-slide:nth-child(3) img.slide-content {
-    object-position: center 140%;
+    object-position: center 140% !important;
 }
 
 /* FOTO 4 */
 .hero-carousel-bg .carousel-slide:nth-child(4) img.slide-content {
-    object-position: center 140%;
+    object-position: center 140% !important;
 }
 
 /* Specific adjustment for mobile if needed */
