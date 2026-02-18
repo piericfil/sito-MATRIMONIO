@@ -2251,13 +2251,7 @@ footer p:first-of-type {
 .hero {
     position: relative;
     overflow: hidden;
-    background: #000 !important;
-    /* Base nera nel caso le foto tardino */
-    min-height: 80vh;
-    /* Forza un'altezza minima se il contenuto è scarso */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: none !important;
 }
 
 /* Carousel come background */
