@@ -2325,17 +2325,17 @@ footer p:first-of-type {
 
 /* FOTO 2: 100% = ALZATA AL MASSIMO (Bordo inferiore allineato) */
 .hero-carousel-bg .carousel-slide:nth-child(2) img.slide-content {
-    object-position: center 30% !important;
+    object-position: center 50% !important;
 }
 
 /* FOTO 3 */
 .hero-carousel-bg .carousel-slide:nth-child(3) img.slide-content {
-    object-position: center 30% !important;
+    object-position: center 50% !important;
 }
 
 /* FOTO 4 */
 .hero-carousel-bg .carousel-slide:nth-child(4) img.slide-content {
-    object-position: center 30% !important;
+    object-position: center 50% !important;
 }
 
 /* Specific adjustment for mobile if needed */
