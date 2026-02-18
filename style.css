@@ -2309,7 +2309,13 @@ footer p:first-of-type {
     z-index: 2;
     height: 100%;
     object-position: center 80%;
-    /* Focus spostato molto in basso per alzare i soggetti */
+    /* Default (Slide 1 ok qui) */
+}
+
+/* 2. Le altre foto (2, 3, 4) alzate al massimo (100%) */
+.hero-carousel-bg .carousel-slide:nth-child(n+2) img.slide-content {
+    object-position: center 100% !important;
+    /* Spinge il focus in basso al massimo per alzare i soggetti */
 }
 
 /* Specific adjustment for mobile if needed */
