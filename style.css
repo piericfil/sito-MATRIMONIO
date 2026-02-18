@@ -2325,9 +2325,9 @@ footer p:first-of-type {
     display: block !important;
 }
 
-/* FOTO 1 (La prima): 50% = CENTRO */
+/* FOTO 1 (La prima): 60% = Alzata LEGGERMENTE (per liberare i volti dal countdown) */
 .hero-carousel-bg .carousel-slide:nth-child(1) img.slide-content {
-    object-position: center 50% !important;
+    object-position: center 60% !important;
 }
 
 /* FOTO 2: 75% = Leggermente alzata (Vedi più in basso) */
