@@ -2318,24 +2318,24 @@ footer p:first-of-type {
     /* Default 50% (centro) */
 }
 
-/* FOTO 1 (La prima) */
+/* FOTO 1 (La prima): 50% = CENTRO (Valore sicuro) */
 .hero-carousel-bg .carousel-slide:nth-child(1) img.slide-content {
-    object-position: center 150% !important;
+    object-position: center 50% !important;
 }
 
-/* FOTO 2 */
+/* FOTO 2: 100% = ALZATA AL MASSIMO (Bordo inferiore allineato) */
 .hero-carousel-bg .carousel-slide:nth-child(2) img.slide-content {
-    object-position: center 140% !important;
+    object-position: center 100% !important;
 }
 
 /* FOTO 3 */
 .hero-carousel-bg .carousel-slide:nth-child(3) img.slide-content {
-    object-position: center 140% !important;
+    object-position: center 100% !important;
 }
 
 /* FOTO 4 */
 .hero-carousel-bg .carousel-slide:nth-child(4) img.slide-content {
-    object-position: center 140% !important;
+    object-position: center 100% !important;
 }
 
 /* Specific adjustment for mobile if needed */
