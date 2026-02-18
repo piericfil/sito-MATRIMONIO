@@ -2308,12 +2308,8 @@ footer p:first-of-type {
     position: relative;
     z-index: 2;
     height: 100%;
-    width: 100%;
-    object-fit: cover;
-    /* Riempie tutto, niente bordi */
-    object-position: center 55%;
-    /* Alziamo il focus (vediamo più in basso) */
-    box-shadow: none;
+    object-position: center 80%;
+    /* Focus spostato molto in basso per alzare i soggetti */
 }
 
 /* Specific adjustment for mobile if needed */
