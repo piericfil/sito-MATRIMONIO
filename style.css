@@ -2251,6 +2251,8 @@ footer p:first-of-type {
 .hero {
     position: relative;
     overflow: hidden;
+    height: 100vh;
+    /* Ripristino altezza schermo intero */
     background: none !important;
 }
 
