@@ -2303,7 +2303,9 @@ footer p:first-of-type {
 }
 
 /* 2. Immagine principale nitida */
-.hero-carousel-bg .carousel-slide img.slide-content {
+/* 2. Immagine principale nitida */
+.hero-carousel-bg .carousel-slide img.slide-content,
+.location-carousel-bg .carousel-slide img.slide-content {
     position: relative;
     z-index: 2;
     height: 100%;
