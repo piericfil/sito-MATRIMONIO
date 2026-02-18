@@ -2304,18 +2304,38 @@ footer p:first-of-type {
 
 /* 2. Immagine principale nitida */
 /* 2. Immagine principale nitida */
+/* --- CONFIGURAZIONE POSIZIONE FOTO CAROSELLO HOME --- */
+
+/* Regola Base (default) */
 .hero-carousel-bg .carousel-slide img.slide-content {
     position: relative;
     z-index: 2;
     height: 100%;
-    object-position: center 80%;
-    /* Default (Slide 1 ok qui) */
+    width: 100%;
+    object-fit: cover;
+    box-shadow: none;
+    object-position: center 50%;
+    /* Default 50% (centro) */
 }
 
-/* 2. Le altre foto (2, 3, 4) alzate al massimo (100%) */
-.hero-carousel-bg .carousel-slide:nth-child(n+2) img.slide-content {
-    object-position: center 100% !important;
-    /* Spinge il focus in basso al massimo per alzare i soggetti */
+/* FOTO 1 (La prima): Modifica la % per alzare/abbassare (50% = centro perfetto) */
+.hero-carousel-bg .carousel-slide:nth-child(1) img.slide-content {
+    object-position: center 50%;
+}
+
+/* FOTO 2: Aumenta la % per vedere più in basso (alza il soggetto) */
+.hero-carousel-bg .carousel-slide:nth-child(2) img.slide-content {
+    object-position: center 80%;
+}
+
+/* FOTO 3 */
+.hero-carousel-bg .carousel-slide:nth-child(3) img.slide-content {
+    object-position: center 80%;
+}
+
+/* FOTO 4 */
+.hero-carousel-bg .carousel-slide:nth-child(4) img.slide-content {
+    object-position: center 80%;
 }
 
 /* Specific adjustment for mobile if needed */
