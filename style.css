@@ -4034,14 +4034,90 @@ body.admin-mode {
 
 .option-item {
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 20px;
-    padding: 40px 30px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    /* Softer border */
+    border-radius: 24px;
+    /* More rounded */
+    padding: 50px 40px;
+    /* More padding */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
-    max-width: 500px;
-    /* Limit width of single item */
+    max-width: 600px;
+    /* Slightly wider */
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically */
+    align-items: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    /* Softer shadow */
+}
+
+.option-icon {
+    font-size: 4rem;
+    /* Larger icon */
+    margin-bottom: 20px;
+    background: var(--cream-light);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option-content h3 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--azul-navy);
+    margin-bottom: 30px;
+}
+
+.iban-simple-info {
+    width: 100%;
+}
+
+.iban-text {
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+    display: block;
+    /* Force new line */
+}
+
+.iban-code-simple {
+    background: #f8f9fa;
+    border: 1px dashed #cbd5e0;
+    padding: 15px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: var(--azul-content);
+    margin: 25px 0;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    word-break: break-all;
+}
+
+.copy-btn-simple {
+    background: var(--terracotta);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.copy-btn-simple:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 111, 81, 0.4);
+    background: var(--terracotta-dark);
 }
 
 .position-grid {
