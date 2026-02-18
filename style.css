@@ -2251,7 +2251,13 @@ footer p:first-of-type {
 .hero {
     position: relative;
     overflow: hidden;
-    background: none !important;
+    background: #000 !important;
+    /* Base nera nel caso le foto tardino */
+    min-height: 80vh;
+    /* Forza un'altezza minima se il contenuto è scarso */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Carousel come background */
@@ -2306,24 +2312,29 @@ footer p:first-of-type {
 /* 2. Immagine principale nitida */
 /* --- CONFIGURAZIONE POSIZIONE FOTO CAROSELLO HOME --- */
 
-/* Regola Base (default) */
+/* Regola Base (default) per tutte le foto del carosello */
 .hero-carousel-bg .carousel-slide img.slide-content {
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    box-shadow: none;
+    position: absolute !important;
+    /* Forza posizione assoluta nel contenitore */
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    /* Fondamentale per far funzionare object-position */
     object-position: center 50%;
-    /* Default 50% (centro) */
+    /* Centro default */
+    z-index: 2;
+    box-shadow: none;
+    display: block !important;
 }
 
-/* FOTO 1 (La prima): 50% = CENTRO (Valore sicuro) */
+/* FOTO 1 (La prima): 50% = CENTRO */
 .hero-carousel-bg .carousel-slide:nth-child(1) img.slide-content {
     object-position: center 50% !important;
 }
 
-/* FOTO 2: 100% = ALZATA AL MASSIMO (Bordo inferiore allineato) */
+/* FOTO 2: 75% = Leggermente alzata (Vedi più in basso) */
 .hero-carousel-bg .carousel-slide:nth-child(2) img.slide-content {
     object-position: center 75% !important;
 }
@@ -2357,17 +2368,19 @@ footer p:first-of-type {
     /* Rimuovi ombra se non vogliamo stacco */
 }
 
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: linear-gradient(to bottom,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0.1) 40%,
-    rgba(0, 0, 0, 0.4) 100%);
-z-index: 3;
-pointer-events: none;
+/* Overlay Sfumato */
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.1) 40%,
+            rgba(0, 0, 0, 0.4) 100%);
+    z-index: 3;
+    pointer-events: none;
 }
 
 /* Contenuto hero sopra */
