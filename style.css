@@ -4025,6 +4025,25 @@ body.admin-mode {
     border-radius: 16px;
 }
 
+.posit.lista-options {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.option-item {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 500px;
+    /* Limit width of single item */
+}
+
 .position-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
