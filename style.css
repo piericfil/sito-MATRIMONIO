@@ -940,12 +940,12 @@ section h2::before {
     margin-top: 8px;
     margin-bottom: 8px;
     line-height: 1.7;
+    flex: 1;
 }
 
 .hotel-location {
     font-size: 0.95rem;
     color: #555;
-    margin-top: auto;
     margin-bottom: 14px;
     line-height: 1.6;
 }
