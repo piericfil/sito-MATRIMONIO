@@ -878,6 +878,8 @@ section h2::before {
     transition: all 0.3s ease;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
 }
 
 .logistica-item:hover {
@@ -898,6 +900,9 @@ section h2::before {
 
 .logistica-content {
     line-height: 1.9;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Hotel info grid: aligns Website/Email/Telefono labels and values on the same row */
@@ -940,6 +945,7 @@ section h2::before {
 .hotel-location {
     font-size: 0.95rem;
     color: #555;
+    margin-top: auto;
     margin-bottom: 14px;
     line-height: 1.6;
 }
