@@ -900,6 +900,72 @@ section h2::before {
     line-height: 1.9;
 }
 
+/* Hotel info grid: aligns Website/Email/Telefono labels and values on the same row */
+.hotel-info-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4px 12px;
+    align-items: baseline;
+    margin-bottom: 16px;
+}
+
+.hotel-label {
+    white-space: nowrap;
+    color: var(--dark);
+}
+
+.hotel-link,
+.hotel-value {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.hotel-link {
+    color: var(--azul-primary);
+    text-decoration: underline;
+}
+
+.hotel-link:hover {
+    color: var(--terracotta);
+}
+
+.hotel-note {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+.hotel-location {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+
+/* Google Maps button for hotel cards */
+.btn-maps-hotel {
+    display: inline-block;
+    margin-top: 4px;
+    padding: 8px 18px;
+    background: linear-gradient(135deg, var(--azul-primary), var(--azul-light));
+    color: var(--white);
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(46, 92, 138, 0.25);
+}
+
+.btn-maps-hotel:hover {
+    background: linear-gradient(135deg, var(--terracotta), var(--orange));
+    box-shadow: 0 6px 18px rgba(232, 106, 62, 0.35);
+    transform: translateY(-2px);
+}
+
+
 .airport {
     margin-bottom: 20px;
     padding: 15px;
