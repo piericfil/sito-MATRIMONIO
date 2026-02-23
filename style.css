@@ -940,8 +940,6 @@ section h2::before {
     margin-top: 8px;
     margin-bottom: 20px;
     line-height: 1.7;
-    min-height: 140px;
-    /* Aligns the start of the Location section */
 }
 
 .hotel-location {
@@ -949,8 +947,6 @@ section h2::before {
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6;
-    flex: 1;
-    /* Absorbs address length differences to push button down */
 }
 
 /* Google Maps button for hotel cards */
