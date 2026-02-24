@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it">
 
 <head>
@@ -52,12 +52,7 @@
 
     <!-- Navigation -->
     <nav id="navbar" class="visible">
-        <div class="navbar-admin-section">
-            <button id="admin-mode-btn" class="admin-mode-button" data-it="Admin Mode" data-pt="Modo Admin">Admin
-                Mode</button>
-            <button id="admin-help-btn" class="admin-help-button" aria-label="Admin mode help">?</button>
-        </div>
-        <ul>
+<ul>
             <li><a href="index.html" data-it="Home" data-pt="Início">Home</a></li>
             <li><a href="localita.html" data-it="Località" data-pt="Localidades">Località</a></li>
             <li><a href="programma.html" class="active" data-it="Programma" data-pt="Programa">Programma</a></li>
@@ -65,50 +60,12 @@
             <li><a href="lista-nozze.html" data-it="Lista Nozze" data-pt="Lista de Presentes">Lista Nozze</a></li>
         </ul>
     </nav>
-
-    <!-- Admin Help Popup -->
-    <div id="admin-help-popup" class="admin-help-popup hidden">
-        <div class="admin-help-content">
-            <button class="admin-help-close" aria-label="Chiudi">&times;</button>
-            <h3 data-it="Modalità Admin" data-pt="Modo Admin">Modalità Admin</h3>
-            <div class="admin-help-section">
-                <h4 data-it="Come Attivare" data-pt="Como Ativar">Come Attivare</h4>
-                <ul>
-                    <li data-it="Clicca il pulsante &quot;Admin Mode&quot;"
-                        data-pt="Clica no botão &quot;Modo Admin&quot;">Clicca il pulsante "Admin Mode"</li>
-                    <li data-it="Oppure premi Ctrl + Alt + A" data-pt="Ou prime Ctrl + Alt + A">Oppure premi
-                        <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd>
-                    </li>
-                </ul>
-            </div>
-            <div class="admin-help-section">
-                <h4 data-it="Cosa Puoi Fare" data-pt="O Que Podes Fazer">Cosa Puoi Fare</h4>
-                <ul>
-                    <li data-it="✏️ Modificare testi con editor ricco" data-pt="✏️ Editar textos com editor rico">✏️
-                        Modificare testi con editor ricco</li>
-                    <li data-it="🎨 Cambiare stili (font, colori, dimensioni)"
-                        data-pt="🎨 Mudar estilos (fontes, cores, tamanhos)">🎨 Cambiare stili (font, colori,
-                        dimensioni)</li>
-                    <li data-it="🖼️ Caricare e modificare immagini" data-pt="🖼️ Carregar e editar imagens">🖼️
-                        Caricare e modificare immagini</li>
-                    <li data-it="🎠 Gestire carousel e gallerie" data-pt="🎠 Gerir carrosséis e galerias">🎠 Gestire
-                        carousel e gallerie</li>
-                    <li data-it="📅 Modificare la timeline del programma" data-pt="📅 Editar a timeline do programa">📅
-                        Modificare la timeline del programma</li>
-                </ul>
-            </div>
-            <p class="admin-help-note" data-it="Tasto destro sugli elementi per il menu di modifica"
-                data-pt="Clique direito nos elementos para o menu de edição">Tasto destro sugli elementi per il menu di
-                modifica</p>
-        </div>
-    </div>
-
-    <!-- Page Header -->
+<!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1 class="editable-text" data-style-editable data-it="Programma della Giornata" data-pt="Programa do Dia">
+            <h1 data-it="Programma della Giornata" data-pt="Programa do Dia">
                 Programma della Giornata</h1>
-            <p class="editable-paragraph" data-style-editable data-it="Tutti i dettagli del nostro giorno speciale"
+            <p data-it="Tutti i dettagli del nostro giorno speciale"
                 data-pt="Todos os detalhes do nosso dia especial">Tutti i dettagli del nostro giorno speciale</p>
         </div>
     </section>
@@ -117,38 +74,38 @@
     <section class="programma">
         <div class="container">
             <div class="azulejo-divider"></div>
-            <h2 class="editable-text" data-style-editable>26 Settembre 2026</h2>
+            <h2>26 Settembre 2026</h2>
 
-            <div class="timeline-zigzag" data-timeline-editable>
+            <div class="timeline-zigzag">
                 <!-- Item 1: Sinistra -->
-                <div class="timeline-zigzag-item left" data-timeline-id="event-1">
+                <div class="timeline-zigzag-item left">
                     <div class="timeline-zigzag-content">
-                        <div class="timeline-time editable-paragraph" data-style-editable>14:30</div>
-                        <h3 class="editable-text" data-style-editable data-it="Arrivo degli ospiti"
+                        <div class="timeline-time">14:30</div>
+                        <h3 data-it="Arrivo degli ospiti"
                             data-pt="Chegada dos convidados">Arrivo degli ospiti</h3>
-                        <p class="editable-paragraph" data-style-editable
+                        <p
                             data-it="Chiesa di Fondra - Vi accoglieremo davanti alla chiesa"
                             data-pt="Igreja de Fondra - Daremos as boas-vindas à frente da igreja">Chiesa di Fondra - Vi
                             accoglieremo davanti alla chiesa</p>
                     </div>
                     <div class="timeline-zigzag-image">
-                        <img class="editable-image" data-image-id="timeline-1" src="immagini/localita-ponte.jpg"
+                        <img src="immagini/localita-ponte.jpg"
                             alt="Ponte di Fondra" loading="lazy">
                     </div>
                 </div>
 
                 <!-- Item 2: Destra -->
-                <div class="timeline-zigzag-item right" data-timeline-id="event-2">
+                <div class="timeline-zigzag-item right">
                     <div class="timeline-zigzag-image">
-                        <img class="editable-image" data-image-id="timeline-2"
+                        <img
                             src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=80"
                             alt="Cerimonia matrimonio" loading="lazy">
                     </div>
                     <div class="timeline-zigzag-content">
-                        <div class="timeline-time editable-paragraph" data-style-editable>15:00</div>
-                        <h3 class="editable-text" data-style-editable data-it="Cerimonia" data-pt="Cerimónia">Cerimonia
+                        <div class="timeline-time">15:00</div>
+                        <h3 data-it="Cerimonia" data-pt="Cerimónia">Cerimonia
                         </h3>
-                        <p class="editable-paragraph" data-style-editable
+                        <p
                             data-it="Celebrazione del matrimonio nella suggestiva chiesa di Fondra"
                             data-pt="Celebração do casamento na sugestiva igreja de Fondra">Celebrazione del matrimonio
                             nella suggestiva chiesa di Fondra</p>
@@ -156,35 +113,35 @@
                 </div>
 
                 <!-- Item 3: Sinistra -->
-                <div class="timeline-zigzag-item left" data-timeline-id="event-3">
+                <div class="timeline-zigzag-item left">
                     <div class="timeline-zigzag-content">
-                        <div class="timeline-time editable-paragraph" data-style-editable>16:00</div>
-                        <h3 class="editable-text" data-style-editable data-it="Foto e congratulazioni"
+                        <div class="timeline-time">16:00</div>
+                        <h3 data-it="Foto e congratulazioni"
                             data-pt="Fotos e parabéns">Foto e congratulazioni</h3>
-                        <p class="editable-paragraph" data-style-editable
+                        <p
                             data-it="Momento speciale per foto di gruppo, saluti e auguri"
                             data-pt="Momento especial para fotos de grupo, cumprimentos e felicitações">Momento speciale
                             per foto di gruppo, saluti e auguri</p>
                     </div>
                     <div class="timeline-zigzag-image">
-                        <img class="editable-image" data-image-id="timeline-3"
+                        <img
                             src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80"
                             alt="Festeggiamenti matrimonio" loading="lazy">
                     </div>
                 </div>
 
                 <!-- Item 4: Destra -->
-                <div class="timeline-zigzag-item right" data-timeline-id="event-4">
+                <div class="timeline-zigzag-item right">
                     <div class="timeline-zigzag-image">
-                        <img class="editable-image" data-image-id="timeline-4"
+                        <img
                             src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=80"
                             alt="Aperitivo brindisi" loading="lazy">
                     </div>
                     <div class="timeline-zigzag-content">
-                        <div class="timeline-time editable-paragraph" data-style-editable>18:00</div>
-                        <h3 class="editable-text" data-style-editable data-it="Aperitivo di benvenuto"
+                        <div class="timeline-time">18:00</div>
+                        <h3 data-it="Aperitivo di benvenuto"
                             data-pt="Aperitivo de boas-vindas">Aperitivo di benvenuto</h3>
-                        <p class="editable-paragraph" data-style-editable
+                        <p
                             data-it="San Pellegrino Terme - Brindisi e stuzzichini per iniziare la festa"
                             data-pt="San Pellegrino Terme - Brinde e petiscos para começar a festa">San Pellegrino Terme
                             - Brindisi e stuzzichini per iniziare la festa</p>
@@ -192,17 +149,17 @@
                 </div>
 
                 <!-- Item 5: Sinistra -->
-                <div class="timeline-zigzag-item left" data-timeline-id="event-5">
+                <div class="timeline-zigzag-item left">
                     <div class="timeline-zigzag-content">
-                        <div class="timeline-time editable-paragraph" data-style-editable>20:00</div>
-                        <h3 class="editable-text" data-style-editable data-it="Cena" data-pt="Jantar">Cena</h3>
-                        <p class="editable-paragraph" data-style-editable
+                        <div class="timeline-time">20:00</div>
+                        <h3 data-it="Cena" data-pt="Jantar">Cena</h3>
+                        <p
                             data-it="Cena raffinata con sapori italiani e portoghesi"
                             data-pt="Jantar refinado com sabores italianos e portugueses">Cena raffinata con sapori
                             italiani e portoghesi</p>
                     </div>
                     <div class="timeline-zigzag-image">
-                        <img class="editable-image" data-image-id="timeline-5"
+                        <img
                             src="https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80"
                             alt="Tavola imbandita" loading="lazy">
                     </div>
@@ -215,15 +172,15 @@
 
     <!-- Decorazione Azulejos -->
     <div class="azulejos-decoration">
-        <img class="editable-image" data-image-id="azulejos-programma" src="foto-piastrelle-azulejos.jpg"
+        <img src="foto-piastrelle-azulejos.jpg"
             alt="Azulejos Decorativi - Pattern Portoghese" loading="lazy">
     </div>
 
     <!-- Footer -->
-    <footer class="editable-footer" data-style-editable data-footer-editable>
-        <p class="editable-paragraph" data-style-editable>Catarina & Lorenzo</p>
-        <p class="editable-paragraph" data-style-editable>26 Settembre 2026</p>
-        <p class="footer-note editable-paragraph" data-style-editable data-it="Con amore da Portogallo e Italia"
+    <footer>
+        <p>Catarina & Lorenzo</p>
+        <p>26 Settembre 2026</p>
+        <p class="footer-note" data-it="Con amore da Portogallo e Italia"
             data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
 
         <!-- View Counter -->
@@ -238,7 +195,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="admin-advanced.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it">
 
 <head>
@@ -51,12 +51,7 @@
 
     <!-- Navigation -->
     <nav id="navbar" class="visible">
-        <div class="navbar-admin-section">
-            <button id="admin-mode-btn" class="admin-mode-button" data-it="Admin Mode" data-pt="Modo Admin">Admin
-                Mode</button>
-            <button id="admin-help-btn" class="admin-help-button" aria-label="Admin mode help">?</button>
-        </div>
-        <ul>
+<ul>
             <li><a href="index.html" data-it="Home" data-pt="Início">Home</a></li>
             <li><a href="localita.html" data-it="Località" data-pt="Localidades">Località</a></li>
             <li><a href="programma.html" data-it="Programma" data-pt="Programa">Programma</a></li>
@@ -65,50 +60,12 @@
                     Nozze</a></li>
         </ul>
     </nav>
-
-    <!-- Admin Help Popup -->
-    <div id="admin-help-popup" class="admin-help-popup hidden">
-        <div class="admin-help-content">
-            <button class="admin-help-close" aria-label="Chiudi">&times;</button>
-            <h3 data-it="Modalità Admin" data-pt="Modo Admin">Modalità Admin</h3>
-            <div class="admin-help-section">
-                <h4 data-it="Come Attivare" data-pt="Como Ativar">Come Attivare</h4>
-                <ul>
-                    <li data-it="Clicca il pulsante &quot;Admin Mode&quot;"
-                        data-pt="Clica no botão &quot;Modo Admin&quot;">Clicca il pulsante "Admin Mode"</li>
-                    <li data-it="Oppure premi Ctrl + Alt + A" data-pt="Ou prime Ctrl + Alt + A">Oppure premi
-                        <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd>
-                    </li>
-                </ul>
-            </div>
-            <div class="admin-help-section">
-                <h4 data-it="Cosa Puoi Fare" data-pt="O Que Podes Fazer">Cosa Puoi Fare</h4>
-                <ul>
-                    <li data-it="✏️ Modificare testi con editor ricco" data-pt="✏️ Editar textos com editor rico">✏️
-                        Modificare testi con editor ricco</li>
-                    <li data-it="🎨 Cambiare stili (font, colori, dimensioni)"
-                        data-pt="🎨 Mudar estilos (fontes, cores, tamanhos)">🎨 Cambiare stili (font, colori,
-                        dimensioni)</li>
-                    <li data-it="🖼️ Caricare e modificare immagini" data-pt="🖼️ Carregar e editar imagens">🖼️
-                        Caricare e modificare immagini</li>
-                    <li data-it="🎠 Gestire carousel e gallerie" data-pt="🎠 Gerir carrosséis e galerias">🎠 Gestire
-                        carousel e gallerie</li>
-                    <li data-it="📅 Modificare la timeline del programma" data-pt="📅 Editar a timeline do programa">📅
-                        Modificare la timeline del programma</li>
-                </ul>
-            </div>
-            <p class="admin-help-note" data-it="Tasto destro sugli elementi per il menu di modifica"
-                data-pt="Clique direito nos elementos para o menu de edição">Tasto destro sugli elementi per il menu di
-                modifica</p>
-        </div>
-    </div>
-
-    <!-- Page Header -->
+<!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1 class="editable-text" data-style-editable data-it="Lista Nozze" data-pt="Lista de Presentes">Lista Nozze
+            <h1 data-it="Lista Nozze" data-pt="Lista de Presentes">Lista Nozze
             </h1>
-            <p class="editable-paragraph" data-style-editable data-text-id="lista-subtitle"
+            <p data-text-id="lista-subtitle"
                 data-it="Il vostro amore e la vostra presenza sono il regalo più grande"
                 data-pt="O vosso amor e a vossa presença são o melhor presente">Il vostro amore e la vostra presenza
                 sono il regalo più grande</p>
@@ -123,7 +80,7 @@
 
                 <!-- Messaggio Principale -->
                 <div class="lista-message" style="max-width: 900px;"> <!-- Increased max-width for 2 lines -->
-                    <p class="editable-paragraph message-text" data-style-editable data-text-id="lista-message">
+                    <p class="message-text" data-text-id="lista-message">
                         <span
                             data-it="Il miglior regalo è avervi con noi in questo giorno così speciale. Se desiderate contribuire alla nostra luna di miele/nuovo capitolo, potete farlo tramite le seguenti informazioni:"
                             data-pt="O melhor presente é ter-vos connosco neste dia tão especial. Se desejarem contribuir para a nossa lua de mel/novo capítulo, podem fazê-lo através das seguintes informações:">
@@ -136,7 +93,7 @@
                 <!-- Opzione Unica: IBAN / Bonifico (Semplificato) -->
                 <div class="iban-direct-container" style="text-align: center; margin: 40px 0;">
                     <div class="option-icon" style="margin: 0 auto 20px;">💌</div>
-                    <h3 class="editable-text" data-style-editable data-text-id="iban-title" data-it="IBAN"
+                    <h3 data-text-id="iban-title" data-it="IBAN"
                         data-pt="IBAN">IBAN</h3>
 
                     <div class="iban-simple-info">
@@ -160,7 +117,7 @@
 
                 <!-- Messaggio di Chiusura -->
                 <div class="lista-closing">
-                    <p class="editable-paragraph closing-text" data-style-editable data-text-id="lista-closing">
+                    <p class="closing-text" data-text-id="lista-closing">
                         <span
                             data-it="Qualunque sia il vostro pensiero, lo accoglieremo con gratitudine. Ciò che conta davvero è celebrare insieme questo momento."
                             data-pt="Seja qual for o vosso pensamento, acolhemo-lo com gratidão. O que realmente importa é celebrar juntos este momento.">
@@ -168,7 +125,7 @@
                             celebrare insieme questo momento.
                         </span>
                     </p>
-                    <p class="signature-simple editable-paragraph" data-style-editable data-text-id="lista-signature"
+                    <p class="signature-simple" data-text-id="lista-signature"
                         data-it="Catarina & Lorenzo" data-pt="Catarina & Lorenzo">Catarina & Lorenzo</p>
                 </div>
 
@@ -178,15 +135,15 @@
 
     <!-- Decorazione Azulejos -->
     <div class="azulejos-decoration">
-        <img class="editable-image" data-image-id="lista-azulejos" src="foto-piastrelle-azulejos.jpg"
+        <img src="foto-piastrelle-azulejos.jpg"
             alt="Piastrelle Azulejos Portoghesi Tradizionali" loading="lazy">
     </div>
 
     <!-- Footer -->
-    <footer class="editable-footer" data-style-editable data-footer-editable>
-        <p class="editable-paragraph" data-style-editable>Catarina & Lorenzo</p>
-        <p class="editable-paragraph" data-style-editable>26 Settembre 2026</p>
-        <p class="footer-note editable-paragraph" data-style-editable data-it="Con amore da Portogallo e Italia"
+    <footer>
+        <p>Catarina & Lorenzo</p>
+        <p>26 Settembre 2026</p>
+        <p class="footer-note" data-it="Con amore da Portogallo e Italia"
             data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
 
         <!-- View Counter -->
@@ -201,7 +158,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="admin-advanced.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it">
 
 <head>
@@ -52,12 +52,7 @@
 
     <!-- Navigation -->
     <nav id="navbar" class="visible">
-        <div class="navbar-admin-section">
-            <button id="admin-mode-btn" class="admin-mode-button" data-it="Admin Mode" data-pt="Modo Admin">Admin
-                Mode</button>
-            <button id="admin-help-btn" class="admin-help-button" aria-label="Admin mode help">?</button>
-        </div>
-        <ul>
+<ul>
             <li><a href="index.html" data-it="Home" data-pt="Início">Home</a></li>
             <li><a href="localita.html" class="active" data-it="Località" data-pt="Localidades">Località</a></li>
             <li><a href="programma.html" data-it="Programma" data-pt="Programa">Programma</a></li>
@@ -65,57 +60,19 @@
             <li><a href="lista-nozze.html" data-it="Lista Nozze" data-pt="Lista de Presentes">Lista Nozze</a></li>
         </ul>
     </nav>
-
-    <!-- Admin Help Popup -->
-    <div id="admin-help-popup" class="admin-help-popup hidden">
-        <div class="admin-help-content">
-            <button class="admin-help-close" aria-label="Chiudi">&times;</button>
-            <h3 data-it="Modalità Admin" data-pt="Modo Admin">Modalità Admin</h3>
-            <div class="admin-help-section">
-                <h4 data-it="Come Attivare" data-pt="Como Ativar">Come Attivare</h4>
-                <ul>
-                    <li data-it="Clicca il pulsante &quot;Admin Mode&quot;"
-                        data-pt="Clica no botão &quot;Modo Admin&quot;">Clicca il pulsante "Admin Mode"</li>
-                    <li data-it="Oppure premi Ctrl + Alt + A" data-pt="Ou prime Ctrl + Alt + A">Oppure premi
-                        <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd>
-                    </li>
-                </ul>
-            </div>
-            <div class="admin-help-section">
-                <h4 data-it="Cosa Puoi Fare" data-pt="O Que Podes Fazer">Cosa Puoi Fare</h4>
-                <ul>
-                    <li data-it="✏️ Modificare testi con editor ricco" data-pt="✏️ Editar textos com editor rico">✏️
-                        Modificare testi con editor ricco</li>
-                    <li data-it="🎨 Cambiare stili (font, colori, dimensioni)"
-                        data-pt="🎨 Mudar estilos (fontes, cores, tamanhos)">🎨 Cambiare stili (font, colori,
-                        dimensioni)</li>
-                    <li data-it="🖼️ Caricare e modificare immagini" data-pt="🖼️ Carregar e editar imagens">🖼️
-                        Caricare e modificare immagini</li>
-                    <li data-it="🎠 Gestire carousel e gallerie" data-pt="🎠 Gerir carrosséis e galerias">🎠 Gestire
-                        carousel e gallerie</li>
-                    <li data-it="📅 Modificare la timeline del programma" data-pt="📅 Editar a timeline do programa">📅
-                        Modificare la timeline del programma</li>
-                </ul>
-            </div>
-            <p class="admin-help-note" data-it="Tasto destro sugli elementi per il menu di modifica"
-                data-pt="Clique direito nos elementos para o menu de edição">Tasto destro sugli elementi per il menu di
-                modifica</p>
-        </div>
-    </div>
-
-    <!-- Page Header con Carousel -->
+<!-- Page Header con Carousel -->
     <section class="page-header location-header">
         <!-- Carousel Background -->
-        <div class="location-carousel-bg editable-carousel" data-carousel-editable data-carousel-id="location">
+        <div class="location-carousel-bg">
             <div class="carousel-track" id="locationCarouselTrack">
                 <!-- Slide 1 -->
                 <div class="carousel-slide">
-                    <img class="editable-image" data-image-id="localita-1" src="immagini/localita-carousel-1.png"
+                    <img src="immagini/localita-carousel-1.png"
                         alt="Località 1" loading="lazy">
                 </div>
                 <!-- Slide 2 -->
                 <div class="carousel-slide">
-                    <img class="editable-image" data-image-id="localita-2" src="immagini/localita-carousel-2.png"
+                    <img src="immagini/localita-carousel-2.png"
                         alt="Località 2" loading="lazy">
                 </div>
             </div>
@@ -124,8 +81,8 @@
 
         <!-- Contenuto Header -->
         <div class="container header-content">
-            <h1 class="editable-text" data-style-editable data-it="Località" data-pt="Localidades">Località</h1>
-            <p class="editable-paragraph" data-style-editable data-it="Dove celebreremo il nostro matrimonio"
+            <h1 data-it="Località" data-pt="Localidades">Località</h1>
+            <p data-it="Dove celebreremo il nostro matrimonio"
                 data-pt="Onde celebraremos o nosso casamento">Dove celebreremo il nostro matrimonio</p>
         </div>
 
@@ -137,21 +94,21 @@
     <section class="evento">
         <div class="container">
             <div class="azulejo-divider"></div>
-            <h2 class="editable-text" data-style-editable data-it="L'Evento" data-pt="O Evento">L'Evento</h2>
+            <h2 data-it="L'Evento" data-pt="O Evento">L'Evento</h2>
 
             <div class="evento-cards">
                 <div class="evento-card">
                     <div class="azulejo-corner"></div>
-                    <h3 class="editable-text" data-style-editable data-it="Cerimonia" data-pt="Cerimónia">Cerimonia</h3>
-                    <h4 class="editable-text" data-style-editable>Chiesa di Fondra</h4>
-                    <p class="time editable-paragraph" data-style-editable>Ore 15:00</p>
-                    <p class="editable-paragraph" data-style-editable
+                    <h3 data-it="Cerimonia" data-pt="Cerimónia">Cerimonia</h3>
+                    <h4>Chiesa di Fondra</h4>
+                    <p class="time">Ore 15:00</p>
+                    <p
                         data-it="La cerimonia si terrà nella suggestiva Chiesa di Fondra, un piccolo borgo di montagna immerso nella natura delle Alpi Orobie."
                         data-pt="A cerimónia terá lugar na sugestiva Igreja de Fondra, uma pequena aldeia de montanha imersa na natureza dos Alpes Oróbios.">
                         La cerimonia si terrà nella suggestiva Chiesa di Fondra, un piccolo borgo di montagna immerso
                         nella natura delle Alpi Orobie.
                     </p>
-                    <p class="address editable-paragraph" data-style-editable> Fondra, 24010 Oltre il Colle (BG)</p>
+                    <p class="address"> Fondra, 24010 Oltre il Colle (BG)</p>
 
                     <!-- Google Maps -->
                     <div class="map-container">
@@ -168,18 +125,18 @@
 
                 <div class="evento-card">
                     <div class="azulejo-corner"></div>
-                    <h3 class="editable-text" data-style-editable data-it="Ricevimento" data-pt="Receção">Ricevimento
+                    <h3 data-it="Ricevimento" data-pt="Receção">Ricevimento
                     </h3>
-                    <h4 class="editable-text" data-style-editable data-text-id="reception-venue">San Pellegrino Terme
+                    <h4 data-text-id="reception-venue">San Pellegrino Terme
                     </h4>
-                    <p class="time editable-paragraph" data-style-editable>Ore 18:00</p>
-                    <p class="editable-paragraph" data-style-editable
+                    <p class="time">Ore 18:00</p>
+                    <p
                         data-it="Il ricevimento si svolgerà a San Pellegrino Terme, celebre località termale ai piedi delle montagne bergamasche."
                         data-pt="A receção terá lugar em San Pellegrino Terme, famosa estância termal aos pés das montanhas bergamascas.">
                         Il ricevimento si svolgerà a San Pellegrino Terme, celebre località termale ai piedi delle
                         montagne bergamasche.
                     </p>
-                    <p class="address editable-paragraph" data-style-editable data-text-id="reception-address">
+                    <p class="address" data-text-id="reception-address">
                         Indirizzo completo da inserire</p>
 
                     <!-- Google Maps -->
@@ -203,33 +160,33 @@
     <section class="logistica">
         <div class="container">
             <div class="azulejo-divider"></div>
-            <h2 class="editable-text" data-style-editable data-it="Come Arrivare" data-pt="Como Chegar">Come Arrivare
+            <h2 data-it="Come Arrivare" data-pt="Como Chegar">Come Arrivare
             </h2>
 
             <div class="logistica-grid">
                 <div class="logistica-item">
-                    <h3 class="editable-text" data-style-editable>✈️ <span data-it="Aeroporti"
+                    <h3>✈️ <span data-it="Aeroporti"
                             data-pt="Aeroportos">Aeroporti</span></h3>
                     <div class="logistica-content">
                         <div class="airport">
-                            <h4 class="editable-text" data-style-editable>Milano Bergamo (BGY)</h4>
-                            <p class="editable-paragraph" data-style-editable
+                            <h4>Milano Bergamo (BGY)</h4>
+                            <p
                                 data-it="Aeroporto più vicino - 45 km da San Pellegrino Terme"
                                 data-pt="Aeroporto mais próximo - 45 km de San Pellegrino Terme">
                                 Aeroporto più vicino - 45 km da San Pellegrino Terme
                             </p>
                         </div>
                         <div class="airport">
-                            <h4 class="editable-text" data-style-editable>Milano Malpensa (MXP)</h4>
-                            <p class="editable-paragraph" data-style-editable
+                            <h4>Milano Malpensa (MXP)</h4>
+                            <p
                                 data-it="Alternativa - 110 km da San Pellegrino Terme"
                                 data-pt="Alternativa - 110 km de San Pellegrino Terme">
                                 Alternativa - 110 km da San Pellegrino Terme
                             </p>
                         </div>
                         <div class="airport">
-                            <h4 class="editable-text" data-style-editable>Milano Linate (LIN)</h4>
-                            <p class="editable-paragraph" data-style-editable
+                            <h4>Milano Linate (LIN)</h4>
+                            <p
                                 data-it="Alternativa - 80 km da San Pellegrino Terme"
                                 data-pt="Alternativa - 80 km de San Pellegrino Terme">
                                 Alternativa - 80 km da San Pellegrino Terme
@@ -239,16 +196,16 @@
                 </div>
 
                 <div class="logistica-item">
-                    <h3 class="editable-text" data-style-editable>🚗 <span data-it="In Auto" data-pt="De Carro">In
+                    <h3>🚗 <span data-it="In Auto" data-pt="De Carro">In
                             Auto</span></h3>
                     <div class="logistica-content">
-                        <p class="editable-paragraph" data-style-editable
+                        <p
                             data-it="Da Milano: Prendere l'autostrada A4 direzione Bergamo, poi seguire le indicazioni per San Pellegrino Terme (circa 1 ora)"
                             data-pt="De Milão: Apanhar a autoestrada A4 direção Bergamo, depois seguir as indicações para San Pellegrino Terme (cerca de 1 hora)">
                             Da Milano: Prendere l'autostrada A4 direzione Bergamo, poi seguire le indicazioni per San
                             Pellegrino Terme (circa 1 ora)
                         </p>
-                        <p class="editable-paragraph" data-style-editable
+                        <p
                             data-it="Da Bergamo: Seguire la SP470 direzione Valle Brembana (circa 30 minuti)"
                             data-pt="De Bergamo: Seguir a SP470 direção Valle Brembana (cerca de 30 minutos)">
                             Da Bergamo: Seguire la SP470 direzione Valle Brembana (circa 30 minuti)
@@ -257,10 +214,10 @@
                 </div>
 
                 <div class="logistica-item">
-                    <h3 class="editable-text" data-style-editable>🅿️ <span data-it="Parcheggio"
+                    <h3>🅿️ <span data-it="Parcheggio"
                             data-pt="Estacionamento">Parcheggio</span></h3>
                     <div class="logistica-content">
-                        <p class="editable-paragraph" data-style-editable
+                        <p
                             data-it="Parcheggi disponibili sia a Fondra che a San Pellegrino Terme. Maggiori dettagli verranno comunicati prossimamente."
                             data-pt="Estacionamento disponível tanto em Fondra como em San Pellegrino Terme. Mais detalhes serão comunicados em breve.">
                             Parcheggi disponibili sia a Fondra che a San Pellegrino Terme. Maggiori dettagli verranno
@@ -276,11 +233,10 @@
     <section class="logistica" id="accommodation">
         <div class="container">
             <div class="azulejo-divider"></div>
-            <h2 class="editable-text" data-style-editable data-it="Un piccolo regalo per chi desidera soggiornare"
+            <h2 data-it="Un piccolo regalo per chi desidera soggiornare"
                 data-pt="Um pequeno presente para quem deseja ficar">Un piccolo regalo per chi desidera soggiornare</h2>
 
-            <p class="editable-paragraph" style="text-align: center; max-width: 1200px; margin: 0 auto 40px;"
-                data-style-editable
+            <p style="text-align: center; max-width: 1200px; margin: 0 auto 40px;"
                 data-it="Affinché possiate vivere al massimo questo fine settimana in montagna e celebrare con noi senza preoccupazioni, abbiamo riservato per voi tre strutture alberghiere con condizioni speciali nella località del matrimonio.<br><br>Potrete scegliere liberamente quella che preferite ed effettuare la prenotazione utilizzando il codice dedicato ai nostri invitati."
                 data-pt="Para que possam aproveitar ao máximo este fim de semana na montanha e celebrar connosco sem preocupações, reservámos três hotéis com condições especiais no local do casamento.<br><br>Podem escolher livremente o que preferirem e fazer a reserva utilizando o código dedicado aos nossos convidados.">
                 Affinché possiate vivere al massimo questo fine settimana in montagna e celebrare con noi senza
@@ -293,7 +249,7 @@
             <div class="logistica-grid">
                 <!-- Block 1: Hotel Bigio -->
                 <div class="logistica-item">
-                    <h3 class="editable-text" data-style-editable>🏨 <span>Hotel Bigio</span></h3>
+                    <h3>🏨 <span>Hotel Bigio</span></h3>
                     <div class="logistica-content">
                         <div class="hotel-info-grid">
                             <span class="hotel-label"><strong>Website:</strong></span>
@@ -303,7 +259,7 @@
                             <span class="hotel-label"><strong>Telefono:</strong></span>
                             <span class="hotel-value">+39 0345 21058</span>
                         </div>
-                        <p class="editable-paragraph hotel-note" data-style-editable>
+                        <p class="hotel-note">
                             Per ottenere lo sconto al momento della prenotazione, dovrete inserire il codice
                             promozionale: <strong>"INLOVE"</strong>
                         </p>
@@ -318,7 +274,7 @@
 
                 <!-- Block 2: Albergo Centrale -->
                 <div class="logistica-item">
-                    <h3 class="editable-text" data-style-editable>🏨 <span>Albergo Centrale</span></h3>
+                    <h3>🏨 <span>Albergo Centrale</span></h3>
                     <div class="logistica-content">
                         <div class="hotel-info-grid">
                             <span class="hotel-label"><strong>Website:</strong></span>
@@ -329,7 +285,7 @@
                             <span class="hotel-label"><strong>Telefono:</strong></span>
                             <span class="hotel-value">+39 0345 21008</span>
                         </div>
-                        <p class="editable-paragraph hotel-note" data-style-editable>
+                        <p class="hotel-note">
                             <strong>Tariffe riservate agli invitati (con colazione inclusa):</strong><br>
                             • Camera doppia/matrimoniale: €100 a notte<br>
                             • Camera singola: €70 a notte<br>
@@ -345,7 +301,7 @@
 
                 <!-- Block 3: Hotel Bes -->
                 <div class="logistica-item">
-                    <h3 class="editable-text" data-style-editable>🏨 <span>Hotel Bes</span></h3>
+                    <h3>🏨 <span>Hotel Bes</span></h3>
                     <div class="logistica-content">
                         <div class="hotel-info-grid">
                             <span class="hotel-label"><strong>Website:</strong></span>
@@ -357,7 +313,7 @@
                             <span class="hotel-label"><strong>Telefono:</strong></span>
                             <span class="hotel-value">0345 21194</span>
                         </div>
-                        <p class="editable-paragraph hotel-note" data-style-editable>
+                        <p class="hotel-note">
                             <strong>Offerta speciale per gli invitati:</strong><br>
                             • Sconto di €10 a camera<br>
                             Per usufruirne, inviare un'e-mail con la richiesta: <strong>"Matrimonio Santos"</strong>
@@ -371,9 +327,8 @@
                 </div>
             </div>
 
-            <p class="editable-paragraph"
+            <p
                 style="text-align: center; max-width: 800px; margin: 40px auto 0; font-style: italic;"
-                data-style-editable
                 data-it="Il nostro desiderio è che possiate godervi non solo il giorno del “Sì”, ma l’intero fine settimana, tra natura, momenti di relax e brindisi sotto le stelle. ✨"
                 data-pt="O nosso desejo é que aproveitem não só o dia do “Sim”, mas todo o fim de semana, entre natureza, momentos de relaxamento e brindes sob as estrelas. ✨">
                 Il nostro desiderio è che possiate godervi non solo il giorno del “Sì”, ma l’intero fine settimana, tra
@@ -384,15 +339,15 @@
 
     <!-- Decorazione Azulejos -->
     <div class="azulejos-decoration">
-        <img class="editable-image" data-image-id="localita-azulejos" src="foto-piastrelle-azulejos.jpg"
+        <img src="foto-piastrelle-azulejos.jpg"
             alt="Azulejos Porto - Pattern Tradizionali Portoghesi" loading="lazy">
     </div>
 
     <!-- Footer -->
-    <footer class="editable-footer" data-style-editable data-footer-editable>
-        <p class="editable-paragraph" data-style-editable>Catarina & Lorenzo</p>
-        <p class="editable-paragraph" data-style-editable>26 Settembre 2026</p>
-        <p class="footer-note editable-paragraph" data-style-editable data-it="Con amore da Portogallo e Italia"
+    <footer>
+        <p>Catarina & Lorenzo</p>
+        <p>26 Settembre 2026</p>
+        <p class="footer-note" data-it="Con amore da Portogallo e Italia"
             data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
 
         <!-- View Counter -->
@@ -407,7 +362,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="admin-advanced.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it">
 
 <head>
@@ -53,12 +53,7 @@
 
     <!-- Navigation -->
     <nav id="navbar" class="visible">
-        <div class="navbar-admin-section">
-            <button id="admin-mode-btn" class="admin-mode-button" data-it="Admin Mode" data-pt="Modo Admin">Admin
-                Mode</button>
-            <button id="admin-help-btn" class="admin-help-button" aria-label="Admin mode help">?</button>
-        </div>
-        <ul>
+<ul>
             <li><a href="index.html" class="active" data-it="Home" data-pt="Início">Home</a></li>
             <li><a href="localita.html" data-it="Località" data-pt="Localidades">Località</a></li>
             <li><a href="programma.html" data-it="Programma" data-pt="Programa">Programma</a></li>
@@ -66,69 +61,31 @@
             <li><a href="lista-nozze.html" data-it="Lista Nozze" data-pt="Lista de Presentes">Lista Nozze</a></li>
         </ul>
     </nav>
-
-    <!-- Admin Help Popup -->
-    <div id="admin-help-popup" class="admin-help-popup hidden">
-        <div class="admin-help-content">
-            <button class="admin-help-close" aria-label="Chiudi">&times;</button>
-            <h3 data-it="Modalità Admin" data-pt="Modo Admin">Modalità Admin</h3>
-            <div class="admin-help-section">
-                <h4 data-it="Come Attivare" data-pt="Como Ativar">Come Attivare</h4>
-                <ul>
-                    <li data-it="Clicca il pulsante &quot;Admin Mode&quot;"
-                        data-pt="Clica no botão &quot;Modo Admin&quot;">Clicca il pulsante "Admin Mode"</li>
-                    <li data-it="Oppure premi Ctrl + Alt + A" data-pt="Ou prime Ctrl + Alt + A">Oppure premi
-                        <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd>
-                    </li>
-                </ul>
-            </div>
-            <div class="admin-help-section">
-                <h4 data-it="Cosa Puoi Fare" data-pt="O Que Podes Fazer">Cosa Puoi Fare</h4>
-                <ul>
-                    <li data-it="✏️ Modificare testi con editor ricco" data-pt="✏️ Editar textos com editor rico">✏️
-                        Modificare testi con editor ricco</li>
-                    <li data-it="🎨 Cambiare stili (font, colori, dimensioni)"
-                        data-pt="🎨 Mudar estilos (fontes, cores, tamanhos)">🎨 Cambiare stili (font, colori,
-                        dimensioni)</li>
-                    <li data-it="🖼️ Caricare e modificare immagini" data-pt="🖼️ Carregar e editar imagens">🖼️
-                        Caricare e modificare immagini</li>
-                    <li data-it="🎠 Gestire carousel e gallerie" data-pt="🎠 Gerir carrosséis e galerias">🎠 Gestire
-                        carousel e gallerie</li>
-                    <li data-it="📅 Modificare la timeline del programma" data-pt="📅 Editar a timeline do programa">📅
-                        Modificare la timeline del programma</li>
-                </ul>
-            </div>
-            <p class="admin-help-note" data-it="Tasto destro sugli elementi per il menu di modifica"
-                data-pt="Clique direito nos elementos para o menu de edição">Tasto destro sugli elementi per il menu di
-                modifica</p>
-        </div>
-    </div>
-
-    <!-- Hero Section con Carousel Background -->
+<!-- Hero Section con Carousel Background -->
     <section class="hero" aria-label="Hero section with wedding photos carousel">
         <!-- Carousel Background -->
-        <div class="hero-carousel-bg editable-carousel" data-carousel-editable data-carousel-id="hero" role="region"
+        <div class="hero-carousel-bg" role="region"
             aria-label="Wedding photos background carousel">
             <div class="carousel-track" id="carouselTrack">
                 <!-- Slide 1 -->
                 <div class="carousel-slide">
-                    <img class="editable-image slide-content" src="immagini/home-carousel-1.jpg"
-                        alt="Momento speciale 1" loading="lazy" data-image-id="hero-1">
+                    <img class="slide-content" src="immagini/home-carousel-1.jpg"
+                        alt="Momento speciale 1" loading="lazy">
                 </div>
                 <!-- Slide 2 -->
                 <div class="carousel-slide">
-                    <img class="editable-image slide-content" src="immagini/home-carousel-2.jpg"
-                        alt="Momento speciale 2" loading="lazy" data-image-id="hero-2">
+                    <img class="slide-content" src="immagini/home-carousel-2.jpg"
+                        alt="Momento speciale 2" loading="lazy">
                 </div>
                 <!-- Slide 3 -->
                 <div class="carousel-slide">
-                    <img class="editable-image slide-content" src="immagini/home-carousel-3.jpg"
-                        alt="Momento speciale 3" loading="lazy" data-image-id="hero-3">
+                    <img class="slide-content" src="immagini/home-carousel-3.jpg"
+                        alt="Momento speciale 3" loading="lazy">
                 </div>
                 <!-- Slide 4 -->
                 <div class="carousel-slide">
-                    <img class="editable-image slide-content" src="immagini/home-carousel-4.jpg"
-                        alt="Momento speciale 4" loading="lazy" data-image-id="hero-4">
+                    <img class="slide-content" src="immagini/home-carousel-4.jpg"
+                        alt="Momento speciale 4" loading="lazy">
                 </div>
             </div>
             <!-- Overlay sfumato -->
@@ -137,30 +94,30 @@
 
         <!-- Contenuto Hero SOPRA -->
         <div class="hero-content">
-            <h1 class="names editable-text" data-style-editable>Catarina & Lorenzo</h1>
-            <p class="date editable-paragraph" data-style-editable>26 Settembre 2026</p>
-            <p class="location editable-paragraph" data-style-editable data-it="Fondra & San Pellegrino Terme"
+            <h1 class="names">Catarina & Lorenzo</h1>
+            <p class="date">26 Settembre 2026</p>
+            <p class="location" data-it="Fondra & San Pellegrino Terme"
                 data-pt="Fondra & San Pellegrino Terme">Fondra & San Pellegrino Terme</p>
 
             <!-- Countdown -->
-            <div class="countdown editable-countdown" data-countdown-editable data-style-editable>
-                <div class="countdown-item" data-style-editable>
-                    <span id="days" class="countdown-number" data-style-editable>0</span>
-                    <p class="countdown-label editable-text" data-it="Giorni" data-pt="Dias" data-style-editable>Giorni
+            <div class="countdown editable-countdown" data-countdown-editable>
+                <div class="countdown-item">
+                    <span id="days" class="countdown-number">0</span>
+                    <p class="countdown-label" data-it="Giorni" data-pt="Dias">Giorni
                     </p>
                 </div>
-                <div class="countdown-item" data-style-editable>
-                    <span id="hours" class="countdown-number" data-style-editable>0</span>
-                    <p class="countdown-label editable-text" data-it="Ore" data-pt="Horas" data-style-editable>Ore</p>
+                <div class="countdown-item">
+                    <span id="hours" class="countdown-number">0</span>
+                    <p class="countdown-label" data-it="Ore" data-pt="Horas">Ore</p>
                 </div>
-                <div class="countdown-item" data-style-editable>
-                    <span id="minutes" class="countdown-number" data-style-editable>0</span>
-                    <p class="countdown-label editable-text" data-it="Minuti" data-pt="Minutos" data-style-editable>
+                <div class="countdown-item">
+                    <span id="minutes" class="countdown-number">0</span>
+                    <p class="countdown-label" data-it="Minuti" data-pt="Minutos">
                         Minuti</p>
                 </div>
-                <div class="countdown-item" data-style-editable>
-                    <span id="seconds" class="countdown-number" data-style-editable>0</span>
-                    <p class="countdown-label editable-text" data-it="Secondi" data-pt="Segundos" data-style-editable>
+                <div class="countdown-item">
+                    <span id="seconds" class="countdown-number">0</span>
+                    <p class="countdown-label" data-it="Secondi" data-pt="Segundos">
                         Secondi</p>
                 </div>
             </div>
@@ -173,36 +130,36 @@
     <!-- Quick Links -->
     <section class="quick-links">
         <div class="container">
-            <h2 class="editable-text" data-style-editable data-it="Esplora" data-pt="Explorar">Esplora</h2>
+            <h2 data-it="Esplora" data-pt="Explorar">Esplora</h2>
             <div class="links-grid">
                 <a href="localita.html" class="link-card">
                     <div class="link-icon-elegant"></div>
-                    <h3 class="editable-text" data-style-editable data-it="Località" data-pt="Localidades">Località</h3>
-                    <p class="editable-paragraph" data-style-editable
+                    <h3 data-it="Località" data-pt="Localidades">Località</h3>
+                    <p
                         data-it="Cerimonia, ricevimento e un pensiero speciale per chi desidera soggiornare"
                         data-pt="Cerimónia, receção e um pensamento especial para quem deseja ficar">Cerimonia,
                         ricevimento e un pensiero speciale per chi desidera soggiornare.</p>
                 </a>
                 <a href="programma.html" class="link-card">
                     <div class="link-icon-elegant"></div>
-                    <h3 class="editable-text" data-style-editable data-it="Programma" data-pt="Programa">Programma</h3>
-                    <p class="editable-paragraph" data-style-editable data-it="I dettagli del nostro giorno speciale: dalla cerimonia al ricevimento serale"
+                    <h3 data-it="Programma" data-pt="Programa">Programma</h3>
+                    <p data-it="I dettagli del nostro giorno speciale: dalla cerimonia al ricevimento serale"
                         data-pt="Os detalhes do nosso dia especial: da cerimônia à recepção noturna.">I dettagli del nostro giorno speciale: dalla cerimonia al ricevimento serale</p>
                 </a>
                 <a href="storia.html" class="link-card">
                     <div class="link-icon-elegant"></div>
-                    <h3 class="editable-text" data-style-editable data-it="La Nostra Storia" data-pt="Nossa História">La
+                    <h3 data-it="La Nostra Storia" data-pt="Nossa História">La
                         Nostra Storia</h3>
-                    <p class="editable-paragraph" data-style-editable
+                    <p
                         data-it="Lasciati raccontare come un semplice gesto ha cambiato le nostre vite"
                         data-pt="Deixa-nos contar como um simples gesto mudou as nossas vidas">Lasciati raccontare come
                         un semplice gesto ha cambiato le nostre vite.</p>
                 </a>
                 <a href="lista-nozze.html" class="link-card">
                     <div class="link-icon-elegant"></div>
-                    <h3 class="editable-text" data-style-editable data-it="Lista Nozze" data-pt="Lista de Presentes">
+                    <h3 data-it="Lista Nozze" data-pt="Lista de Presentes">
                         Lista Nozze</h3>
-                    <p class="editable-paragraph" data-style-editable
+                    <p
                         data-it="Scopri come contribuire ai prossimi capitoli della nostra nuova vita insieme"
                         data-pt="Descubra como você pode contribuir para os próximos capítulos da nossa nova vida juntos.">Scopri come contribuire ai prossimi capitoli della nostra nuova vita insieme
                         futuro insieme</p>
@@ -215,9 +172,9 @@
     <section class="rsvp">
         <div class="container">
             <div class="azulejo-divider"></div>
-            <h2 class="editable-text" data-style-editable data-it="Conferma la tua presenza"
+            <h2 data-it="Conferma la tua presenza"
                 data-pt="Confirma a tua presença">Conferma la tua presenza</h2>
-            <p class="rsvp-subtitle editable-paragraph" data-style-editable
+            <p class="rsvp-subtitle"
                 data-it="Ci farebbe molto piacere averti con noi! Per favore conferma entro il 30 giugno 2026"
                 data-pt="Ficamos muito felizes em ter-te connosco! Por favor confirma até 30 de junho de 2026">
                 Ci farebbe molto piacere averti con noi! Per favore conferma entro il 30 giugno 2026
@@ -326,16 +283,16 @@
 
     <!-- Decorazione Azulejos -->
     <div class="azulejos-decoration">
-        <img class="editable-image" data-image-id="index-azulejos" src="foto-piastrelle-azulejos.jpg"
+        <img src="foto-piastrelle-azulejos.jpg"
             alt="Piastrelle Azulejos Portoghesi Tradizionali" loading="lazy">
     </div>
 
     <!-- Footer -->
-    <footer class="editable-footer" data-style-editable data-footer-editable>
-        <p class="editable-paragraph" data-style-editable>Catarina & Lorenzo</p>
-        <p class="editable-paragraph" data-style-editable>26 Settembre 2026</p>
-        <p class="footer-note editable-paragraph" data-it="Con amore da Portogallo e Italia"
-            data-pt="Com amor de Portugal e Itália" data-style-editable>Con amore da Portogallo e Italia</p>
+    <footer>
+        <p>Catarina & Lorenzo</p>
+        <p>26 Settembre 2026</p>
+        <p class="footer-note" data-it="Con amore da Portogallo e Italia"
+            data-pt="Com amor de Portugal e Itália">Con amore da Portogallo e Italia</p>
 
         <!-- View Counter -->
         <div class="view-counter">
@@ -349,7 +306,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="admin-advanced.js"></script>
 </body>
 
 </html>
