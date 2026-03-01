@@ -1684,24 +1684,16 @@ footer p:first-of-type {
 
 .page-header h1 {
     font-family: var(--font-serif);
-    font-size: clamp(2.8rem, 8vw, 6rem);
-    font-weight: 300;
-    color: var(--white);
-    letter-spacing: 0;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    margin: 0 0 10px 0;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--azul-navy);
 }
 
 /* Removed ::before line for cleaner page headers */
 
 .page-header p {
-    font-family: var(--font-serif);
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    font-weight: 400;
-    color: var(--cream);
-    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
-    opacity: 0.95;
-    margin: 0;
+    font-size: 1.2rem;
+    color: var(--dark);
+    opacity: 0.8;
 }
 
 /* Location Header con Carousel */
@@ -1750,7 +1742,25 @@ footer p:first-of-type {
     color: var(--white);
 }
 
+.location-header h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.8rem, 8vw, 6rem);
+    font-weight: 300;
+    color: var(--white);
+    letter-spacing: 0;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin: 0 0 10px 0;
+}
 
+.location-header p {
+    font-family: var(--font-serif);
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 400;
+    color: var(--cream);
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+    opacity: 0.95;
+    margin: 0;
+}
 
 /* Location Carousel Indicators */
 .location-carousel-indicators {
