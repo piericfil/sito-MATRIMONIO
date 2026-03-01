@@ -307,7 +307,7 @@ footer {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     flex: 1;
     min-width: 0;
-    max-width: 200px;
+    max-width: 300px;
     border: 2px solid rgba(255, 184, 77, 0.3);
     position: relative;
     transition: all 0.3s ease;
