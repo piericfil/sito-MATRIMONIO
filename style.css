@@ -319,6 +319,19 @@ footer {
     border-color: var(--gold);
 }
 
+/* Fix sovrapposizione volti su mobile */
+@media (max-width: 768px) {
+    .hero-content {
+        margin-top: 6vh;
+        /* Più in alto per liberare i volti */
+    }
+
+    .countdown {
+        margin-top: 28vh;
+        /* Abbassato verso il fondo per non coprire i volti */
+    }
+}
+
 .countdown-item span {
     display: block;
     font-family: var(--font-serif);
