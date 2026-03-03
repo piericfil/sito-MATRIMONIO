@@ -321,6 +321,20 @@ footer {
 
 /* Fix sovrapposizione volti su mobile */
 @media (max-width: 768px) {
+    .names {
+        font-size: clamp(3.2rem, 10vw, 4rem);
+        white-space: normal;
+        line-height: 1.1;
+    }
+
+    .date {
+        font-size: clamp(1.7rem, 5vw, 2.5rem);
+    }
+
+    .location {
+        font-size: 1.3rem;
+    }
+
     .hero-content {
         margin-top: 6vh;
         /* Più in alto per liberare i volti */
