@@ -325,14 +325,22 @@ footer {
         font-size: clamp(3.2rem, 10vw, 4rem);
         white-space: normal;
         line-height: 1.1;
+        font-weight: 400;
+        /* Reso più spesso come richiesto (da 300 a 400) */
+        text-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+        /* Ombra potenziata per sostenere lo spessore */
     }
 
     .date {
         font-size: clamp(1.7rem, 5vw, 2.5rem);
+        font-weight: 500;
+        /* Aumentato lo spessore per la data base */
     }
 
     .location {
         font-size: 1.3rem;
+        font-weight: 400;
+        /* Aumentato lo spessore per il luogo */
     }
 
     .hero-content {
